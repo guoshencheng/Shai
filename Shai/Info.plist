@@ -139,5 +139,7 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<true/>
+	<key>CFBundleDisplayName</key>
+	<string>$(PRODUCT_NAME)</string>
 </dict>
 </plist>

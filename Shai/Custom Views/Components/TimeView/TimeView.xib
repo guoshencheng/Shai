@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimeView">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12月" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIY-p5-fme" userLabel="monthLabel">
+                    <rect key="frame" x="90" y="3" width="24" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="pO4-jx-NbG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPY-PQ-hjU" userLabel="dayLabel">
+                    <rect key="frame" x="91" y="18" width="24" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="vYI-Gi-Q2M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:43" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vx-ex-6Zq" userLabel="timeLabel">
+                    <rect key="frame" x="40" y="7" width="50" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="VAe-Hr-Llk"/>
+                        <constraint firstAttribute="height" constant="21" id="gIa-fc-QPG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刚刚" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vas-mg-c0D" userLabel="textLabel">
+                    <rect key="frame" x="78" y="7" width="34" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="dfb-zj-hes"/>
+                        <constraint firstAttribute="height" constant="21" id="vdd-1U-mBb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XIY-p5-fme" secondAttribute="bottom" constant="17" id="1aa-qe-RVe"/>
+                <constraint firstItem="XIY-p5-fme" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="6Dx-tZ-oU3"/>
+                <constraint firstAttribute="trailing" secondItem="9Vx-ex-6Zq" secondAttribute="trailing" constant="30" id="BXq-Jy-HoS"/>
+                <constraint firstAttribute="trailing" secondItem="vas-mg-c0D" secondAttribute="trailing" constant="8" id="Fz9-9h-eAx"/>
+                <constraint firstItem="YPY-PQ-hjU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="91" id="Lzo-NJ-9By"/>
+                <constraint firstItem="XIY-p5-fme" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="90" id="YpS-nM-p3c"/>
+                <constraint firstAttribute="centerY" secondItem="vas-mg-c0D" secondAttribute="centerY" id="dUr-YI-4x2"/>
+                <constraint firstItem="YPY-PQ-hjU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="eKf-bs-QCB"/>
+                <constraint firstAttribute="bottom" secondItem="YPY-PQ-hjU" secondAttribute="bottom" constant="2" id="jIX-od-cdI"/>
+                <constraint firstAttribute="centerY" secondItem="9Vx-ex-6Zq" secondAttribute="centerY" id="mqN-vh-9Td"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dayLabel" destination="YPY-PQ-hjU" id="wrm-X8-qhm"/>
+                <outlet property="monthLabel" destination="XIY-p5-fme" id="9Af-mj-8zM"/>
+                <outlet property="textLabel" destination="vas-mg-c0D" id="eGu-78-htt"/>
+                <outlet property="timeLabel" destination="9Vx-ex-6Zq" id="1cd-ER-z3t"/>
+            </connections>
+            <point key="canvasLocation" x="578" y="413.5"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

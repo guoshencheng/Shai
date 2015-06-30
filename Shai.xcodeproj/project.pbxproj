@@ -44,6 +44,11 @@
 		2E00A19D1B42276400A4AB3F /* MagicalRecordWorkaround.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A19A1B42276300A4AB3F /* MagicalRecordWorkaround.m */; };
 		2E00A19E1B42276400A4AB3F /* Shai.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A19B1B42276300A4AB3F /* Shai.xcdatamodeld */; };
 		2E00A1A01B42293700A4AB3F /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A19F1B42293700A4AB3F /* mapapi.bundle */; };
+		2E00A1C71B42328700A4AB3F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1C51B42328700A4AB3F /* HomeViewController.m */; };
+		2E00A1C81B42328700A4AB3F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A1C61B42328700A4AB3F /* HomeViewController.xib */; };
+		2E00A1CC1B4237FD00A4AB3F /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1CB1B4237FD00A4AB3F /* TimeView.m */; };
+		2E00A1CE1B42380E00A4AB3F /* TimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A1CD1B42380E00A4AB3F /* TimeView.xib */; };
+		2E00A1D41B42423D00A4AB3F /* HomeViewController+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1D31B42423D00A4AB3F /* HomeViewController+Configuration.m */; };
 		CB741897115545C7E9F5E780 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D56AD2AE65D895EE146132D8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +123,14 @@
 		2E00A19A1B42276300A4AB3F /* MagicalRecordWorkaround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalRecordWorkaround.m; sourceTree = "<group>"; };
 		2E00A19C1B42276300A4AB3F /* Shai.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shai.xcdatamodel; sourceTree = "<group>"; };
 		2E00A19F1B42293700A4AB3F /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapAPI.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		2E00A1C41B42328700A4AB3F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2E00A1C51B42328700A4AB3F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		2E00A1C61B42328700A4AB3F /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2E00A1CA1B4237FD00A4AB3F /* TimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeView.h; sourceTree = "<group>"; };
+		2E00A1CB1B4237FD00A4AB3F /* TimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeView.m; sourceTree = "<group>"; };
+		2E00A1CD1B42380E00A4AB3F /* TimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeView.xib; sourceTree = "<group>"; };
+		2E00A1D21B42423D00A4AB3F /* HomeViewController+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+Configuration.h"; sourceTree = "<group>"; };
+		2E00A1D31B42423D00A4AB3F /* HomeViewController+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+Configuration.m"; sourceTree = "<group>"; };
 		38BFDD2328466ACA7B8B9E26 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		83E05D7600E53F86A0BCE3D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D56AD2AE65D895EE146132D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +263,7 @@
 		2E00A14F1B42256200A4AB3F /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2E00A1B81B422EFE00A4AB3F /* HomeViewController */,
 				2E00A1501B42256200A4AB3F /* Basic */,
 				2E00A1571B42256200A4AB3F /* Demo */,
 			);
@@ -315,6 +329,8 @@
 		2E00A1661B42256D00A4AB3F /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E00A1BA1B42300100A4AB3F /* Components */,
+				2E00A1BC1B42300100A4AB3F /* Custom Cells */,
 				2E00A1671B42256D00A4AB3F /* Basic */,
 				2E00A16D1B42256D00A4AB3F /* Motions */,
 			);
@@ -410,6 +426,43 @@
 			name = "Data Models";
 			path = "Shai/Data Models";
 			sourceTree = SOURCE_ROOT;
+		};
+		2E00A1B81B422EFE00A4AB3F /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E00A1C41B42328700A4AB3F /* HomeViewController.h */,
+				2E00A1C51B42328700A4AB3F /* HomeViewController.m */,
+				2E00A1C61B42328700A4AB3F /* HomeViewController.xib */,
+				2E00A1D21B42423D00A4AB3F /* HomeViewController+Configuration.h */,
+				2E00A1D31B42423D00A4AB3F /* HomeViewController+Configuration.m */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		2E00A1BA1B42300100A4AB3F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2E00A1C91B4237E300A4AB3F /* TimeView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2E00A1BC1B42300100A4AB3F /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		2E00A1C91B4237E300A4AB3F /* TimeView */ = {
+			isa = PBXGroup;
+			children = (
+				2E00A1CA1B4237FD00A4AB3F /* TimeView.h */,
+				2E00A1CB1B4237FD00A4AB3F /* TimeView.m */,
+				2E00A1CD1B42380E00A4AB3F /* TimeView.xib */,
+			);
+			path = TimeView;
+			sourceTree = "<group>";
 		};
 		99883D0D0AB73A643A96709A /* Frameworks */ = {
 			isa = PBXGroup;
@@ -509,6 +562,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E00A1CE1B42380E00A4AB3F /* TimeView.xib in Resources */,
 				2E00A1651B42256200A4AB3F /* DemoTwoViewController.xib in Resources */,
 				2E00A11E1B421D4000A4AB3F /* Images.xcassets in Resources */,
 				2E00A13C1B42229F00A4AB3F /* Default-667h@2x.png in Resources */,
@@ -516,6 +570,7 @@
 				2E00A1631B42256200A4AB3F /* DemoOneViewController.xib in Resources */,
 				2E00A13E1B42229F00A4AB3F /* Default@2x.png in Resources */,
 				2E00A1411B42247400A4AB3F /* localizable.strings in Resources */,
+				2E00A1C81B42328700A4AB3F /* HomeViewController.xib in Resources */,
 				2E00A13D1B42229F00A4AB3F /* Default-736h@2x.png in Resources */,
 				2E00A13B1B42229F00A4AB3F /* Default-568h@2x.png in Resources */,
 			);
@@ -571,8 +626,11 @@
 				2E00A1851B4225A100A4AB3F /* UIAlertView+Utility.m in Sources */,
 				2E00A1641B42256200A4AB3F /* DemoTwoViewController.m in Sources */,
 				2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */,
+				2E00A1CC1B4237FD00A4AB3F /* TimeView.m in Sources */,
 				2E00A1871B4225A100A4AB3F /* UIImage+Utility.m in Sources */,
+				2E00A1D41B42423D00A4AB3F /* HomeViewController+Configuration.m in Sources */,
 				2E00A1611B42256200A4AB3F /* UINavigationController+CustomNavigationController.m in Sources */,
+				2E00A1C71B42328700A4AB3F /* HomeViewController.m in Sources */,
 				2E00A1881B4225A100A4AB3F /* UIScreen+Utility.m in Sources */,
 				2E00A19E1B42276400A4AB3F /* Shai.xcdatamodeld in Sources */,
 				2E00A14D1B42255800A4AB3F /* ApiResponse.m in Sources */,

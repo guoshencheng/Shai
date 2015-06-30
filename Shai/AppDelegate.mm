@@ -11,6 +11,7 @@
 #import "MagicalRecordWorkaround.h"
 #import "CoreData+MagicalRecord.h"
 #import "DemoOneViewController.h"
+#import "HomeViewController.h"
 #import <BaiduMapAPI/BMapKit.h>
 
 @interface AppDelegate ()
@@ -48,7 +49,7 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-
+    
 }
 
 #pragma mark - PrivateMethod
@@ -65,7 +66,7 @@
 
 - (void)iniWindow {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen bounds]];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[DemoOneViewController create]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[HomeViewController create]];
     navigationController.navigationBarHidden = YES;
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];

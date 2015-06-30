@@ -182,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				2E00A19F1B42293700A4AB3F /* mapapi.bundle */,
+				2E00A1981B42276300A4AB3F /* Data Models */,
 				2E00A1781B4225A100A4AB3F /* Tools */,
 				2E00A1661B42256D00A4AB3F /* Custom Views */,
 				2E00A14F1B42256200A4AB3F /* View Controller */,
@@ -249,7 +250,6 @@
 		2E00A14F1B42256200A4AB3F /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2E00A1981B42276300A4AB3F /* Data Models */,
 				2E00A1501B42256200A4AB3F /* Basic */,
 				2E00A1571B42256200A4AB3F /* Demo */,
 			);

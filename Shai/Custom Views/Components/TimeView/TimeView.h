@@ -16,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
 + (instancetype)create;
-- (void)updateWithTimeStamp:(NSTimeInterval)time;
+- (void)updateWithDate:(NSDate *)date;
 
 @end

@@ -57,6 +57,11 @@
 		2E00A1ED1B425F0300A4AB3F /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E00A1EC1B425F0300A4AB3F /* ImageIO.framework */; };
 		2E00A1EF1B425F1900A4AB3F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E00A1EE1B425F1900A4AB3F /* CoreTelephony.framework */; };
 		2E00A1F11B425F2700A4AB3F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E00A1F01B425F2700A4AB3F /* CoreText.framework */; };
+		2E00A1F71B4274B100A4AB3F /* StatusCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1F51B4274B100A4AB3F /* StatusCollectionViewCell.m */; };
+		2E00A1F81B4274B100A4AB3F /* StatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A1F61B4274B100A4AB3F /* StatusCollectionViewCell.xib */; };
+		2E00A1FD1B427EB000A4AB3F /* StatusCollectionViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1FC1B427EB000A4AB3F /* StatusCollectionViewDatasource.m */; };
+		2E00A2011B427FC300A4AB3F /* StatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2001B427FC300A4AB3F /* StatusTool.m */; };
+		2E00A2041B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */; };
 		CB741897115545C7E9F5E780 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D56AD2AE65D895EE146132D8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +163,15 @@
 		2E00A1EC1B425F0300A4AB3F /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		2E00A1EE1B425F1900A4AB3F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		2E00A1F01B425F2700A4AB3F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		2E00A1F41B4274B100A4AB3F /* StatusCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusCollectionViewCell.h; sourceTree = "<group>"; };
+		2E00A1F51B4274B100A4AB3F /* StatusCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusCollectionViewCell.m; sourceTree = "<group>"; };
+		2E00A1F61B4274B100A4AB3F /* StatusCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusCollectionViewCell.xib; sourceTree = "<group>"; };
+		2E00A1FB1B427EB000A4AB3F /* StatusCollectionViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusCollectionViewDatasource.h; sourceTree = "<group>"; };
+		2E00A1FC1B427EB000A4AB3F /* StatusCollectionViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusCollectionViewDatasource.m; sourceTree = "<group>"; };
+		2E00A1FF1B427FC300A4AB3F /* StatusTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTool.h; sourceTree = "<group>"; };
+		2E00A2001B427FC300A4AB3F /* StatusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTool.m; sourceTree = "<group>"; };
+		2E00A2021B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+UICollectionViewDelegate.h"; sourceTree = "<group>"; };
+		2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+UICollectionViewDelegate.m"; sourceTree = "<group>"; };
 		38BFDD2328466ACA7B8B9E26 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		83E05D7600E53F86A0BCE3D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D56AD2AE65D895EE146132D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -419,6 +433,8 @@
 		2E00A1781B4225A100A4AB3F /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2E00A1FE1B427FA900A4AB3F /* DTO */,
+				2E00A1F91B427E7200A4AB3F /* Data Sources */,
 				2E00A1791B4225A100A4AB3F /* Utilities */,
 			);
 			path = Tools;
@@ -468,6 +484,8 @@
 				2E00A1C61B42328700A4AB3F /* HomeViewController.xib */,
 				2E00A1D21B42423D00A4AB3F /* HomeViewController+Configuration.h */,
 				2E00A1D31B42423D00A4AB3F /* HomeViewController+Configuration.m */,
+				2E00A2021B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.h */,
+				2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -483,7 +501,7 @@
 		2E00A1BC1B42300100A4AB3F /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2E00A1F21B4273BB00A4AB3F /* StatusCollectionViewCell */,
+				2E00A1F31B42749A00A4AB3F /* StatusCollectionViewCell */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -528,12 +546,40 @@
 			path = libWeiboSDK;
 			sourceTree = "<group>";
 		};
-		2E00A1F21B4273BB00A4AB3F /* StatusCollectionViewCell */ = {
+		2E00A1F31B42749A00A4AB3F /* StatusCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				2E00A1F41B4274B100A4AB3F /* StatusCollectionViewCell.h */,
+				2E00A1F51B4274B100A4AB3F /* StatusCollectionViewCell.m */,
+				2E00A1F61B4274B100A4AB3F /* StatusCollectionViewCell.xib */,
 			);
-			name = StatusCollectionViewCell;
-			path = StatusCollectionView;
+			path = StatusCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2E00A1F91B427E7200A4AB3F /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2E00A1FA1B427E7200A4AB3F /* Status */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		2E00A1FA1B427E7200A4AB3F /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				2E00A1FB1B427EB000A4AB3F /* StatusCollectionViewDatasource.h */,
+				2E00A1FC1B427EB000A4AB3F /* StatusCollectionViewDatasource.m */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		2E00A1FE1B427FA900A4AB3F /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				2E00A1FF1B427FC300A4AB3F /* StatusTool.h */,
+				2E00A2001B427FC300A4AB3F /* StatusTool.m */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		99883D0D0AB73A643A96709A /* Frameworks */ = {
@@ -641,6 +687,7 @@
 				2E00A1651B42256200A4AB3F /* DemoTwoViewController.xib in Resources */,
 				2E00A11E1B421D4000A4AB3F /* Images.xcassets in Resources */,
 				2E00A13C1B42229F00A4AB3F /* Default-667h@2x.png in Resources */,
+				2E00A1F81B4274B100A4AB3F /* StatusCollectionViewCell.xib in Resources */,
 				2E00A1A01B42293700A4AB3F /* mapapi.bundle in Resources */,
 				2E00A1631B42256200A4AB3F /* DemoOneViewController.xib in Resources */,
 				2E00A13E1B42229F00A4AB3F /* Default@2x.png in Resources */,
@@ -705,6 +752,7 @@
 				2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */,
 				2E00A1CC1B4237FD00A4AB3F /* TimeView.m in Sources */,
 				2E00A1871B4225A100A4AB3F /* UIImage+Utility.m in Sources */,
+				2E00A2011B427FC300A4AB3F /* StatusTool.m in Sources */,
 				2E00A1D41B42423D00A4AB3F /* HomeViewController+Configuration.m in Sources */,
 				2E00A1611B42256200A4AB3F /* UINavigationController+CustomNavigationController.m in Sources */,
 				2E00A1C71B42328700A4AB3F /* HomeViewController.m in Sources */,
@@ -716,8 +764,11 @@
 				2E00A1131B421D4000A4AB3F /* AppDelegate.mm in Sources */,
 				2E00A1861B4225A100A4AB3F /* UIColor+Utility.m in Sources */,
 				2E00A14C1B42255800A4AB3F /* ApiRequest.m in Sources */,
+				2E00A1F71B4274B100A4AB3F /* StatusCollectionViewCell.m in Sources */,
+				2E00A1FD1B427EB000A4AB3F /* StatusCollectionViewDatasource.m in Sources */,
 				2E00A1DD1B4258C500A4AB3F /* LoginViewController+Configuration.m in Sources */,
 				2E00A1741B42256D00A4AB3F /* AutoLayoutView.m in Sources */,
+				2E00A2041B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m in Sources */,
 				2E00A19D1B42276400A4AB3F /* MagicalRecordWorkaround.m in Sources */,
 				2E00A1761B42256D00A4AB3F /* SlideMotion+Calculation.m in Sources */,
 				2E00A1601B42256200A4AB3F /* BaseViewController.m in Sources */,

@@ -8,8 +8,9 @@
 
 #import "BaseViewController.h"
 #import "TimeView.h"
+#import "StatusCollectionViewDatasource.h"
 
-@interface HomeViewController : BaseViewController
+@interface HomeViewController : BaseViewController <UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *statusCollectionView;
 
 @property (strong, nonatomic) TimeView *timeView;
+@property (strong, nonatomic) StatusCollectionViewDatasource *statusCollectionViewDatasource;
 
 + (instancetype)create;
 

@@ -16,11 +16,10 @@
     return timeView;
 }
 
-- (void)updateWithTimeStamp:(NSTimeInterval)time {
-    NSDate *now = [NSDate date];
+- (void)updateWithDate:(NSDate *)date {
     NSCalendar *cal = [NSCalendar currentCalendar];
     unsigned int unitFlags = NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSCalendarUnitMonth | NSCalendarUnitDay;
-    NSDateComponents *dd = [cal components:unitFlags fromDate:now];
+    NSDateComponents *dd = [cal components:unitFlags fromDate:date];
     NSInteger month = [dd month];
     NSInteger day = [dd day];
     NSInteger hour = [dd hour];

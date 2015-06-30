@@ -25,13 +25,12 @@
     self.statusCollectionViewDatasource.status = [self getTestStatus];
     [self.statusCollectionView registerNib:[UINib nibWithNibName:@"StatusCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:STATUS_COLLECTION_VIEW_CELL];
     self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;
-    
 }
 
 - (void)configureTimeView {
     self.timeView = [TimeView create];
     [self.topView addSubview:self.timeView];
-    [self.timeView setRightSpace:5];
+    [self.timeView setRightSpace:-10];
     [self.timeView setTopSpace:5];
     [self.timeView setBottomSpace:5];
     [self.timeView setWidthConstant:120];

@@ -7,6 +7,7 @@
 //
 
 #import "TimeView.h"
+#import "NSNumber+Utility.h"
 
 @implementation TimeView
 
@@ -20,13 +21,13 @@
     NSCalendar *cal = [NSCalendar currentCalendar];
     unsigned int unitFlags = NSWeekdayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSCalendarUnitMonth | NSCalendarUnitDay;
     NSDateComponents *dd = [cal components:unitFlags fromDate:date];
-    NSInteger month = [dd month];
-    NSInteger day = [dd day];
-    NSInteger hour = [dd hour];
-    NSInteger minute = [dd minute];
-    self.monthLabel.text = [NSString stringWithFormat:@"%d%@", month, @"月"];
-    self.dayLabel.text = [NSString stringWithFormat:@"%d%@", day, @"日"];
-    self.timeLabel.text = [NSString stringWithFormat:@"%d:%d", hour, minute];
+    NSString *month = [@([dd month]) IntegerFommatToString];
+    NSString *day = [@([dd day]) IntegerFommatToString];
+    NSString *hour = [@([dd hour]) IntegerFommatToString];
+    NSString *minute = [@([dd minute]) IntegerFommatToString];
+    self.monthLabel.text = [NSString stringWithFormat:@"%@%@", month, @"月"];
+    self.dayLabel.text = [NSString stringWithFormat:@"%@%@", day, @"日"];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@:%@", hour, minute];
     [self layoutIfNeeded];
 }
 

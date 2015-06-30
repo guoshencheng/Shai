@@ -62,6 +62,7 @@
 		2E00A1FD1B427EB000A4AB3F /* StatusCollectionViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1FC1B427EB000A4AB3F /* StatusCollectionViewDatasource.m */; };
 		2E00A2011B427FC300A4AB3F /* StatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2001B427FC300A4AB3F /* StatusTool.m */; };
 		2E00A2041B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */; };
+		2E00A2081B42977F00A4AB3F /* NSNumber+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2071B42977F00A4AB3F /* NSNumber+Utility.m */; };
 		CB741897115545C7E9F5E780 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D56AD2AE65D895EE146132D8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +173,8 @@
 		2E00A2001B427FC300A4AB3F /* StatusTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTool.m; sourceTree = "<group>"; };
 		2E00A2021B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+UICollectionViewDelegate.h"; sourceTree = "<group>"; };
 		2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+UICollectionViewDelegate.m"; sourceTree = "<group>"; };
+		2E00A2061B42977F00A4AB3F /* NSNumber+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Utility.h"; sourceTree = "<group>"; };
+		2E00A2071B42977F00A4AB3F /* NSNumber+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Utility.m"; sourceTree = "<group>"; };
 		38BFDD2328466ACA7B8B9E26 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		83E05D7600E53F86A0BCE3D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D56AD2AE65D895EE146132D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -443,6 +446,7 @@
 		2E00A1791B4225A100A4AB3F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2E00A2051B42975700A4AB3F /* Fundation */,
 				2E00A17A1B4225A100A4AB3F /* UIKit */,
 			);
 			path = Utilities;
@@ -580,6 +584,15 @@
 				2E00A2001B427FC300A4AB3F /* StatusTool.m */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		2E00A2051B42975700A4AB3F /* Fundation */ = {
+			isa = PBXGroup;
+			children = (
+				2E00A2061B42977F00A4AB3F /* NSNumber+Utility.h */,
+				2E00A2071B42977F00A4AB3F /* NSNumber+Utility.m */,
+			);
+			path = Fundation;
 			sourceTree = "<group>";
 		};
 		99883D0D0AB73A643A96709A /* Frameworks */ = {
@@ -751,6 +764,7 @@
 				2E00A1641B42256200A4AB3F /* DemoTwoViewController.m in Sources */,
 				2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */,
 				2E00A1CC1B4237FD00A4AB3F /* TimeView.m in Sources */,
+				2E00A2081B42977F00A4AB3F /* NSNumber+Utility.m in Sources */,
 				2E00A1871B4225A100A4AB3F /* UIImage+Utility.m in Sources */,
 				2E00A2011B427FC300A4AB3F /* StatusTool.m in Sources */,
 				2E00A1D41B42423D00A4AB3F /* HomeViewController+Configuration.m in Sources */,

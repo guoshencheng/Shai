@@ -10,9 +10,12 @@
 #import "UIScreen+Utility.h"
 #import "MagicalRecordWorkaround.h"
 #import "CoreData+MagicalRecord.h"
-#import "DemoOneViewController.h"
+#import "LoginViewController.h"
 #import "HomeViewController.h"
 #import <BaiduMapAPI/BMapKit.h>
+
+#define APPKEY @"1734340436"
+#define REDIRECT_URI @"https://api.weibo.com/oauth2/default.html"
 
 @interface AppDelegate ()
 
@@ -31,6 +34,8 @@
     if (!ret) {
         NSLog(@"manager start failed!");
     }
+    [WeiboSDK enableDebugMode:YES];
+    [WeiboSDK registerApp:APPKEY];
     
     [self iniWindow];
     return YES;
@@ -52,6 +57,32 @@
     
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WeiboSDK handleOpenURL:url delegate:self];
+}
+
+#pragma mark - WBHttpRequestDelegate
+
+- (void)request:(WBHttpRequest *)request didFinishLoadingWithDataResult:(NSData *)data {
+    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    NSString *nickName = [result objectForKey:@"name"];
+    NSString *avatar = [result objectForKey:@"profile_image_url"];
+    NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"weiboAccessToken"];
+    NSLog(@"nickName:%@ avatar:%@ accessToken:%@", nickName, avatar, accessToken);
+}
+
+#pragma mark - WeiboSDKDelegate
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response {
+    WBAuthorizeResponse *authorizeResponse = (WBAuthorizeResponse *)response;
+    [WBHttpRequest requestWithAccessToken:authorizeResponse.accessToken url:@"https://api.weibo.com/2/users/show.json" httpMethod:@"GET" params:@{@"uid":authorizeResponse.userID} delegate:self withTag:nil];
+    [[NSUserDefaults standardUserDefaults] setObject:authorizeResponse.accessToken forKey:@"weiboAccessToken"];
+}
+
 #pragma mark - PrivateMethod
 
 - (void)initCoreDataWithMagicalRecord {
@@ -66,7 +97,7 @@
 
 - (void)iniWindow {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen bounds]];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[HomeViewController create]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[LoginViewController create]];
     navigationController.navigationBarHidden = YES;
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];

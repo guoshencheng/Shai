@@ -12,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12月" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIY-p5-fme" userLabel="monthLabel">
-                    <rect key="frame" x="90" y="3" width="24" height="15"/>
+                    <rect key="frame" x="90" y="3" width="23.5" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="pO4-jx-NbG"/>
                     </constraints>
@@ -21,7 +21,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20日" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPY-PQ-hjU" userLabel="dayLabel">
-                    <rect key="frame" x="91" y="18" width="24" height="15"/>
+                    <rect key="frame" x="91" y="18" width="23.5" height="15"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="vYI-Gi-Q2M"/>
                     </constraints>
@@ -29,13 +29,13 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:43" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vx-ex-6Zq" userLabel="timeLabel">
-                    <rect key="frame" x="40" y="7" width="50" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:43" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vx-ex-6Zq" userLabel="timeLabel">
+                    <rect key="frame" x="27.5" y="7" width="57.5" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="VAe-Hr-Llk"/>
                         <constraint firstAttribute="height" constant="21" id="gIa-fc-QPG"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -54,7 +54,7 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="XIY-p5-fme" secondAttribute="bottom" constant="17" id="1aa-qe-RVe"/>
                 <constraint firstItem="XIY-p5-fme" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="6Dx-tZ-oU3"/>
-                <constraint firstAttribute="trailing" secondItem="9Vx-ex-6Zq" secondAttribute="trailing" constant="30" id="BXq-Jy-HoS"/>
+                <constraint firstAttribute="trailing" secondItem="9Vx-ex-6Zq" secondAttribute="trailing" constant="35" id="BXq-Jy-HoS"/>
                 <constraint firstAttribute="trailing" secondItem="vas-mg-c0D" secondAttribute="trailing" constant="8" id="Fz9-9h-eAx"/>
                 <constraint firstItem="YPY-PQ-hjU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="91" id="Lzo-NJ-9By"/>
                 <constraint firstItem="XIY-p5-fme" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="90" id="YpS-nM-p3c"/>

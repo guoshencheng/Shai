@@ -63,6 +63,10 @@
 		2E00A2011B427FC300A4AB3F /* StatusTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2001B427FC300A4AB3F /* StatusTool.m */; };
 		2E00A2041B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */; };
 		2E00A2081B42977F00A4AB3F /* NSNumber+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2071B42977F00A4AB3F /* NSNumber+Utility.m */; };
+		2E00A20C1B429A9A00A4AB3F /* LabelTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A20B1B429A9A00A4AB3F /* LabelTabView.m */; };
+		2E00A20E1B429AB100A4AB3F /* LabelTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A20D1B429AB100A4AB3F /* LabelTabView.xib */; };
+		2E231D921B42E4DF00D38562 /* LabelTabViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E231D901B42E4DF00D38562 /* LabelTabViewCell.m */; };
+		2E231D931B42E4DF00D38562 /* LabelTabViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E231D911B42E4DF00D38562 /* LabelTabViewCell.xib */; };
 		CB741897115545C7E9F5E780 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D56AD2AE65D895EE146132D8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -175,6 +179,12 @@
 		2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+UICollectionViewDelegate.m"; sourceTree = "<group>"; };
 		2E00A2061B42977F00A4AB3F /* NSNumber+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Utility.h"; sourceTree = "<group>"; };
 		2E00A2071B42977F00A4AB3F /* NSNumber+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Utility.m"; sourceTree = "<group>"; };
+		2E00A20A1B429A9A00A4AB3F /* LabelTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelTabView.h; sourceTree = "<group>"; };
+		2E00A20B1B429A9A00A4AB3F /* LabelTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelTabView.m; sourceTree = "<group>"; };
+		2E00A20D1B429AB100A4AB3F /* LabelTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelTabView.xib; sourceTree = "<group>"; };
+		2E231D8F1B42E4DF00D38562 /* LabelTabViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelTabViewCell.h; sourceTree = "<group>"; };
+		2E231D901B42E4DF00D38562 /* LabelTabViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelTabViewCell.m; sourceTree = "<group>"; };
+		2E231D911B42E4DF00D38562 /* LabelTabViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelTabViewCell.xib; sourceTree = "<group>"; };
 		38BFDD2328466ACA7B8B9E26 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		83E05D7600E53F86A0BCE3D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D56AD2AE65D895EE146132D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -497,6 +507,7 @@
 		2E00A1BA1B42300100A4AB3F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2E00A2091B429A6C00A4AB3F /* LabelTabView */,
 				2E00A1C91B4237E300A4AB3F /* TimeView */,
 			);
 			path = Components;
@@ -505,6 +516,7 @@
 		2E00A1BC1B42300100A4AB3F /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2E231D8E1B42E47E00D38562 /* LabelTabViewCell */,
 				2E00A1F31B42749A00A4AB3F /* StatusCollectionViewCell */,
 			);
 			path = "Custom Cells";
@@ -593,6 +605,26 @@
 				2E00A2071B42977F00A4AB3F /* NSNumber+Utility.m */,
 			);
 			path = Fundation;
+			sourceTree = "<group>";
+		};
+		2E00A2091B429A6C00A4AB3F /* LabelTabView */ = {
+			isa = PBXGroup;
+			children = (
+				2E00A20A1B429A9A00A4AB3F /* LabelTabView.h */,
+				2E00A20D1B429AB100A4AB3F /* LabelTabView.xib */,
+				2E00A20B1B429A9A00A4AB3F /* LabelTabView.m */,
+			);
+			path = LabelTabView;
+			sourceTree = "<group>";
+		};
+		2E231D8E1B42E47E00D38562 /* LabelTabViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E231D8F1B42E4DF00D38562 /* LabelTabViewCell.h */,
+				2E231D901B42E4DF00D38562 /* LabelTabViewCell.m */,
+				2E231D911B42E4DF00D38562 /* LabelTabViewCell.xib */,
+			);
+			path = LabelTabViewCell;
 			sourceTree = "<group>";
 		};
 		99883D0D0AB73A643A96709A /* Frameworks */ = {
@@ -699,9 +731,11 @@
 				2E00A1CE1B42380E00A4AB3F /* TimeView.xib in Resources */,
 				2E00A1651B42256200A4AB3F /* DemoTwoViewController.xib in Resources */,
 				2E00A11E1B421D4000A4AB3F /* Images.xcassets in Resources */,
+				2E00A20E1B429AB100A4AB3F /* LabelTabView.xib in Resources */,
 				2E00A13C1B42229F00A4AB3F /* Default-667h@2x.png in Resources */,
 				2E00A1F81B4274B100A4AB3F /* StatusCollectionViewCell.xib in Resources */,
 				2E00A1A01B42293700A4AB3F /* mapapi.bundle in Resources */,
+				2E231D931B42E4DF00D38562 /* LabelTabViewCell.xib in Resources */,
 				2E00A1631B42256200A4AB3F /* DemoOneViewController.xib in Resources */,
 				2E00A13E1B42229F00A4AB3F /* Default@2x.png in Resources */,
 				2E00A1411B42247400A4AB3F /* localizable.strings in Resources */,
@@ -789,7 +823,9 @@
 				2E00A1621B42256200A4AB3F /* DemoOneViewController.m in Sources */,
 				2E00A1891B4225A100A4AB3F /* UITextField+Utility.m in Sources */,
 				2E00A1751B42256D00A4AB3F /* UIView+CommonSuperview.m in Sources */,
+				2E00A20C1B429A9A00A4AB3F /* LabelTabView.m in Sources */,
 				2E00A1101B421D4000A4AB3F /* main.m in Sources */,
+				2E231D921B42E4DF00D38562 /* LabelTabViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

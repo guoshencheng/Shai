@@ -13,11 +13,12 @@
 
 - (void)awakeFromNib {
     self.avatarImageView.layer.cornerRadius = 5;
+    self.containerViewTopConstraint.constant = self.avatarImageView.frame.size.width;
+    [self layoutIfNeeded];
 }
 
-- (void)updateWithIfCurrent:(BOOL)isCurrent andAvatarUrl:(NSString *)avatarUrl {
+- (void)updateWithAvatarUrl:(NSString *)avatarUrl {
     [self.avatarImageView setImageWithURL:[NSURL URLWithString:avatarUrl]];
-    self.containerViewTopConstraint.constant = isCurrent ? 5 : self.avatarImageView.frame.size.width;
     [self layoutIfNeeded];
 }
 

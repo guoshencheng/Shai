@@ -7,8 +7,14 @@
 //
 
 #import "AutoLayoutView.h"
+#import "AvatarLabelTabDatasource.h"
 
-@interface LabelTabView : AutoLayoutView
+@interface LabelTabView : AutoLayoutView <UICollectionViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
+@property (strong, nonatomic) AvatarLabelTabDatasource *avatarLabelTabDatasource;
+
+- (void)updateWithDataSource:(AvatarLabelTabDatasource *)datasource;
+- (void)updateWithCurrentIndex:(NSInteger)currentIndex;
 
 @end

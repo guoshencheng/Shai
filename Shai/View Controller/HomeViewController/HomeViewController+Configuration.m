@@ -8,6 +8,7 @@
 
 #import "HomeViewController+Configuration.h"
 #import "StatusCollectionViewCell.h"
+#import "AvatarLabelTabDatasource.h"
 
 @implementation HomeViewController (Configuration)
 
@@ -15,9 +16,23 @@
 - (void)configureViews {
     [self configureTimeView];
     [self configureStatausCollectionView];
+    [self configureAvatarLabelView];
 }
 
 #pragma mark - PrivateMethod
+
+- (void)configureAvatarLabelView {
+    self.labelTabView = [LabelTabView create];
+    [self.containerView addSubview:self.labelTabView];
+    [self.labelTabView setRightSpace:0];
+    [self.labelTabView setLeftSpace:0];
+    [self.labelTabView setBottomSpace:0];
+    [self.labelTabView setHeightConstant:58];
+    AvatarLabelTabDatasource *dataSource = [AvatarLabelTabDatasource new];
+    dataSource.currentAvatarIndex = -1;
+    [dataSource setAvatarUrlsFromStatus:[self getTestStatus]];
+    [self.labelTabView updateWithDataSource:dataSource];
+}
 
 - (void)configureStatausCollectionView {
     self.statusCollectionView.delegate = self;

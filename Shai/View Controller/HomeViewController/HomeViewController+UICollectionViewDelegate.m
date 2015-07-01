@@ -8,6 +8,7 @@
 
 #import "HomeViewController+UICollectionViewDelegate.h"
 #import "StatusTool.h"
+#import "LabelTabViewCell+Animation.h"
 
 @implementation HomeViewController (UICollectionViewDelegate)
 
@@ -15,6 +16,7 @@
     NSLog(@"%d",[self caculateCurrentPageWithOffset:scrollView.contentOffset.x]);
     StatusTool *statusTool = [self.statusCollectionViewDatasource.status objectAtIndex:[self caculateCurrentPageWithOffset:scrollView.contentOffset.x]];
     [self.timeView updateWithDate:statusTool.sendDate];
+    [self.labelTabView updateWithCurrentIndex:[self caculateCurrentPageWithOffset:scrollView.contentOffset.x]];
 }
 
 #pragma mark - PrivateMethod

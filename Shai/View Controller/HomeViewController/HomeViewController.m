@@ -28,4 +28,8 @@
     [self configureViews];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self.labelTabView updateWithCurrentIndex:0];
+}
+
 @end

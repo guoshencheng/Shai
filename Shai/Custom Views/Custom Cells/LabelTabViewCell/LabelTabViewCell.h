@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#define LABEL_TAB_VIEW_CELL @"LabelTabViewCell"
 
 @interface LabelTabViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewTopConstraint;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
+
+- (void)updateWithAvatarUrl:(NSString *)avatarUrl;
 
 @end

@@ -31,6 +31,18 @@
     return  request;
 }
 
++ (instancetype)requestForLoginWithUserId:(NSString *)userId nickName:(NSString *)nickName avatarUrl:(NSString *)avatarUrl {
+    ApiRequest *request = [self defaultRequest];
+    request.method = ApiRequestMethodPost;
+    request.url = @"http://10.0.2.217:8888/api/login";
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+    [dic setValue:userId forKey:@"userId"];
+    [dic setValue:nickName forKey:@"nickName"];
+    [dic setValue:avatarUrl forKey:@"avatarUrl"];
+    request.parameters = [ApiRequest createPostParametersWithParameters:dic];
+    return request;
+}
+
 #pragma mark - Private Methods
 
 + (instancetype)defaultRequest {
@@ -38,6 +50,10 @@
     request.method = ApiRequestMethodGet;
     request.parameters = [NSMutableDictionary dictionary];
     return request;
+}
+
++ (NSDictionary *)createPostParametersWithParameters:(NSDictionary *)parameters {
+    return @{@"version":@"1.0", @"encoding":@"UTF-8", @"entity":@{@"model":parameters}};
 }
 
 @end

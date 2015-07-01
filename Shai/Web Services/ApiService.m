@@ -8,6 +8,7 @@
 
 #import "ApiService.h"
 #import "AFNetworking.h"
+#import "NSDictionary+Utility.h"
 
 @interface ApiService () {
     NSOperationQueue *_requestQueue;
@@ -37,6 +38,7 @@
 - (void)sendJSONRequest:(ApiRequest *)apiRequest {
     [self sendRequest:apiRequest withCompletion:^(id dictionary, NSError *error) {
         ApiResponse *apiResponse = [ApiResponse responseWithDictionary:dictionary error:error];
+        NSLog(@"%@",dictionary);
         if ([self.delegate respondsToSelector:@selector(service:didFinishRequest:withResponse:)]) {
             [self.delegate service:self didFinishRequest:apiRequest withResponse:apiResponse];
         }
@@ -78,12 +80,18 @@
     AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
     manger.requestSerializer = [AFHTTPRequestSerializer serializer];
     manger.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manger POST:apiRequest.url parameters:apiRequest.parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:apiRequest.url]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/x-www-form-urlencoded"
+   forHTTPHeaderField:@"Contsetent-Type"];
+    [request setHTTPBody:[[apiRequest.parameters toJsonString] dataUsingEncoding:NSUTF8StringEncoding]];
+    NSOperation *operation = [manger HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
         responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         completion(responseObject, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         completion(nil, error);
     }];
+    [manger.operationQueue addOperation:operation];
 }
 
 - (NSString *)getUrlFactoryWithApiService:(ApiRequest *)apiRequest {

@@ -20,6 +20,7 @@ typedef enum {
 @property (nonatomic, assign) ApiRequestMethod method;
 
 + (instancetype)requestForTestServer;
++ (instancetype)requestForLoginWithUserId:(NSString *)userId nickName:(NSString *)nickName avatarUrl:(NSString *)avatarUrl;
 - (NSString *)assembleParameters;
 
 @end

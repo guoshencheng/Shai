@@ -71,7 +71,9 @@
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     NSString *nickName = [result objectForKey:@"name"];
     NSString *avatar = [result objectForKey:@"profile_image_url"];
+    NSString *userId = [result objectForKey:@"id"];
     NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"weiboAccessToken"];
+    [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForLoginWithUserId:userId nickName:nickName avatarUrl:avatar]];
     NSLog(@"nickName:%@ avatar:%@ accessToken:%@", nickName, avatar, accessToken);
 }
 
@@ -97,7 +99,7 @@
 
 - (void)iniWindow {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen bounds]];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[HomeViewController create]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[LoginViewController create]];
     navigationController.navigationBarHidden = YES;
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];

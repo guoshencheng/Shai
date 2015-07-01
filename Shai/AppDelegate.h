@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "WeiboSDK.h"
+#import "ApiService.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, WeiboSDKDelegate, WBHttpRequestDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, WeiboSDKDelegate, WBHttpRequestDelegate, ApiServiceDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

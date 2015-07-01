@@ -10,4 +10,6 @@
 
 @interface NSDictionary (Utility)
 
+- (NSString *)toJsonString;
+
 @end

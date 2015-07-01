@@ -7,8 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "ApiService.h"
 
-@interface LoginViewController : BaseViewController
+@interface LoginViewController : BaseViewController <ApiServiceDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *weiboButton;
 

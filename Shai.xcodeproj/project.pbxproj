@@ -70,6 +70,7 @@
 		2EA633401B43728E005C459F /* AvatarLabelTabDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6333F1B43728E005C459F /* AvatarLabelTabDatasource.m */; };
 		2EA633431B4376B3005C459F /* LabelTabView+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633421B4376B3005C459F /* LabelTabView+Configuration.m */; };
 		2EA633461B437F91005C459F /* LabelTabViewCell+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633451B437F91005C459F /* LabelTabViewCell+Animation.m */; };
+		2EA633491B43D814005C459F /* NSDictionary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633481B43D814005C459F /* NSDictionary+Utility.m */; };
 		CB741897115545C7E9F5E780 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D56AD2AE65D895EE146132D8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -194,6 +195,8 @@
 		2EA633421B4376B3005C459F /* LabelTabView+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LabelTabView+Configuration.m"; sourceTree = "<group>"; };
 		2EA633441B437F91005C459F /* LabelTabViewCell+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LabelTabViewCell+Animation.h"; sourceTree = "<group>"; };
 		2EA633451B437F91005C459F /* LabelTabViewCell+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LabelTabViewCell+Animation.m"; sourceTree = "<group>"; };
+		2EA633471B43D814005C459F /* NSDictionary+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utility.h"; sourceTree = "<group>"; };
+		2EA633481B43D814005C459F /* NSDictionary+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utility.m"; sourceTree = "<group>"; };
 		38BFDD2328466ACA7B8B9E26 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		83E05D7600E53F86A0BCE3D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D56AD2AE65D895EE146132D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -613,6 +616,8 @@
 			children = (
 				2E00A2061B42977F00A4AB3F /* NSNumber+Utility.h */,
 				2E00A2071B42977F00A4AB3F /* NSNumber+Utility.m */,
+				2EA633471B43D814005C459F /* NSDictionary+Utility.h */,
+				2EA633481B43D814005C459F /* NSDictionary+Utility.m */,
 			);
 			path = Fundation;
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				2E00A1131B421D4000A4AB3F /* AppDelegate.mm in Sources */,
 				2E00A1861B4225A100A4AB3F /* UIColor+Utility.m in Sources */,
 				2E00A14C1B42255800A4AB3F /* ApiRequest.m in Sources */,
+				2EA633491B43D814005C459F /* NSDictionary+Utility.m in Sources */,
 				2E00A1F71B4274B100A4AB3F /* StatusCollectionViewCell.m in Sources */,
 				2E00A1FD1B427EB000A4AB3F /* StatusCollectionViewDatasource.m in Sources */,
 				2E00A1DD1B4258C500A4AB3F /* LoginViewController+Configuration.m in Sources */,

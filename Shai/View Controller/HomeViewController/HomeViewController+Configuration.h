@@ -11,5 +11,6 @@
 @interface HomeViewController (Configuration)
 
 - (void)configureViews;
+- (void)reloadData;
 
 @end

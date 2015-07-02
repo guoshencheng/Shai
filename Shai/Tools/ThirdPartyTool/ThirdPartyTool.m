@@ -51,6 +51,9 @@
 }
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response {
+    if (response.statusCode == WeiboSDKResponseStatusCodeUserCancel) {
+        return;
+    }
     WBAuthorizeResponse *authorizeResponse = (WBAuthorizeResponse *)response;
     [WBHttpRequest requestWithAccessToken:authorizeResponse.accessToken url:WEIBO_USER_INFO_URL httpMethod:@"GET" params:@{@"uid":authorizeResponse.userID} delegate:self withTag:nil];
     [[NSUserDefaults standardUserDefaults] setObject:authorizeResponse.accessToken forKey:@"weiboAccessToken"];

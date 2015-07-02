@@ -11,7 +11,7 @@
 #import "ThirdPartyTool.h"
 #import "ApiService.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,ApiServiceDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -14,9 +14,6 @@
 #import "HomeViewController.h"
 #import <BaiduMapAPI/BMapKit.h>
 
-#define APPKEY @"1734340436"
-#define REDIRECT_URI @"https://api.weibo.com/oauth2/default.html"
-
 @interface AppDelegate ()
 
 @end

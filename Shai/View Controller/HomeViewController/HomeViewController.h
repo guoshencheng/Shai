@@ -10,8 +10,9 @@
 #import "TimeView.h"
 #import "LabelTabView.h"
 #import "StatusCollectionViewDatasource.h"
+#import "ApiService.h"
 
-@interface HomeViewController : BaseViewController <UICollectionViewDelegate>
+@interface HomeViewController : BaseViewController <UICollectionViewDelegate, ApiServiceDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *leftButtonImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *statusCollectionView;
 
+@property (strong, nonatomic) NSArray *status;
 @property (strong, nonatomic) TimeView *timeView;
 @property (strong, nonatomic) LabelTabView *labelTabView;
 @property (strong, nonatomic) StatusCollectionViewDatasource *statusCollectionViewDatasource;

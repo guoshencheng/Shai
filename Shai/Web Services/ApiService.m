@@ -37,7 +37,12 @@
 
 - (void)sendJSONRequest:(ApiRequest *)apiRequest {
     [self sendRequest:apiRequest withCompletion:^(id dictionary, NSError *error) {
-        ApiResponse *apiResponse = [ApiResponse responseWithDictionary:dictionary error:error];
+        ApiResponse *apiResponse;
+        if (apiRequest.method == ApiRequestMethodGet) {
+            apiResponse = [ApiResponse getResponseWithDictionary:dictionary error:error];
+        } else {
+            apiResponse = [ApiResponse postResponseWithDictionary:dictionary error:error];
+        }
         NSLog(@"%@",dictionary);
         if ([self.delegate respondsToSelector:@selector(service:didFinishRequest:withResponse:)]) {
             [self.delegate service:self didFinishRequest:apiRequest withResponse:apiResponse];
@@ -68,7 +73,7 @@
     AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
     manger.requestSerializer = [AFHTTPRequestSerializer serializer];
     manger.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manger GET:[self getUrlFactoryWithApiService:apiRequest] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manger GET:apiRequest.url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         completion(responseObject, nil);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -93,10 +98,6 @@
         completion(nil, error);
     }];
     [manger.operationQueue addOperation:operation];
-}
-
-- (NSString *)getUrlFactoryWithApiService:(ApiRequest *)apiRequest {
-    return [NSString stringWithFormat:@"%@/%@",apiRequest.url, [apiRequest.parameters objectForKey:@"id"]];
 }
 
 @end

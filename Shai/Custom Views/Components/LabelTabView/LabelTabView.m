@@ -23,24 +23,33 @@
 - (void)updateWithDataSource:(AvatarLabelTabDatasource *)datasource {
     self.avatarLabelTabDatasource = datasource;
     self.labelCollectionView.dataSource = self.avatarLabelTabDatasource;
+    [self.labelCollectionView reloadData];
 }
 
 - (void)updateWithCurrentIndex:(NSInteger)currentIndex {
     if (currentIndex != self.avatarLabelTabDatasource.currentAvatarIndex) {
-        if (currentIndex != -1) {
+        if (self.avatarLabelTabDatasource.currentAvatarIndex != -1) {
             LabelTabViewCell *lastCell = (LabelTabViewCell *)[self.labelCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.avatarLabelTabDatasource.currentAvatarIndex inSection:0]];
             [lastCell animationSlideDown];
+            self.currentIndex = currentIndex;
+            [self.labelCollectionView setContentOffset:CGPointMake(currentIndex * 50, 0) animated:YES];
+        } else {
+            LabelTabViewCell *currentCell = (LabelTabViewCell *)[self.labelCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:0]];
+            [currentCell animationSlideUp];
         }
-        LabelTabViewCell *currentCell = (LabelTabViewCell *)[self.labelCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:currentIndex inSection:0]];
-        [currentCell animationSlideUp];
-        self.avatarLabelTabDatasource.currentAvatarIndex = currentIndex;
     }
+    self.avatarLabelTabDatasource.currentAvatarIndex = currentIndex;
 }
 
 #pragma mark - LiveCycle
 
 - (void)awakeFromNib {
     [self configureViews];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    LabelTabViewCell *currentCell = (LabelTabViewCell *)[self.labelCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:0]];
+    [currentCell animationSlideUp];
 }
 
 @end

@@ -20,9 +20,13 @@ typedef enum {
 @property (nonatomic, assign) ApiRequestMethod method;
 @property (nonatomic, strong) UIImage *image;
 
-+ (instancetype)requestForUploadPictureWithUserId:(NSString *)userId andImage:(UIImage *)image;
 + (instancetype)requestForTestServer;
++ (instancetype)requestForGetAllUserAllStatus;
++ (instancetype)requestForGetAllStatusWithId:(NSInteger)userId;
+
++ (instancetype)requestForUploadPictureWithUserId:(NSString *)userId andImage:(UIImage *)image;
 + (instancetype)requestForLoginWithUserId:(NSString *)userId nickName:(NSString *)nickName avatarUrl:(NSString *)avatarUrl;
++ (instancetype)requestForCreateStatusWith:(NSString *)details location:(NSString *)location imageUrls:(NSArray *)imageUrls;
 - (NSString *)assembleParameters;
 
 @end

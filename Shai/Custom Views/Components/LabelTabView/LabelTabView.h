@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UICollectionView *labelCollectionView;
 @property (strong, nonatomic) AvatarLabelTabDatasource *avatarLabelTabDatasource;
+@property (assign, nonatomic) NSInteger currentIndex;
 
 - (void)updateWithDataSource:(AvatarLabelTabDatasource *)datasource;
 - (void)updateWithCurrentIndex:(NSInteger)currentIndex;

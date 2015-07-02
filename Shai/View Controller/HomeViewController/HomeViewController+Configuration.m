@@ -13,13 +13,36 @@
 @implementation HomeViewController (Configuration)
 
 #pragma mark -  PublicMethod
+
+- (void)reloadData {
+    AvatarLabelTabDatasource *dataSource = [AvatarLabelTabDatasource new];
+    dataSource.currentAvatarIndex = -1;
+    [dataSource setAvatarUrlsFromStatus:self.status];
+    [self.labelTabView updateWithDataSource:dataSource];
+    [self.labelTabView updateWithCurrentIndex:0];
+    self.statusCollectionViewDatasource.status = self.status;
+    self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;
+    [self.statusCollectionView reloadData];
+    if (self.status.count > 0) {
+        StatusTool *firstStatusTool = [[self getTestStatus] objectAtIndex:0];
+        [self.timeView updateWithDate:firstStatusTool.sendDate];
+    }
+    [self.view layoutIfNeeded];
+}
+
 - (void)configureViews {
+    [self initSatatus];
     [self configureTimeView];
     [self configureStatausCollectionView];
     [self configureAvatarLabelView];
 }
 
 #pragma mark - PrivateMethod
+
+- (void)initSatatus {
+    self.status = [[NSArray alloc] init];
+    [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForGetAllUserAllStatus]];
+}
 
 - (void)configureAvatarLabelView {
     self.labelTabView = [LabelTabView create];
@@ -30,14 +53,14 @@
     [self.labelTabView setHeightConstant:58];
     AvatarLabelTabDatasource *dataSource = [AvatarLabelTabDatasource new];
     dataSource.currentAvatarIndex = -1;
-    [dataSource setAvatarUrlsFromStatus:[self getTestStatus]];
+    [dataSource setAvatarUrlsFromStatus:self.status];
     [self.labelTabView updateWithDataSource:dataSource];
 }
 
 - (void)configureStatausCollectionView {
     self.statusCollectionView.delegate = self;
     self.statusCollectionViewDatasource = [StatusCollectionViewDatasource new];
-    self.statusCollectionViewDatasource.status = [self getTestStatus];
+    self.statusCollectionViewDatasource.status = self.status;
     [self.statusCollectionView registerNib:[UINib nibWithNibName:@"StatusCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:STATUS_COLLECTION_VIEW_CELL];
     self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;
 }
@@ -49,8 +72,10 @@
     [self.timeView setTopSpace:5];
     [self.timeView setBottomSpace:5];
     [self.timeView setWidthConstant:120];
-    StatusTool *firstStatusTool = [[self getTestStatus] objectAtIndex:0];
-    [self.timeView updateWithDate:firstStatusTool.sendDate];
+    if (self.status.count > 0) {
+        StatusTool *firstStatusTool = [[self getTestStatus] objectAtIndex:0];
+        [self.timeView updateWithDate:firstStatusTool.sendDate];
+    }
     [self.view layoutIfNeeded];
 }
 
@@ -61,11 +86,11 @@
 }
 
 - (StatusTool *)getTestStatusTool {
-    return [StatusTool createWithNickName:@"贰浅不可能这么贰吧" selfDecription:@"微博登入按钮主要是简化用户进行 SSO 登陆，实际上，它内部是对 SSO 认证流程进行了简单的封装。微博登出按钮主要提供一键登出的功能，帮助开发者主动取消用户的授权。" location:@"地点:浙江杭州" posterImage:[self getTestPosterImageUrls] sendDate:[NSDate date] avatarUrl:@"http://cdnq.duitang.com/uploads/item/201408/28/20140828224832_JdeHi.jpeg"];
+    return [StatusTool createWithNickName:@"贰浅不可能这么贰吧" selfDecription:@"微博登入按钮主要是简化用户进行 SSO 登陆，实际上，它内部是对 SSO 认证流程进行了简单的封装。微博登出按钮主要提供一键登出的功能，帮助开发者主动取消用户的授权。" location:@"地点:浙江杭州" posterImage:[self getTestPosterImageUrls] sendDate:[NSDate date] avatarUrl:@"http://cdnq.duitang.com/uploads/item/201408/28/20140828224832_JdeHi.jpeg" userId:1 statusId:1];
 }
 
 - (NSArray *)getTestPosterImageUrls {
-    return @[@"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg", @"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg", @"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
+    return @[@"http://10.0.2.217:8888/img/1231435733278526-7388697968418470513", @"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg", @"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
 }
 
 @end

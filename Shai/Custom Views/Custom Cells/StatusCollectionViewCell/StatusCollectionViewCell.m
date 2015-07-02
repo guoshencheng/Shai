@@ -17,7 +17,7 @@
 }
 
 - (void)updateWithStatusTool:(StatusTool *)statusTool {
-    [self updateWithNickName:statusTool.nickName posterImageUrl:[statusTool.posterImageUrls objectAtIndex:0] description:statusTool.selfDescription location:statusTool.location];
+    [self updateWithNickName:statusTool.nickName posterImageUrl:[statusTool.posterImageUrls objectAtIndex:0] description:statusTool.details location:statusTool.location];
 }
 
 - (void)updateWithNickName:(NSString *)nickName posterImageUrl:(NSString *)posterImageUrl description:(NSString *)description location:(NSString *)location {

@@ -71,6 +71,7 @@
 		2E9F9DAC1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DAB1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m */; };
 		2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DAE1B44DAE60056312C /* LoginViewController+LogicalFlow.m */; };
 		2E9F9DB31B44EACA0056312C /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DB11B44EACA0056312C /* Base64.m */; };
+		2E9F9DB61B4517560056312C /* HomeViewController+LogicalFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DB51B4517560056312C /* HomeViewController+LogicalFlow.m */; };
 		2EA633401B43728E005C459F /* AvatarLabelTabDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6333F1B43728E005C459F /* AvatarLabelTabDatasource.m */; };
 		2EA633431B4376B3005C459F /* LabelTabView+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633421B4376B3005C459F /* LabelTabView+Configuration.m */; };
 		2EA633461B437F91005C459F /* LabelTabViewCell+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633451B437F91005C459F /* LabelTabViewCell+Animation.m */; };
@@ -202,6 +203,8 @@
 		2E9F9DAE1B44DAE60056312C /* LoginViewController+LogicalFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LoginViewController+LogicalFlow.m"; sourceTree = "<group>"; };
 		2E9F9DB11B44EACA0056312C /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		2E9F9DB21B44EACA0056312C /* NSBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBase64.h; sourceTree = "<group>"; };
+		2E9F9DB41B4517560056312C /* HomeViewController+LogicalFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+LogicalFlow.h"; sourceTree = "<group>"; };
+		2E9F9DB51B4517560056312C /* HomeViewController+LogicalFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+LogicalFlow.m"; sourceTree = "<group>"; };
 		2EA6333E1B43728E005C459F /* AvatarLabelTabDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarLabelTabDatasource.h; sourceTree = "<group>"; };
 		2EA6333F1B43728E005C459F /* AvatarLabelTabDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarLabelTabDatasource.m; sourceTree = "<group>"; };
 		2EA633411B4376B3005C459F /* LabelTabView+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LabelTabView+Configuration.h"; sourceTree = "<group>"; };
@@ -527,6 +530,8 @@
 				2E00A1D31B42423D00A4AB3F /* HomeViewController+Configuration.m */,
 				2E00A2021B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.h */,
 				2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */,
+				2E9F9DB41B4517560056312C /* HomeViewController+LogicalFlow.h */,
+				2E9F9DB51B4517560056312C /* HomeViewController+LogicalFlow.m */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -886,6 +891,7 @@
 				2E00A1F71B4274B100A4AB3F /* StatusCollectionViewCell.m in Sources */,
 				2E00A1FD1B427EB000A4AB3F /* StatusCollectionViewDatasource.m in Sources */,
 				2E00A1DD1B4258C500A4AB3F /* LoginViewController+Configuration.m in Sources */,
+				2E9F9DB61B4517560056312C /* HomeViewController+LogicalFlow.m in Sources */,
 				2E00A1741B42256D00A4AB3F /* AutoLayoutView.m in Sources */,
 				2E00A2041B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m in Sources */,
 				2E00A19D1B42276400A4AB3F /* MagicalRecordWorkaround.m in Sources */,

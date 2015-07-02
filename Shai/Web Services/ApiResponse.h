@@ -12,11 +12,14 @@
 
 @property (nonatomic, assign) CGFloat version;
 @property (nonatomic, strong) NSString *encoding;
-@property (nonatomic, strong) NSDictionary *entity;
+@property (nonatomic, strong) NSArray *entities;
 @property (nonatomic, strong) NSNumber *errorCode;
 @property (nonatomic, strong) NSString *errorMsg;
 
-+ (instancetype)responseWithDictionary:(NSDictionary *)dictionary error:(NSError *)error;
++ (instancetype)getResponseWithDictionary:(NSDictionary *)dictionary error:(NSError *)error;
++ (instancetype)postResponseWithDictionary:(NSDictionary *)dictionary error:(NSError *)error;
+- (NSArray *)statusToolsObjectFactory;
+
 - (BOOL)success;
 
 @end

@@ -12,9 +12,11 @@
 
 @property (nonatomic, assign) CGFloat version;
 @property (nonatomic, strong) NSString *encoding;
-@property (nonatomic, strong) NSString *sendUrl;
-@property (nonatomic, strong) NSArray *entities;
+@property (nonatomic, strong) NSDictionary *entity;
+@property (nonatomic, strong) NSNumber *errorCode;
+@property (nonatomic, strong) NSString *errorMsg;
 
 + (instancetype)responseWithDictionary:(NSDictionary *)dictionary error:(NSError *)error;
+- (BOOL)success;
 
 @end

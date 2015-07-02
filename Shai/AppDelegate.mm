@@ -23,6 +23,7 @@
 
 @implementation AppDelegate {
     BMKMapManager *_mapManager;
+    ThirdPartyTool *_thirdPartyTool;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -34,9 +35,8 @@
     if (!ret) {
         NSLog(@"manager start failed!");
     }
-    [WeiboSDK enableDebugMode:YES];
-    [WeiboSDK registerApp:APPKEY];
-    
+    _thirdPartyTool = [ThirdPartyTool sharedInstance];
+    [_thirdPartyTool registerApp];
     [self iniWindow];
     return YES;
 }
@@ -58,31 +58,11 @@
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-    return [WeiboSDK handleOpenURL:url delegate:self];
+    return [_thirdPartyTool handleOpenURL:url];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    return [WeiboSDK handleOpenURL:url delegate:self];
-}
-
-#pragma mark - WBHttpRequestDelegate
-
-- (void)request:(WBHttpRequest *)request didFinishLoadingWithDataResult:(NSData *)data {
-    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-    NSString *nickName = [result objectForKey:@"name"];
-    NSString *avatar = [result objectForKey:@"profile_image_url"];
-    NSString *userId = [result objectForKey:@"id"];
-    NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"weiboAccessToken"];
-    [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForLoginWithUserId:userId nickName:nickName avatarUrl:avatar]];
-    NSLog(@"nickName:%@ avatar:%@ accessToken:%@", nickName, avatar, accessToken);
-}
-
-#pragma mark - WeiboSDKDelegate
-
-- (void)didReceiveWeiboResponse:(WBBaseResponse *)response {
-    WBAuthorizeResponse *authorizeResponse = (WBAuthorizeResponse *)response;
-    [WBHttpRequest requestWithAccessToken:authorizeResponse.accessToken url:@"https://api.weibo.com/2/users/show.json" httpMethod:@"GET" params:@{@"uid":authorizeResponse.userID} delegate:self withTag:nil];
-    [[NSUserDefaults standardUserDefaults] setObject:authorizeResponse.accessToken forKey:@"weiboAccessToken"];
+    return [_thirdPartyTool handleOpenURL:url];
 }
 
 #pragma mark - PrivateMethod

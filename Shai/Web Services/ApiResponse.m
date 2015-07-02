@@ -17,11 +17,15 @@
     } else  {
         response.version = [[dictionary objectForKey:@"version"] floatValue];
         response.encoding = [dictionary objectForKey:@"encoding"];
-        NSDictionary *feed = [dictionary objectForKey:@"feed"];
-        response.sendUrl = [feed objectForKey:@"id"];
-        response.entities = [feed objectForKey:@"entities"];
+        response.errorCode = [dictionary objectForKey:@"errorCode"];
+        response.errorMsg = [dictionary objectForKey:@"errorMsg"];
+        response.entity = [dictionary objectForKey:@"entity"];
     }
     return response;
+}
+
+- (BOOL)success {
+    return [self.errorCode integerValue] == 200;
 }
 
 @end

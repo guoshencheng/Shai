@@ -6,11 +6,12 @@
 //  Copyright (c) 2015 guoshencheng. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef enum {
     ApiRequestMethodGet,
     ApiRequestMethodPost,
+    ApiRequestMethodPostImage,
 } ApiRequestMethod;
 
 @interface ApiRequest : NSObject
@@ -18,6 +19,7 @@ typedef enum {
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSDictionary *parameters;
 @property (nonatomic, assign) ApiRequestMethod method;
+@property (nonatomic, strong) UIImage *image;
 
 + (instancetype)requestForTestServer;
 + (instancetype)requestForLoginWithUserId:(NSString *)userId nickName:(NSString *)nickName avatarUrl:(NSString *)avatarUrl;

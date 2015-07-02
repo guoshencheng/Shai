@@ -43,6 +43,17 @@
     return request;
 }
 
++ (instancetype)requestForUploadPicture:(NSString *)userId andImage:(UIImage *)image {
+    ApiRequest *request = [self defaultRequest];
+    request.method = ApiRequestMethodPostImage;
+    request.url = @"";
+    request.image = image;
+    NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+    [dic setValue:userId forKey:userId];
+    request.parameters = [ApiRequest createPostParametersWithParameters:dic];
+    return request;
+}
+
 #pragma mark - Private Methods
 
 + (instancetype)defaultRequest {

@@ -28,11 +28,8 @@
 #pragma mark - Action
 
 - (IBAction)didClickWeiBoLoginButton:(id)sender {
-    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-    request.redirectURI = @"https://api.weibo.com/oauth2/default.html";
-    request.scope = @"all";
-    request.userInfo = @{};
-    [WeiboSDK sendRequest:request];
+    [ThirdPartyTool sharedInstance].delegate = self;
+    [ThirdPartyTool getWeiBoUserInfo];
 }
 
 

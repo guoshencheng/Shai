@@ -8,8 +8,9 @@
 
 #import "BaseViewController.h"
 #import "ApiService.h"
+#import "ThirdPartyTool.h"
 
-@interface LoginViewController : BaseViewController <ApiServiceDelegate>
+@interface LoginViewController : BaseViewController <ApiServiceDelegate, ThirdPartyToolDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *weiboButton;
 

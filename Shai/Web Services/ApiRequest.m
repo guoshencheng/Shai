@@ -7,6 +7,7 @@
 //
 
 #import "ApiRequest.h"
+#import "NSBase64.h"
 
 @implementation ApiRequest
 
@@ -43,13 +44,15 @@
     return request;
 }
 
-+ (instancetype)requestForUploadPicture:(NSString *)userId andImage:(UIImage *)image {
++ (instancetype)requestForUploadPictureWithUserId:(NSString *)userId andImage:(UIImage *)image {
     ApiRequest *request = [self defaultRequest];
-    request.method = ApiRequestMethodPostImage;
-    request.url = @"";
-    request.image = image;
+    request.method = ApiRequestMethodPost;
+    request.url = @"http://10.0.2.217:8888/api/images";
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-    [dic setValue:userId forKey:userId];
+    [dic setValue:userId forKey:@"userId"];
+    [dic setValue:@((NSInteger)[[NSDate date] timeIntervalSince1970]) forKey:@"referTime"];
+    NSString *imageString =  [UIImagePNGRepresentation(image) base64EncodedString];
+    [dic setValue:imageString forKey:@"imageString"];
     request.parameters = [ApiRequest createPostParametersWithParameters:dic];
     return request;
 }

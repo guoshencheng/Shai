@@ -58,8 +58,6 @@
         case ApiRequestMethodPost:
             [self sendPostRequest:apiRequest withCompletion:completion];
             break;
-        case ApiRequestMethodPostImage:
-            [self sendPostImageRequest:apiRequest withCompletion:completion];
         default:
             break;
     }
@@ -78,22 +76,6 @@
     }];
 }
 
-- (void)sendPostImageRequest:(ApiRequest *)apiRequest withCompletion:(void (^)(id data, NSError *error))completion {
-    AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
-    manger.requestSerializer = [AFHTTPRequestSerializer serializer];
-    manger.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manger POST:apiRequest.url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFormData:UIImagePNGRepresentation(apiRequest.image) name:@"image"];
-        [formData appendPartWithFormData:[[apiRequest.parameters toJsonString] dataUsingEncoding:NSUTF8StringEncoding] name:@"parameters"];
-    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-        completion(responseObject, nil);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        completion(nil, error);
-    }];
-    
-}
-
 - (void)sendPostRequest:(ApiRequest *)apiRequest withCompletion:(void (^)(id data, NSError *error))completion {
     AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
     manger.requestSerializer = [AFHTTPRequestSerializer serializer];
@@ -102,6 +84,7 @@
     [request setHTTPMethod:@"POST"];
     [request setValue:@"application/x-www-form-urlencoded"
    forHTTPHeaderField:@"Contsetent-Type"];
+    NSLog(@"%@", [apiRequest.parameters toJsonString]);
     [request setHTTPBody:[[apiRequest.parameters toJsonString] dataUsingEncoding:NSUTF8StringEncoding]];
     NSOperation *operation = [manger HTTPRequestOperationWithRequest:request success:^(AFHTTPRequestOperation *operation, id responseObject) {
         responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];

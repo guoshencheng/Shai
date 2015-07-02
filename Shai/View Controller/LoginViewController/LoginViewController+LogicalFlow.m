@@ -14,7 +14,7 @@
 #pragma mark - ApiserverDelegate
 
 - (void)service:(ApiService *)service didFinishRequest:(ApiRequest *)request withResponse:(ApiResponse *)response {
-    if ([response success]) {
+    if ([response success] && request.method == ApiRequestMethodPost) {
         [self.navigationController pushViewController:[HomeViewController create] animated:YES];
     }
 }

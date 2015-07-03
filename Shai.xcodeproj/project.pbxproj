@@ -15,7 +15,7 @@
 		2E00A13C1B42229F00A4AB3F /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A1381B42229F00A4AB3F /* Default-667h@2x.png */; };
 		2E00A13D1B42229F00A4AB3F /* Default-736h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A1391B42229F00A4AB3F /* Default-736h@2x.png */; };
 		2E00A13E1B42229F00A4AB3F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A13A1B42229F00A4AB3F /* Default@2x.png */; };
-		2E00A1411B42247400A4AB3F /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A1431B42247400A4AB3F /* localizable.strings */; };
+		2E00A1411B42247400A4AB3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A1431B42247400A4AB3F /* Localizable.strings */; };
 		2E00A14C1B42255800A4AB3F /* ApiRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1471B42255800A4AB3F /* ApiRequest.m */; };
 		2E00A14D1B42255800A4AB3F /* ApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1491B42255800A4AB3F /* ApiResponse.m */; };
 		2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A14B1B42255800A4AB3F /* ApiService.m */; };
@@ -67,11 +67,16 @@
 		2E00A20E1B429AB100A4AB3F /* LabelTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A20D1B429AB100A4AB3F /* LabelTabView.xib */; };
 		2E231D921B42E4DF00D38562 /* LabelTabViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E231D901B42E4DF00D38562 /* LabelTabViewCell.m */; };
 		2E231D931B42E4DF00D38562 /* LabelTabViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E231D911B42E4DF00D38562 /* LabelTabViewCell.xib */; };
+		2E4ADEEA1B4573D300138918 /* ProfilePanel+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4ADEE91B4573D300138918 /* ProfilePanel+Configuration.m */; };
+		2E4ADEED1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4ADEEC1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m */; };
+		2E4ADEF01B4580C600138918 /* HomeViewController+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4ADEEF1B4580C600138918 /* HomeViewController+Animation.m */; };
 		2E9F9DA51B44C8D00056312C /* ThirdPartyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DA41B44C8D00056312C /* ThirdPartyTool.m */; };
 		2E9F9DAC1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DAB1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m */; };
 		2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DAE1B44DAE60056312C /* LoginViewController+LogicalFlow.m */; };
 		2E9F9DB31B44EACA0056312C /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DB11B44EACA0056312C /* Base64.m */; };
 		2E9F9DB61B4517560056312C /* HomeViewController+LogicalFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DB51B4517560056312C /* HomeViewController+LogicalFlow.m */; };
+		2E9F9DBA1B453FE80056312C /* ProfilePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DB91B453FE80056312C /* ProfilePanel.m */; };
+		2E9F9DBC1B453FFA0056312C /* ProfilePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F9DBB1B453FFA0056312C /* ProfilePanel.xib */; };
 		2EA633401B43728E005C459F /* AvatarLabelTabDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6333F1B43728E005C459F /* AvatarLabelTabDatasource.m */; };
 		2EA633431B4376B3005C459F /* LabelTabView+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633421B4376B3005C459F /* LabelTabView+Configuration.m */; };
 		2EA633461B437F91005C459F /* LabelTabViewCell+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633451B437F91005C459F /* LabelTabViewCell+Animation.m */; };
@@ -103,8 +108,8 @@
 		2E00A1381B42229F00A4AB3F /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		2E00A1391B42229F00A4AB3F /* Default-736h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@2x.png"; sourceTree = "<group>"; };
 		2E00A13A1B42229F00A4AB3F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		2E00A1421B42247400A4AB3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/localizable.strings; sourceTree = "<group>"; };
-		2E00A1441B42248500A4AB3F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/localizable.strings"; sourceTree = "<group>"; };
+		2E00A1421B42247400A4AB3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2E00A1441B42248500A4AB3F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2E00A1461B42255800A4AB3F /* ApiRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiRequest.h; sourceTree = "<group>"; };
 		2E00A1471B42255800A4AB3F /* ApiRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiRequest.m; sourceTree = "<group>"; };
 		2E00A1481B42255800A4AB3F /* ApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiResponse.h; sourceTree = "<group>"; };
@@ -194,6 +199,12 @@
 		2E231D8F1B42E4DF00D38562 /* LabelTabViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelTabViewCell.h; sourceTree = "<group>"; };
 		2E231D901B42E4DF00D38562 /* LabelTabViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelTabViewCell.m; sourceTree = "<group>"; };
 		2E231D911B42E4DF00D38562 /* LabelTabViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelTabViewCell.xib; sourceTree = "<group>"; };
+		2E4ADEE81B4573D300138918 /* ProfilePanel+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ProfilePanel+Configuration.h"; sourceTree = "<group>"; };
+		2E4ADEE91B4573D300138918 /* ProfilePanel+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ProfilePanel+Configuration.m"; sourceTree = "<group>"; };
+		2E4ADEEB1B45804400138918 /* HomeViewController+ProfilePanelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+ProfilePanelDelegate.h"; sourceTree = "<group>"; };
+		2E4ADEEC1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+ProfilePanelDelegate.m"; sourceTree = "<group>"; };
+		2E4ADEEE1B4580C600138918 /* HomeViewController+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+Animation.h"; sourceTree = "<group>"; };
+		2E4ADEEF1B4580C600138918 /* HomeViewController+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+Animation.m"; sourceTree = "<group>"; };
 		2E9F9DA31B44C8D00056312C /* ThirdPartyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyTool.h; sourceTree = "<group>"; };
 		2E9F9DA41B44C8D00056312C /* ThirdPartyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPartyTool.m; sourceTree = "<group>"; };
 		2E9F9DA61B44CBA90056312C /* ThirdPartyUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartyUrl.h; sourceTree = "<group>"; };
@@ -205,6 +216,9 @@
 		2E9F9DB21B44EACA0056312C /* NSBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSBase64.h; sourceTree = "<group>"; };
 		2E9F9DB41B4517560056312C /* HomeViewController+LogicalFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+LogicalFlow.h"; sourceTree = "<group>"; };
 		2E9F9DB51B4517560056312C /* HomeViewController+LogicalFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+LogicalFlow.m"; sourceTree = "<group>"; };
+		2E9F9DB81B453FE80056312C /* ProfilePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePanel.h; sourceTree = "<group>"; };
+		2E9F9DB91B453FE80056312C /* ProfilePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePanel.m; sourceTree = "<group>"; };
+		2E9F9DBB1B453FFA0056312C /* ProfilePanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePanel.xib; sourceTree = "<group>"; };
 		2EA6333E1B43728E005C459F /* AvatarLabelTabDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarLabelTabDatasource.h; sourceTree = "<group>"; };
 		2EA6333F1B43728E005C459F /* AvatarLabelTabDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarLabelTabDatasource.m; sourceTree = "<group>"; };
 		2EA633411B4376B3005C459F /* LabelTabView+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LabelTabView+Configuration.h"; sourceTree = "<group>"; };
@@ -301,7 +315,7 @@
 				2E00A1361B42229F00A4AB3F /* LaunchImages */,
 				2E00A10E1B421D4000A4AB3F /* Info.plist */,
 				2E00A10F1B421D4000A4AB3F /* main.m */,
-				2E00A1431B42247400A4AB3F /* localizable.strings */,
+				2E00A1431B42247400A4AB3F /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -528,10 +542,14 @@
 				2E00A1C61B42328700A4AB3F /* HomeViewController.xib */,
 				2E00A1D21B42423D00A4AB3F /* HomeViewController+Configuration.h */,
 				2E00A1D31B42423D00A4AB3F /* HomeViewController+Configuration.m */,
-				2E00A2021B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.h */,
-				2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */,
 				2E9F9DB41B4517560056312C /* HomeViewController+LogicalFlow.h */,
 				2E9F9DB51B4517560056312C /* HomeViewController+LogicalFlow.m */,
+				2E4ADEEE1B4580C600138918 /* HomeViewController+Animation.h */,
+				2E4ADEEF1B4580C600138918 /* HomeViewController+Animation.m */,
+				2E00A2021B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.h */,
+				2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */,
+				2E4ADEEB1B45804400138918 /* HomeViewController+ProfilePanelDelegate.h */,
+				2E4ADEEC1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -539,6 +557,7 @@
 		2E00A1BA1B42300100A4AB3F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2E9F9DB71B453FC60056312C /* ProfilePanel */,
 				2E00A2091B429A6C00A4AB3F /* LabelTabView */,
 				2E00A1C91B4237E300A4AB3F /* TimeView */,
 			);
@@ -689,6 +708,18 @@
 			path = Base64;
 			sourceTree = "<group>";
 		};
+		2E9F9DB71B453FC60056312C /* ProfilePanel */ = {
+			isa = PBXGroup;
+			children = (
+				2E9F9DB81B453FE80056312C /* ProfilePanel.h */,
+				2E9F9DBB1B453FFA0056312C /* ProfilePanel.xib */,
+				2E9F9DB91B453FE80056312C /* ProfilePanel.m */,
+				2E4ADEE81B4573D300138918 /* ProfilePanel+Configuration.h */,
+				2E4ADEE91B4573D300138918 /* ProfilePanel+Configuration.m */,
+			);
+			path = ProfilePanel;
+			sourceTree = "<group>";
+		};
 		2EA6333D1B437273005C459F /* AvatarLabelTabDatasource */ = {
 			isa = PBXGroup;
 			children = (
@@ -805,11 +836,12 @@
 				2E00A20E1B429AB100A4AB3F /* LabelTabView.xib in Resources */,
 				2E00A13C1B42229F00A4AB3F /* Default-667h@2x.png in Resources */,
 				2E00A1F81B4274B100A4AB3F /* StatusCollectionViewCell.xib in Resources */,
+				2E9F9DBC1B453FFA0056312C /* ProfilePanel.xib in Resources */,
 				2E00A1A01B42293700A4AB3F /* mapapi.bundle in Resources */,
 				2E231D931B42E4DF00D38562 /* LabelTabViewCell.xib in Resources */,
 				2E00A1631B42256200A4AB3F /* DemoOneViewController.xib in Resources */,
 				2E00A13E1B42229F00A4AB3F /* Default@2x.png in Resources */,
-				2E00A1411B42247400A4AB3F /* localizable.strings in Resources */,
+				2E00A1411B42247400A4AB3F /* Localizable.strings in Resources */,
 				2E00A1DA1B4253E000A4AB3F /* LoginViewController.xib in Resources */,
 				2E00A1EB1B425CDC00A4AB3F /* WeiboSDK.bundle in Resources */,
 				2E00A1C81B42328700A4AB3F /* HomeViewController.xib in Resources */,
@@ -870,6 +902,7 @@
 				2E00A1641B42256200A4AB3F /* DemoTwoViewController.m in Sources */,
 				2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */,
 				2E00A1CC1B4237FD00A4AB3F /* TimeView.m in Sources */,
+				2E4ADEEA1B4573D300138918 /* ProfilePanel+Configuration.m in Sources */,
 				2E00A2081B42977F00A4AB3F /* NSNumber+Utility.m in Sources */,
 				2E00A1871B4225A100A4AB3F /* UIImage+Utility.m in Sources */,
 				2E00A2011B427FC300A4AB3F /* StatusTool.m in Sources */,
@@ -878,6 +911,7 @@
 				2E00A1611B42256200A4AB3F /* UINavigationController+CustomNavigationController.m in Sources */,
 				2E00A1C71B42328700A4AB3F /* HomeViewController.m in Sources */,
 				2E00A1D91B4253E000A4AB3F /* LoginViewController.m in Sources */,
+				2E4ADEF01B4580C600138918 /* HomeViewController+Animation.m in Sources */,
 				2E00A1881B4225A100A4AB3F /* UIScreen+Utility.m in Sources */,
 				2E00A19E1B42276400A4AB3F /* Shai.xcdatamodeld in Sources */,
 				2E00A14D1B42255800A4AB3F /* ApiResponse.m in Sources */,
@@ -887,9 +921,11 @@
 				2E00A1861B4225A100A4AB3F /* UIColor+Utility.m in Sources */,
 				2E00A14C1B42255800A4AB3F /* ApiRequest.m in Sources */,
 				2E9F9DA51B44C8D00056312C /* ThirdPartyTool.m in Sources */,
+				2E9F9DBA1B453FE80056312C /* ProfilePanel.m in Sources */,
 				2EA633491B43D814005C459F /* NSDictionary+Utility.m in Sources */,
 				2E00A1F71B4274B100A4AB3F /* StatusCollectionViewCell.m in Sources */,
 				2E00A1FD1B427EB000A4AB3F /* StatusCollectionViewDatasource.m in Sources */,
+				2E4ADEED1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m in Sources */,
 				2E00A1DD1B4258C500A4AB3F /* LoginViewController+Configuration.m in Sources */,
 				2E9F9DB61B4517560056312C /* HomeViewController+LogicalFlow.m in Sources */,
 				2E00A1741B42256D00A4AB3F /* AutoLayoutView.m in Sources */,
@@ -928,13 +964,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2E00A1431B42247400A4AB3F /* localizable.strings */ = {
+		2E00A1431B42247400A4AB3F /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2E00A1421B42247400A4AB3F /* en */,
 				2E00A1441B42248500A4AB3F /* zh-Hans */,
 			);
-			name = localizable.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

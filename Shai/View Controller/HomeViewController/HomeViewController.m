@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "HomeViewController+Configuration.h"
+#import "HomeViewController+Animation.h"
 
 @interface HomeViewController ()
 
@@ -28,7 +29,12 @@
     [self configureViews];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (IBAction)didClickLeftButton:(id)sender {
+    if (self.containerViewLeftConstraint.constant == 0) {
+        [self animationSlideToShowProfilePanel];
+    } else {
+        [self animationSlideToHideProfilePanel];
+    }
 }
 
 @end

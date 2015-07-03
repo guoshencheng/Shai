@@ -9,6 +9,7 @@
 #import "HomeViewController+Configuration.h"
 #import "StatusCollectionViewCell.h"
 #import "AvatarLabelTabDatasource.h"
+#import "UIScreen+Utility.h"
 
 @implementation HomeViewController (Configuration)
 
@@ -35,6 +36,8 @@
     [self configureTimeView];
     [self configureStatausCollectionView];
     [self configureAvatarLabelView];
+    [self configureProfilePanel];
+    [self.view layoutIfNeeded];
 }
 
 #pragma mark - PrivateMethod
@@ -42,6 +45,7 @@
 - (void)initSatatus {
     self.status = [[NSArray alloc] init];
     [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForGetAllUserAllStatus]];
+    //self.status = [self getTestStatus];
 }
 
 - (void)configureAvatarLabelView {
@@ -65,6 +69,15 @@
     self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;
 }
 
+- (void)configureProfilePanel {
+    self.profilePanel = [ProfilePanel create];
+    [self.view insertSubview:self.profilePanel belowSubview:self.containerView];
+    [self.profilePanel setRightSpace:-(([UIScreen screenWidth] - 30 ) / 2 + 30)];
+    [self.profilePanel setLeftSpace: - ([UIScreen screenWidth] - 30 ) / 2];
+    [self.profilePanel setTopSpace:0];
+    [self.profilePanel setBottomSpace:0];
+}
+
 - (void)configureTimeView {
     self.timeView = [TimeView create];
     [self.topView addSubview:self.timeView];
@@ -76,7 +89,6 @@
         StatusTool *firstStatusTool = [[self getTestStatus] objectAtIndex:0];
         [self.timeView updateWithDate:firstStatusTool.sendDate];
     }
-    [self.view layoutIfNeeded];
 }
 
 #pragma mark - TESTDATA 
@@ -90,7 +102,7 @@
 }
 
 - (NSArray *)getTestPosterImageUrls {
-    return @[@"http://10.0.2.217:8888/img/1231435733278526-7388697968418470513", @"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg", @"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
+    return @[@"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg", @"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg", @"http://pic25.nipic.com/20121209/9252150_194258033000_2.jpg"];
 }
 
 @end

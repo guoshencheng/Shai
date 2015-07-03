@@ -1,0 +1,11 @@
+/* 
+  localizable.strings
+  Shai
+
+  Created by guoshencheng on 6/30/15.
+  Copyright (c) 2015 guoshencheng. All rights reserved.
+*/
+"author" = "郭申成";
+"profilepanel-mystatus" = "我的状态";
+"profilepanel-allstatus" = "所有状态";
+"profilepanel-createstatus" = "发状态";

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProfilePanel">
+            <rect key="frame" x="0.0" y="0.0" width="290" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uVv-K8-XcV">
+                    <rect key="frame" x="50" y="57" width="190" height="190"/>
+                    <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="uVv-K8-XcV" secondAttribute="height" multiplier="1:1" id="6Gk-L9-RPs"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guoshencheng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bww-uy-DSK" userLabel="nickName">
+                    <rect key="frame" x="0.0" y="277" width="290" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="BZB-rY-InB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPD-vM-jtM" userLabel="myStatus">
+                    <rect key="frame" x="0.0" y="327" width="290" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="9e9-Ih-rrn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所有状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oc8-D7-jsi" userLabel="allStatus">
+                    <rect key="frame" x="0.0" y="377" width="290" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5SA-me-fv4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzb-WG-gXb" userLabel="createStatus">
+                    <rect key="frame" x="0.0" y="427" width="290" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0r1-sH-dlc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="uVv-K8-XcV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="57" id="3jL-z1-8Bq"/>
+                <constraint firstAttribute="trailing" secondItem="mzb-WG-gXb" secondAttribute="trailing" id="5pX-ej-EcT"/>
+                <constraint firstItem="uVv-K8-XcV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="9eE-FG-7rM"/>
+                <constraint firstAttribute="trailing" secondItem="Oc8-D7-jsi" secondAttribute="trailing" id="A3u-SX-EC8"/>
+                <constraint firstItem="mzb-WG-gXb" firstAttribute="top" secondItem="Oc8-D7-jsi" secondAttribute="bottom" id="Afl-Hk-jOK"/>
+                <constraint firstAttribute="trailing" secondItem="oPD-vM-jtM" secondAttribute="trailing" id="D9H-T6-7ky"/>
+                <constraint firstItem="mzb-WG-gXb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JH8-Hh-A6Q"/>
+                <constraint firstAttribute="trailing" secondItem="uVv-K8-XcV" secondAttribute="trailing" constant="50" id="LPI-hy-0iK"/>
+                <constraint firstItem="bww-uy-DSK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="T3z-py-2Zt"/>
+                <constraint firstItem="Oc8-D7-jsi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="VUK-2O-Xe5"/>
+                <constraint firstItem="oPD-vM-jtM" firstAttribute="top" secondItem="bww-uy-DSK" secondAttribute="bottom" constant="20" id="azH-c4-P3b"/>
+                <constraint firstAttribute="trailing" secondItem="bww-uy-DSK" secondAttribute="trailing" id="bF1-xt-tdb"/>
+                <constraint firstItem="oPD-vM-jtM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sjk-BZ-gTN"/>
+                <constraint firstItem="Oc8-D7-jsi" firstAttribute="top" secondItem="oPD-vM-jtM" secondAttribute="bottom" id="uHf-j8-Xa4"/>
+                <constraint firstItem="bww-uy-DSK" firstAttribute="top" secondItem="uVv-K8-XcV" secondAttribute="bottom" constant="30" id="zMN-Ch-PhU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="allStatusLabel" destination="Oc8-D7-jsi" id="7Hs-kd-qU0"/>
+                <outlet property="avatarImageView" destination="uVv-K8-XcV" id="f5c-eX-9Xd"/>
+                <outlet property="createStatusLabel" destination="mzb-WG-gXb" id="L02-R9-Ktg"/>
+                <outlet property="myStatusLabel" destination="oPD-vM-jtM" id="n3T-LH-ogF"/>
+                <outlet property="nickNameLabel" destination="bww-uy-DSK" id="gNJ-xj-xcb"/>
+            </connections>
+            <point key="canvasLocation" x="730" y="432"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

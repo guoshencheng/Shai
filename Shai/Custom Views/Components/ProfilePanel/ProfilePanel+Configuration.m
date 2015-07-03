@@ -34,9 +34,9 @@
     UITapGestureRecognizer *myStatusTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(myStatusLabelTapAction:)];
     [self.myStatusLabel addGestureRecognizer:myStatusTapGesture];
     UITapGestureRecognizer *allStatusTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(allStatusLabelTapAction:)];
-    [self.myStatusLabel addGestureRecognizer:allStatusTapGesture];
+    [self.allStatusLabel addGestureRecognizer:allStatusTapGesture];
     UITapGestureRecognizer *createStatusTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(createStatusLabelTapAction:)];
-    [self.myStatusLabel addGestureRecognizer:createStatusTapGesture];
+    [self.createStatusLabel addGestureRecognizer:createStatusTapGesture];
 }
 
 - (void)configureImageView {

@@ -71,12 +71,12 @@
 
 - (void)configureProfilePanel {
     self.profilePanel = [ProfilePanel create];
-    self.profilePanel.delegate = self;
     [self.view insertSubview:self.profilePanel belowSubview:self.containerView];
     [self.profilePanel setRightSpace:-(([UIScreen screenWidth] - 30 ) / 2 + 30)];
     [self.profilePanel setLeftSpace: - ([UIScreen screenWidth] - 30 ) / 2];
     [self.profilePanel setTopSpace:0];
     [self.profilePanel setBottomSpace:0];
+    self.profilePanel.delegate = self;
 }
 
 - (void)configureTimeView {

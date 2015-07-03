@@ -7,11 +7,16 @@
 //
 
 #import "LoginViewController+ThirdPartyToolDelegate.h"
+#import "Owener+DataManager.h"
 
 @implementation LoginViewController (ThirdPartyToolDelegate)
 
-- (void)thirdPartyTool:(ThirdPartyTool *)thirdPartyTool didLoginWithUserId:(NSString *)userId avatarUrl:(NSString *)avatarUrl nickName:(NSString *)nickName {
-    [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForLoginWithUserId:userId nickName:nickName avatarUrl:avatarUrl]];
+- (void)thirdPartyTool:(ThirdPartyTool *)thirdPartyTool didLoginWithAvatarUrl:(NSString *)avatarUrl nickName:(NSString *)nickName {
+    thirdPartyTool.delegate = nil;
+    [Owener updateOwenInfomationWithAvatarUrl:avatarUrl nickName:nickName completion:^(BOOL success, NSError *error) {
+        Owener *owner = [Owener getOwenserInfomation];
+        [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForLoginWithUserId:[owner.userId stringValue] nickName:nickName avatarUrl:avatarUrl]];
+    }];
 }
 
 @end

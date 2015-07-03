@@ -12,6 +12,7 @@
 #import "CoreData+MagicalRecord.h"
 #import "LoginViewController.h"
 #import "HomeViewController.h"
+#import "Owener+DataManager.h"
 #import <BaiduMapAPI/BMapKit.h>
 
 @interface AppDelegate ()
@@ -73,14 +74,26 @@
     [MagicalRecordWorkaround setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Shai.sqlite"];
 }
 
-
 - (void)iniWindow {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen bounds]];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[LoginViewController create]];
-    navigationController.navigationBarHidden = YES;
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
-    
+    if ([Owener getOwenserInfomation]) {
+        Owener *owner = [Owener getOwenserInfomation];
+        [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForLoginWithUserId:[owner.userId stringValue] nickName:owner.nickName avatarUrl:owner.avatarUrl]];
+    } else {
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:[LoginViewController create]];
+        self.navigationController.navigationBarHidden = YES;
+        self.window.rootViewController = self.navigationController;
+        [self.window makeKeyAndVisible];
+    }
+}
+
+- (void)service:(ApiService *)service didFinishRequest:(ApiRequest *)request withResponse:(ApiResponse *)response {
+    if ([response success] && request.method == ApiRequestMethodPost) {
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:[HomeViewController create]];
+        self.navigationController.navigationBarHidden = YES;
+        self.window.rootViewController = self.navigationController;
+        [self.window makeKeyAndVisible];
+    }
 }
 
 @end

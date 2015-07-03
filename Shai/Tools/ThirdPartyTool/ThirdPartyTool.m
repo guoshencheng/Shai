@@ -7,6 +7,7 @@
 //
 
 #import "ThirdPartyTool.h"
+#import "Owener+DataManager.h"
 
 @implementation ThirdPartyTool
 
@@ -33,6 +34,9 @@
     return [WeiboSDK handleOpenURL:url delegate:self];
 }
 
+- (void)sendUserProfileRequestWithAccessToken:(NSString *)accessToken userid:(NSString *)userId {
+    [WBHttpRequest requestWithAccessToken:accessToken url:WEIBO_USER_INFO_URL httpMethod:@"GET" params:@{@"uid":userId} delegate:self withTag:nil];
+}
 
 #pragma mark - WeiBoPublicMethod
 
@@ -55,8 +59,8 @@
         return;
     }
     WBAuthorizeResponse *authorizeResponse = (WBAuthorizeResponse *)response;
-    [WBHttpRequest requestWithAccessToken:authorizeResponse.accessToken url:WEIBO_USER_INFO_URL httpMethod:@"GET" params:@{@"uid":authorizeResponse.userID} delegate:self withTag:nil];
-    [[NSUserDefaults standardUserDefaults] setObject:authorizeResponse.accessToken forKey:@"weiboAccessToken"];
+    [Owener saveOwenerInfomationWithAccessToken:authorizeResponse.accessToken userId:[authorizeResponse.userID integerValue] avatarUrl:nil nickName:nil completion:nil];
+    [self sendUserProfileRequestWithAccessToken:authorizeResponse.accessToken userid:authorizeResponse.userID];
 }
 
 #pragma mark - WBHttpRequestDelegate
@@ -66,9 +70,8 @@
         NSDictionary *result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         NSString *nickName = [result objectForKey:@"name"];
         NSString *avatar = [result objectForKey:@"profile_image_url"];
-        NSString *userId = [result objectForKey:@"id"];
-        if ([self.delegate respondsToSelector:@selector(thirdPartyTool:didLoginWithUserId:avatarUrl:nickName:)]) {
-            [self.delegate thirdPartyTool:self didLoginWithUserId:userId avatarUrl:avatar nickName:nickName];
+        if ([self.delegate respondsToSelector:@selector(thirdPartyTool:didLoginWithAvatarUrl:nickName:)]) {
+            [self.delegate thirdPartyTool:self didLoginWithAvatarUrl:avatar nickName:nickName];
         }
 
     }

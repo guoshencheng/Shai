@@ -77,6 +77,11 @@
 		2E9F9DB61B4517560056312C /* HomeViewController+LogicalFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DB51B4517560056312C /* HomeViewController+LogicalFlow.m */; };
 		2E9F9DBA1B453FE80056312C /* ProfilePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DB91B453FE80056312C /* ProfilePanel.m */; };
 		2E9F9DBC1B453FFA0056312C /* ProfilePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F9DBB1B453FFA0056312C /* ProfilePanel.xib */; };
+		2EA1904A1B4625F30036E2B6 /* ImageUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190491B4625F30036E2B6 /* ImageUrls.m */; };
+		2EA1904D1B4625FC0036E2B6 /* Owener.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1904C1B4625FC0036E2B6 /* Owener.m */; };
+		2EA190521B4626080036E2B6 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1904F1B4626080036E2B6 /* Status.m */; };
+		2EA190531B4626080036E2B6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190511B4626080036E2B6 /* User.m */; };
+		2EA190561B4626330036E2B6 /* Owener+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190551B4626330036E2B6 /* Owener+DataManager.m */; };
 		2EA633401B43728E005C459F /* AvatarLabelTabDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6333F1B43728E005C459F /* AvatarLabelTabDatasource.m */; };
 		2EA633431B4376B3005C459F /* LabelTabView+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633421B4376B3005C459F /* LabelTabView+Configuration.m */; };
 		2EA633461B437F91005C459F /* LabelTabViewCell+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633451B437F91005C459F /* LabelTabViewCell+Animation.m */; };
@@ -219,6 +224,16 @@
 		2E9F9DB81B453FE80056312C /* ProfilePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePanel.h; sourceTree = "<group>"; };
 		2E9F9DB91B453FE80056312C /* ProfilePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePanel.m; sourceTree = "<group>"; };
 		2E9F9DBB1B453FFA0056312C /* ProfilePanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePanel.xib; sourceTree = "<group>"; };
+		2EA190481B4625F30036E2B6 /* ImageUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUrls.h; sourceTree = "<group>"; };
+		2EA190491B4625F30036E2B6 /* ImageUrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUrls.m; sourceTree = "<group>"; };
+		2EA1904B1B4625FC0036E2B6 /* Owener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Owener.h; sourceTree = "<group>"; };
+		2EA1904C1B4625FC0036E2B6 /* Owener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Owener.m; sourceTree = "<group>"; };
+		2EA1904E1B4626080036E2B6 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		2EA1904F1B4626080036E2B6 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		2EA190501B4626080036E2B6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2EA190511B4626080036E2B6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2EA190541B4626330036E2B6 /* Owener+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Owener+DataManager.h"; sourceTree = "<group>"; };
+		2EA190551B4626330036E2B6 /* Owener+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Owener+DataManager.m"; sourceTree = "<group>"; };
 		2EA6333E1B43728E005C459F /* AvatarLabelTabDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarLabelTabDatasource.h; sourceTree = "<group>"; };
 		2EA6333F1B43728E005C459F /* AvatarLabelTabDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarLabelTabDatasource.m; sourceTree = "<group>"; };
 		2EA633411B4376B3005C459F /* LabelTabView+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LabelTabView+Configuration.h"; sourceTree = "<group>"; };
@@ -526,6 +541,15 @@
 		2E00A1981B42276300A4AB3F /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				2EA190481B4625F30036E2B6 /* ImageUrls.h */,
+				2EA190491B4625F30036E2B6 /* ImageUrls.m */,
+				2EA1904E1B4626080036E2B6 /* Status.h */,
+				2EA1904F1B4626080036E2B6 /* Status.m */,
+				2EA190501B4626080036E2B6 /* User.h */,
+				2EA190511B4626080036E2B6 /* User.m */,
+				2EA1904B1B4625FC0036E2B6 /* Owener.h */,
+				2EA1904C1B4625FC0036E2B6 /* Owener.m */,
+				2EA190471B4625F30036E2B6 /* Data Manager */,
 				2E00A1991B42276300A4AB3F /* MagicalRecordWorkaround.h */,
 				2E00A19A1B42276300A4AB3F /* MagicalRecordWorkaround.m */,
 				2E00A19B1B42276300A4AB3F /* Shai.xcdatamodeld */,
@@ -720,6 +744,15 @@
 			path = ProfilePanel;
 			sourceTree = "<group>";
 		};
+		2EA190471B4625F30036E2B6 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2EA190541B4626330036E2B6 /* Owener+DataManager.h */,
+				2EA190551B4626330036E2B6 /* Owener+DataManager.m */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
 		2EA6333D1B437273005C459F /* AvatarLabelTabDatasource */ = {
 			isa = PBXGroup;
 			children = (
@@ -900,9 +933,11 @@
 				2E00A1851B4225A100A4AB3F /* UIAlertView+Utility.m in Sources */,
 				2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */,
 				2E00A1641B42256200A4AB3F /* DemoTwoViewController.m in Sources */,
+				2EA1904A1B4625F30036E2B6 /* ImageUrls.m in Sources */,
 				2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */,
 				2E00A1CC1B4237FD00A4AB3F /* TimeView.m in Sources */,
 				2E4ADEEA1B4573D300138918 /* ProfilePanel+Configuration.m in Sources */,
+				2EA190521B4626080036E2B6 /* Status.m in Sources */,
 				2E00A2081B42977F00A4AB3F /* NSNumber+Utility.m in Sources */,
 				2E00A1871B4225A100A4AB3F /* UIImage+Utility.m in Sources */,
 				2E00A2011B427FC300A4AB3F /* StatusTool.m in Sources */,
@@ -913,6 +948,7 @@
 				2E00A1D91B4253E000A4AB3F /* LoginViewController.m in Sources */,
 				2E4ADEF01B4580C600138918 /* HomeViewController+Animation.m in Sources */,
 				2E00A1881B4225A100A4AB3F /* UIScreen+Utility.m in Sources */,
+				2EA1904D1B4625FC0036E2B6 /* Owener.m in Sources */,
 				2E00A19E1B42276400A4AB3F /* Shai.xcdatamodeld in Sources */,
 				2E00A14D1B42255800A4AB3F /* ApiResponse.m in Sources */,
 				2E9F9DB31B44EACA0056312C /* Base64.m in Sources */,
@@ -930,8 +966,10 @@
 				2E9F9DB61B4517560056312C /* HomeViewController+LogicalFlow.m in Sources */,
 				2E00A1741B42256D00A4AB3F /* AutoLayoutView.m in Sources */,
 				2E00A2041B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m in Sources */,
+				2EA190531B4626080036E2B6 /* User.m in Sources */,
 				2E00A19D1B42276400A4AB3F /* MagicalRecordWorkaround.m in Sources */,
 				2E00A1761B42256D00A4AB3F /* SlideMotion+Calculation.m in Sources */,
+				2EA190561B4626330036E2B6 /* Owener+DataManager.m in Sources */,
 				2EA633401B43728E005C459F /* AvatarLabelTabDatasource.m in Sources */,
 				2E00A1601B42256200A4AB3F /* BaseViewController.m in Sources */,
 				2E00A1621B42256200A4AB3F /* DemoOneViewController.m in Sources */,

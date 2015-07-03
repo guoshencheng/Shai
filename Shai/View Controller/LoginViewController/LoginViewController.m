@@ -32,5 +32,4 @@
     [ThirdPartyTool getWeiBoUserInfo];
 }
 
-
 @end

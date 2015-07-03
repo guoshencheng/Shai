@@ -7,6 +7,8 @@
 //
 
 #import "ProfilePanel+Configuration.h"
+#import "Owener+DataManager.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation ProfilePanel (Configuration)
 
@@ -20,7 +22,7 @@
 #pragma mark - PrivateMethod 
 
 - (void)configureTextAndCornerRadius {
-    self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.width / 2;
+    [self configureImageView];
     self.nickNameLabel.text = NSLocalizedString(@"author", nil);
     self.myStatusLabel.text = NSLocalizedString(@"profilepanel-mystatus", nil);
     self.allStatusLabel.text = NSLocalizedString(@"profilepanel-allstatus", nil);
@@ -34,6 +36,14 @@
     [self.myStatusLabel addGestureRecognizer:allStatusTapGesture];
     UITapGestureRecognizer *createStatusTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(createStatusLabelTapAction:)];
     [self.myStatusLabel addGestureRecognizer:createStatusTapGesture];
+}
+
+- (void)configureImageView {
+    self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.width / 2;
+    Owener *owner = [Owener getOwenserInfomation];
+    if (owner.avatarUrl) {
+        [self.avatarImageView setImageWithURL:[NSURL URLWithString:owner.avatarUrl]];
+    }
 }
 
 - (void)myStatusLabelTapAction:(UITapGestureRecognizer *)sender {

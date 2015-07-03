@@ -22,11 +22,12 @@
 - (void)enableDebugMode:(BOOL)enable;
 
 + (void)getWeiBoUserInfo;
+- (void)sendUserProfileRequestWithAccessToken:(NSString *)accessToken userid:(NSString *)userId;
 
 @end
 
 @protocol ThirdPartyToolDelegate <NSObject>
 @optional
-- (void)thirdPartyTool:(ThirdPartyTool *)thirdPartyTool didLoginWithUserId:(NSString *)userId avatarUrl:(NSString *)avatarUrl nickName:(NSString *)nickName;
+- (void)thirdPartyTool:(ThirdPartyTool *)thirdPartyTool didLoginWithAvatarUrl:(NSString *)avatarUrl nickName:(NSString *)nickName;
 
 @end

@@ -11,9 +11,10 @@
 #import "ThirdPartyTool.h"
 #import "ApiService.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, ApiServiceDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINavigationController *navigationController;
 
 @end
 

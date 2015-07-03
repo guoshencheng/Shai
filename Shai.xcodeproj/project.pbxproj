@@ -65,6 +65,13 @@
 		2E00A2081B42977F00A4AB3F /* NSNumber+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2071B42977F00A4AB3F /* NSNumber+Utility.m */; };
 		2E00A20C1B429A9A00A4AB3F /* LabelTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A20B1B429A9A00A4AB3F /* LabelTabView.m */; };
 		2E00A20E1B429AB100A4AB3F /* LabelTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A20D1B429AB100A4AB3F /* LabelTabView.xib */; };
+		2E22A3F91B46613700627DDE /* CreateStatusViewController+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E22A3F81B46613700627DDE /* CreateStatusViewController+Animation.m */; };
+		2E22A3FB1B466B1800627DDE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E22A3FA1B466B1800627DDE /* MobileCoreServices.framework */; };
+		2E22A4041B46764F00627DDE /* PictureImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E22A4021B46764F00627DDE /* PictureImageCollectionViewCell.m */; };
+		2E22A4051B46764F00627DDE /* PictureImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E22A4031B46764F00627DDE /* PictureImageCollectionViewCell.xib */; };
+		2E22A4091B467B2200627DDE /* PictureImageCollectionViewDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E22A4081B467B2200627DDE /* PictureImageCollectionViewDatasource.m */; };
+		2E22A40C1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E22A40B1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.m */; };
+		2E22A40F1B468A4500627DDE /* HomeViewController+CreateStatusViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E22A40E1B468A4500627DDE /* HomeViewController+CreateStatusViewControllerDelegate.m */; };
 		2E231D921B42E4DF00D38562 /* LabelTabViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E231D901B42E4DF00D38562 /* LabelTabViewCell.m */; };
 		2E231D931B42E4DF00D38562 /* LabelTabViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E231D911B42E4DF00D38562 /* LabelTabViewCell.xib */; };
 		2E4ADEEA1B4573D300138918 /* ProfilePanel+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4ADEE91B4573D300138918 /* ProfilePanel+Configuration.m */; };
@@ -82,6 +89,9 @@
 		2EA190521B4626080036E2B6 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1904F1B4626080036E2B6 /* Status.m */; };
 		2EA190531B4626080036E2B6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190511B4626080036E2B6 /* User.m */; };
 		2EA190561B4626330036E2B6 /* Owener+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190551B4626330036E2B6 /* Owener+DataManager.m */; };
+		2EA190621B4651900036E2B6 /* CreateStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190601B4651900036E2B6 /* CreateStatusViewController.m */; };
+		2EA190631B4651900036E2B6 /* CreateStatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA190611B4651900036E2B6 /* CreateStatusViewController.xib */; };
+		2EA190661B465B1E0036E2B6 /* CreateStatusViewController+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190651B465B1E0036E2B6 /* CreateStatusViewController+Configuration.m */; };
 		2EA633401B43728E005C459F /* AvatarLabelTabDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA6333F1B43728E005C459F /* AvatarLabelTabDatasource.m */; };
 		2EA633431B4376B3005C459F /* LabelTabView+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633421B4376B3005C459F /* LabelTabView+Configuration.m */; };
 		2EA633461B437F91005C459F /* LabelTabViewCell+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633451B437F91005C459F /* LabelTabViewCell+Animation.m */; };
@@ -201,6 +211,18 @@
 		2E00A20A1B429A9A00A4AB3F /* LabelTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelTabView.h; sourceTree = "<group>"; };
 		2E00A20B1B429A9A00A4AB3F /* LabelTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelTabView.m; sourceTree = "<group>"; };
 		2E00A20D1B429AB100A4AB3F /* LabelTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelTabView.xib; sourceTree = "<group>"; };
+		2E22A3F71B46613700627DDE /* CreateStatusViewController+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CreateStatusViewController+Animation.h"; sourceTree = "<group>"; };
+		2E22A3F81B46613700627DDE /* CreateStatusViewController+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CreateStatusViewController+Animation.m"; sourceTree = "<group>"; };
+		2E22A3FA1B466B1800627DDE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2E22A4011B46764F00627DDE /* PictureImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureImageCollectionViewCell.h; sourceTree = "<group>"; };
+		2E22A4021B46764F00627DDE /* PictureImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureImageCollectionViewCell.m; sourceTree = "<group>"; };
+		2E22A4031B46764F00627DDE /* PictureImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		2E22A4071B467B2200627DDE /* PictureImageCollectionViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureImageCollectionViewDatasource.h; sourceTree = "<group>"; };
+		2E22A4081B467B2200627DDE /* PictureImageCollectionViewDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureImageCollectionViewDatasource.m; sourceTree = "<group>"; };
+		2E22A40A1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CreateStatusViewController+LogicalFlow.h"; sourceTree = "<group>"; };
+		2E22A40B1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CreateStatusViewController+LogicalFlow.m"; sourceTree = "<group>"; };
+		2E22A40D1B468A4500627DDE /* HomeViewController+CreateStatusViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+CreateStatusViewControllerDelegate.h"; sourceTree = "<group>"; };
+		2E22A40E1B468A4500627DDE /* HomeViewController+CreateStatusViewControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+CreateStatusViewControllerDelegate.m"; sourceTree = "<group>"; };
 		2E231D8F1B42E4DF00D38562 /* LabelTabViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelTabViewCell.h; sourceTree = "<group>"; };
 		2E231D901B42E4DF00D38562 /* LabelTabViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelTabViewCell.m; sourceTree = "<group>"; };
 		2E231D911B42E4DF00D38562 /* LabelTabViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelTabViewCell.xib; sourceTree = "<group>"; };
@@ -234,6 +256,11 @@
 		2EA190511B4626080036E2B6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2EA190541B4626330036E2B6 /* Owener+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Owener+DataManager.h"; sourceTree = "<group>"; };
 		2EA190551B4626330036E2B6 /* Owener+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Owener+DataManager.m"; sourceTree = "<group>"; };
+		2EA1905F1B4651900036E2B6 /* CreateStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateStatusViewController.h; sourceTree = "<group>"; };
+		2EA190601B4651900036E2B6 /* CreateStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateStatusViewController.m; sourceTree = "<group>"; };
+		2EA190611B4651900036E2B6 /* CreateStatusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateStatusViewController.xib; sourceTree = "<group>"; };
+		2EA190641B465B1E0036E2B6 /* CreateStatusViewController+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CreateStatusViewController+Configuration.h"; sourceTree = "<group>"; };
+		2EA190651B465B1E0036E2B6 /* CreateStatusViewController+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CreateStatusViewController+Configuration.m"; sourceTree = "<group>"; };
 		2EA6333E1B43728E005C459F /* AvatarLabelTabDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarLabelTabDatasource.h; sourceTree = "<group>"; };
 		2EA6333F1B43728E005C459F /* AvatarLabelTabDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarLabelTabDatasource.m; sourceTree = "<group>"; };
 		2EA633411B4376B3005C459F /* LabelTabView+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LabelTabView+Configuration.h"; sourceTree = "<group>"; };
@@ -252,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E22A3FB1B466B1800627DDE /* MobileCoreServices.framework in Frameworks */,
 				2E00A1F11B425F2700A4AB3F /* CoreText.framework in Frameworks */,
 				2E00A1EF1B425F1900A4AB3F /* CoreTelephony.framework in Frameworks */,
 				2E00A1ED1B425F0300A4AB3F /* ImageIO.framework in Frameworks */,
@@ -380,6 +408,7 @@
 		2E00A14F1B42256200A4AB3F /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2EA1905E1B46517F0036E2B6 /* CreateStatusViewController */,
 				2E00A1D51B4253C200A4AB3F /* LoginViewController */,
 				2E00A1B81B422EFE00A4AB3F /* HomeViewController */,
 				2E00A1501B42256200A4AB3F /* Basic */,
@@ -574,6 +603,8 @@
 				2E00A2031B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m */,
 				2E4ADEEB1B45804400138918 /* HomeViewController+ProfilePanelDelegate.h */,
 				2E4ADEEC1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m */,
+				2E22A40D1B468A4500627DDE /* HomeViewController+CreateStatusViewControllerDelegate.h */,
+				2E22A40E1B468A4500627DDE /* HomeViewController+CreateStatusViewControllerDelegate.m */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -591,6 +622,7 @@
 		2E00A1BC1B42300100A4AB3F /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2E22A4001B46737900627DDE /* PictureImageCollectionViewCell */,
 				2E231D8E1B42E47E00D38562 /* LabelTabViewCell */,
 				2E00A1F31B42749A00A4AB3F /* StatusCollectionViewCell */,
 			);
@@ -654,6 +686,7 @@
 		2E00A1F91B427E7200A4AB3F /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2E22A4061B467B0A00627DDE /* PictureImageCollectionViewDatasource */,
 				2EA6333D1B437273005C459F /* AvatarLabelTabDatasource */,
 				2E00A1FA1B427E7200A4AB3F /* Status */,
 			);
@@ -699,6 +732,25 @@
 				2EA633421B4376B3005C459F /* LabelTabView+Configuration.m */,
 			);
 			path = LabelTabView;
+			sourceTree = "<group>";
+		};
+		2E22A4001B46737900627DDE /* PictureImageCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E22A4011B46764F00627DDE /* PictureImageCollectionViewCell.h */,
+				2E22A4021B46764F00627DDE /* PictureImageCollectionViewCell.m */,
+				2E22A4031B46764F00627DDE /* PictureImageCollectionViewCell.xib */,
+			);
+			path = PictureImageCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2E22A4061B467B0A00627DDE /* PictureImageCollectionViewDatasource */ = {
+			isa = PBXGroup;
+			children = (
+				2E22A4071B467B2200627DDE /* PictureImageCollectionViewDatasource.h */,
+				2E22A4081B467B2200627DDE /* PictureImageCollectionViewDatasource.m */,
+			);
+			path = PictureImageCollectionViewDatasource;
 			sourceTree = "<group>";
 		};
 		2E231D8E1B42E47E00D38562 /* LabelTabViewCell */ = {
@@ -753,6 +805,22 @@
 			path = "Data Manager";
 			sourceTree = "<group>";
 		};
+		2EA1905E1B46517F0036E2B6 /* CreateStatusViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2EA1905F1B4651900036E2B6 /* CreateStatusViewController.h */,
+				2EA190601B4651900036E2B6 /* CreateStatusViewController.m */,
+				2E22A3F71B46613700627DDE /* CreateStatusViewController+Animation.h */,
+				2E22A3F81B46613700627DDE /* CreateStatusViewController+Animation.m */,
+				2E22A40A1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.h */,
+				2E22A40B1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.m */,
+				2EA190641B465B1E0036E2B6 /* CreateStatusViewController+Configuration.h */,
+				2EA190651B465B1E0036E2B6 /* CreateStatusViewController+Configuration.m */,
+				2EA190611B4651900036E2B6 /* CreateStatusViewController.xib */,
+			);
+			path = CreateStatusViewController;
+			sourceTree = "<group>";
+		};
 		2EA6333D1B437273005C459F /* AvatarLabelTabDatasource */ = {
 			isa = PBXGroup;
 			children = (
@@ -765,6 +833,7 @@
 		99883D0D0AB73A643A96709A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E22A3FA1B466B1800627DDE /* MobileCoreServices.framework */,
 				2E00A1F01B425F2700A4AB3F /* CoreText.framework */,
 				2E00A1EE1B425F1900A4AB3F /* CoreTelephony.framework */,
 				2E00A1EC1B425F0300A4AB3F /* ImageIO.framework */,
@@ -866,6 +935,7 @@
 				2E00A1CE1B42380E00A4AB3F /* TimeView.xib in Resources */,
 				2E00A1651B42256200A4AB3F /* DemoTwoViewController.xib in Resources */,
 				2E00A11E1B421D4000A4AB3F /* Images.xcassets in Resources */,
+				2E22A4051B46764F00627DDE /* PictureImageCollectionViewCell.xib in Resources */,
 				2E00A20E1B429AB100A4AB3F /* LabelTabView.xib in Resources */,
 				2E00A13C1B42229F00A4AB3F /* Default-667h@2x.png in Resources */,
 				2E00A1F81B4274B100A4AB3F /* StatusCollectionViewCell.xib in Resources */,
@@ -877,6 +947,7 @@
 				2E00A1411B42247400A4AB3F /* Localizable.strings in Resources */,
 				2E00A1DA1B4253E000A4AB3F /* LoginViewController.xib in Resources */,
 				2E00A1EB1B425CDC00A4AB3F /* WeiboSDK.bundle in Resources */,
+				2EA190631B4651900036E2B6 /* CreateStatusViewController.xib in Resources */,
 				2E00A1C81B42328700A4AB3F /* HomeViewController.xib in Resources */,
 				2E00A13D1B42229F00A4AB3F /* Default-736h@2x.png in Resources */,
 				2E00A13B1B42229F00A4AB3F /* Default-568h@2x.png in Resources */,
@@ -934,6 +1005,7 @@
 				2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */,
 				2E00A1641B42256200A4AB3F /* DemoTwoViewController.m in Sources */,
 				2EA1904A1B4625F30036E2B6 /* ImageUrls.m in Sources */,
+				2E22A4041B46764F00627DDE /* PictureImageCollectionViewCell.m in Sources */,
 				2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */,
 				2E00A1CC1B4237FD00A4AB3F /* TimeView.m in Sources */,
 				2E4ADEEA1B4573D300138918 /* ProfilePanel+Configuration.m in Sources */,
@@ -945,13 +1017,16 @@
 				2EA633431B4376B3005C459F /* LabelTabView+Configuration.m in Sources */,
 				2E00A1611B42256200A4AB3F /* UINavigationController+CustomNavigationController.m in Sources */,
 				2E00A1C71B42328700A4AB3F /* HomeViewController.m in Sources */,
+				2E22A40C1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.m in Sources */,
 				2E00A1D91B4253E000A4AB3F /* LoginViewController.m in Sources */,
 				2E4ADEF01B4580C600138918 /* HomeViewController+Animation.m in Sources */,
 				2E00A1881B4225A100A4AB3F /* UIScreen+Utility.m in Sources */,
 				2EA1904D1B4625FC0036E2B6 /* Owener.m in Sources */,
+				2EA190661B465B1E0036E2B6 /* CreateStatusViewController+Configuration.m in Sources */,
 				2E00A19E1B42276400A4AB3F /* Shai.xcdatamodeld in Sources */,
 				2E00A14D1B42255800A4AB3F /* ApiResponse.m in Sources */,
 				2E9F9DB31B44EACA0056312C /* Base64.m in Sources */,
+				2EA190621B4651900036E2B6 /* CreateStatusViewController.m in Sources */,
 				2E00A1771B42256D00A4AB3F /* SlideMotion.m in Sources */,
 				2E00A1131B421D4000A4AB3F /* AppDelegate.mm in Sources */,
 				2E00A1861B4225A100A4AB3F /* UIColor+Utility.m in Sources */,
@@ -962,6 +1037,7 @@
 				2E00A1F71B4274B100A4AB3F /* StatusCollectionViewCell.m in Sources */,
 				2E00A1FD1B427EB000A4AB3F /* StatusCollectionViewDatasource.m in Sources */,
 				2E4ADEED1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m in Sources */,
+				2E22A4091B467B2200627DDE /* PictureImageCollectionViewDatasource.m in Sources */,
 				2E00A1DD1B4258C500A4AB3F /* LoginViewController+Configuration.m in Sources */,
 				2E9F9DB61B4517560056312C /* HomeViewController+LogicalFlow.m in Sources */,
 				2E00A1741B42256D00A4AB3F /* AutoLayoutView.m in Sources */,
@@ -970,6 +1046,7 @@
 				2E00A19D1B42276400A4AB3F /* MagicalRecordWorkaround.m in Sources */,
 				2E00A1761B42256D00A4AB3F /* SlideMotion+Calculation.m in Sources */,
 				2EA190561B4626330036E2B6 /* Owener+DataManager.m in Sources */,
+				2E22A3F91B46613700627DDE /* CreateStatusViewController+Animation.m in Sources */,
 				2EA633401B43728E005C459F /* AvatarLabelTabDatasource.m in Sources */,
 				2E00A1601B42256200A4AB3F /* BaseViewController.m in Sources */,
 				2E00A1621B42256200A4AB3F /* DemoOneViewController.m in Sources */,
@@ -979,6 +1056,7 @@
 				2E9F9DAC1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m in Sources */,
 				2E00A1101B421D4000A4AB3F /* main.m in Sources */,
 				2E231D921B42E4DF00D38562 /* LabelTabViewCell.m in Sources */,
+				2E22A40F1B468A4500627DDE /* HomeViewController+CreateStatusViewControllerDelegate.m in Sources */,
 				2EA633461B437F91005C459F /* LabelTabViewCell+Animation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -43,6 +43,7 @@
 #pragma mark - PrivateMethod
 
 - (void)initSatatus {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.status = [[NSArray alloc] init];
     [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForGetAllUserAllStatus]];
     //self.status = [self getTestStatus];

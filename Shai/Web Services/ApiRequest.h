@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#define STATUS_URL @"http://10.0.2.217:8888/api/statuses"
+#define LOGIN_URL @"http://10.0.2.217:8888/api/login"
+#define IMAGE_URL @"http://10.0.2.217:8888/api/images"
+#define STATUS_USERID_URL @"http://10.0.2.217:8888/api/user/%d/statuses"
+
 typedef enum {
     ApiRequestMethodGet,
     ApiRequestMethodPost,
@@ -26,7 +31,7 @@ typedef enum {
 
 + (instancetype)requestForUploadPictureWithUserId:(NSString *)userId andImage:(UIImage *)image;
 + (instancetype)requestForLoginWithUserId:(NSString *)userId nickName:(NSString *)nickName avatarUrl:(NSString *)avatarUrl;
-+ (instancetype)requestForCreateStatusWith:(NSString *)details location:(NSString *)location imageUrls:(NSArray *)imageUrls;
++ (instancetype)requestForCreateStatusWithDetails:(NSString *)details location:(NSString *)location imageUrls:(NSArray *)imageUrls;
 - (NSString *)assembleParameters;
 
 @end

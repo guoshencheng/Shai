@@ -17,6 +17,9 @@
 
 - (void)profilePanelDidClickCreateStatus:(ProfilePanel *)profilePanel {
     [self animationSlideToHideProfilePanel];
+    CreateStatusViewController *createStatusViewController = [CreateStatusViewController create];
+    createStatusViewController.delegate = self;
+    [self.navigationController pushViewController:createStatusViewController animated:YES];
 }
 
 - (void)profilePanelDidClickMyStatus:(ProfilePanel *)profilePanel {

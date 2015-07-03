@@ -35,6 +35,7 @@
         response.encoding = [dictionary objectForKey:@"encoding"];
         response.errorCode = [dictionary objectForKey:@"errorCode"];
         response.errorMsg = [dictionary objectForKey:@"errorMsg"];
+        response.entity = [dictionary objectForKey:@"entity"];
     }
     return response;
 }
@@ -62,6 +63,11 @@
         [statusTools addObject:statusTool];
     }
     return statusTools;
+}
+
+- (NSString *)imageUrlResponseFactory {
+    NSDictionary *model = [self.entity objectForKey:@"model"];
+    return [model objectForKey:@"url"];
 }
 
 @end

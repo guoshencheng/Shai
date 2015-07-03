@@ -34,14 +34,14 @@
 
 + (instancetype)requestForGetAllUserAllStatus {
     ApiRequest *request = [self defaultRequest];
-    request.url = @"http://10.0.2.217:8888/api/statuses";
+    request.url = STATUS_URL;
     request.parameters = nil;
     return request;
 }
 
 + (instancetype)requestForGetAllStatusWithId:(NSInteger)userId {
     ApiRequest *request = [self defaultRequest];
-    request.url = [NSString stringWithFormat:@"http://10.0.2.217:8888/api/user/%d/statuses", userId];
+    request.url = [NSString stringWithFormat:STATUS_USERID_URL, userId];
     request.parameters = nil;
     return request;
 }
@@ -49,7 +49,7 @@
 + (instancetype)requestForLoginWithUserId:(NSString *)userId nickName:(NSString *)nickName avatarUrl:(NSString *)avatarUrl {
     ApiRequest *request = [self defaultRequest];
     request.method = ApiRequestMethodPost;
-    request.url = @"http://10.0.2.217:8888/api/login";
+    request.url = LOGIN_URL;
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
     [dic setValue:userId forKey:@"userId"];
     [dic setValue:nickName forKey:@"nickName"];
@@ -58,15 +58,15 @@
     return request;
 }
 
-+ (instancetype)requestForCreateStatusWith:(NSString *)details location:(NSString *)location imageUrls:(NSArray *)imageUrls {
++ (instancetype)requestForCreateStatusWithDetails:(NSString *)details location:(NSString *)location imageUrls:(NSArray *)imageUrls {
     ApiRequest *request = [self defaultRequest];
     request.method = ApiRequestMethodPost;
-    request.url = @" http://10.0.2.217:8888/api/statuses";
+    request.url = STATUS_URL;
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
     [dic setValue:details forKey:@"details"];
     [dic setValue:location forKey:@"location"];
     [dic setValue:imageUrls forKey:@"imageUrls"];
-    [dic setValue:@((NSInteger)[[NSDate date] timeIntervalSince1970]) forKey:@"referTime"];
+    [dic setValue:@((NSInteger)([[NSDate date] timeIntervalSince1970] * 1000)) forKey:@"referTime"];
     request.parameters = [ApiRequest createPostParametersWithParameters:dic];
     return request;
 }
@@ -74,11 +74,11 @@
 + (instancetype)requestForUploadPictureWithUserId:(NSString *)userId andImage:(UIImage *)image {
     ApiRequest *request = [self defaultRequest];
     request.method = ApiRequestMethodPost;
-    request.url = @"http://10.0.2.217:8888/api/images";
+    request.url = IMAGE_URL;
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
     [dic setValue:userId forKey:@"userId"];
-    [dic setValue:@((NSInteger)[[NSDate date] timeIntervalSince1970]) forKey:@"referTime"];
-    NSString *imageString =  [UIImagePNGRepresentation(image) base64EncodedString];
+    [dic setValue:@((NSInteger)([[NSDate date] timeIntervalSince1970] * 1000)) forKey:@"referTime"];
+    NSString *imageString =  [UIImageJPEGRepresentation(image, 0.2) base64EncodedString];
     [dic setValue:imageString forKey:@"imageString"];
     request.parameters = [ApiRequest createPostParametersWithParameters:dic];
     return request;

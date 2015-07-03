@@ -15,10 +15,12 @@
 @property (nonatomic, strong) NSArray *entities;
 @property (nonatomic, strong) NSNumber *errorCode;
 @property (nonatomic, strong) NSString *errorMsg;
+@property (nonatomic, strong) NSDictionary *entity;
 
 + (instancetype)getResponseWithDictionary:(NSDictionary *)dictionary error:(NSError *)error;
 + (instancetype)postResponseWithDictionary:(NSDictionary *)dictionary error:(NSError *)error;
 - (NSArray *)statusToolsObjectFactory;
+- (NSString *)imageUrlResponseFactory;
 
 - (BOOL)success;
 

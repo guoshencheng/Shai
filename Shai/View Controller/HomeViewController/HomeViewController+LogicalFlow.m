@@ -12,6 +12,7 @@
 @implementation HomeViewController (LogicalFlow)
 
 - (void)service:(ApiService *)service didFinishRequest:(ApiRequest *)request withResponse:(ApiResponse *)response {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     self.status = [response statusToolsObjectFactory];
     [self reloadData];
 }

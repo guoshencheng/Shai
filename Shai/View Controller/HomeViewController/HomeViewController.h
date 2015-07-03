@@ -7,13 +7,14 @@
 //
 
 #import "BaseViewController.h"
+#import "CreateStatusViewController.h"
 #import "TimeView.h"
 #import "LabelTabView.h"
 #import "StatusCollectionViewDatasource.h"
 #import "ApiService.h"
 #import "ProfilePanel.h"
 
-@interface HomeViewController : BaseViewController <UICollectionViewDelegate, ApiServiceDelegate, ProfilePanelDelegate>
+@interface HomeViewController : BaseViewController <UICollectionViewDelegate, ApiServiceDelegate, ProfilePanelDelegate, CreateStatusViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIView *topView;

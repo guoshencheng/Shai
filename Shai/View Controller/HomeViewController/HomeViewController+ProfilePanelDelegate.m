@@ -7,19 +7,20 @@
 //
 
 #import "HomeViewController+ProfilePanelDelegate.h"
+#import "HomeViewController+Animation.h"
 
 @implementation HomeViewController (ProfilePanelDelegate)
 
 - (void)profilePanelDidClickAllStatus:(ProfilePanel *)profilePanel {
-    
+    [self animationSlideToHideProfilePanel];
 }
 
 - (void)profilePanelDidClickCreateStatus:(ProfilePanel *)profilePanel {
-    
+    [self animationSlideToHideProfilePanel];
 }
 
 - (void)profilePanelDidClickMyStatus:(ProfilePanel *)profilePanel {
-    
+    [self animationSlideToHideProfilePanel];
 }
 
 @end

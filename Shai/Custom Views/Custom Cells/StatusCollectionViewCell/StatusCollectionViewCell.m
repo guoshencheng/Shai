@@ -23,6 +23,7 @@
 - (void)updateWithNickName:(NSString *)nickName posterImageUrl:(NSString *)posterImageUrl description:(NSString *)description location:(NSString *)location {
     self.nickNameLabel.text = nickName;
     if (posterImageUrl) {
+        self.posterImageViewRightConstraint.constant = 0;
         [self.posterImageView setImageWithURL:[NSURL URLWithString:posterImageUrl]];
     } else {
         self.posterImageViewRightConstraint.constant = self.containerView.frame.size.width;

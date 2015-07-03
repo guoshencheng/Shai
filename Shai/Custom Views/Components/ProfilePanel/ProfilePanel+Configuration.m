@@ -23,7 +23,8 @@
 
 - (void)configureTextAndCornerRadius {
     [self configureImageView];
-    self.nickNameLabel.text = NSLocalizedString(@"author", nil);
+    Owener *owner = [Owener getOwenserInfomation];
+    self.nickNameLabel.text = owner.nickName;
     self.myStatusLabel.text = NSLocalizedString(@"profilepanel-mystatus", nil);
     self.allStatusLabel.text = NSLocalizedString(@"profilepanel-allstatus", nil);
     self.createStatusLabel.text = NSLocalizedString(@"profilepanel-createstatus", nil);
@@ -40,6 +41,8 @@
 
 - (void)configureImageView {
     self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.width / 2;
+    self.avatarImageView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    self.avatarImageView.layer.borderWidth = 2;
     Owener *owner = [Owener getOwenserInfomation];
     if (owner.avatarUrl) {
         [self.avatarImageView setImageWithURL:[NSURL URLWithString:owner.avatarUrl]];

@@ -25,7 +25,7 @@
     self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;
     [self.statusCollectionView reloadData];
     if (self.status.count > 0) {
-        StatusTool *firstStatusTool = [[self getTestStatus] objectAtIndex:0];
+        StatusTool *firstStatusTool = [self.status objectAtIndex:0];
         [self.timeView updateWithDate:firstStatusTool.sendDate];
     }
     [self.view layoutIfNeeded];
@@ -71,6 +71,7 @@
 
 - (void)configureProfilePanel {
     self.profilePanel = [ProfilePanel create];
+    self.profilePanel.delegate = self;
     [self.view insertSubview:self.profilePanel belowSubview:self.containerView];
     [self.profilePanel setRightSpace:-(([UIScreen screenWidth] - 30 ) / 2 + 30)];
     [self.profilePanel setLeftSpace: - ([UIScreen screenWidth] - 30 ) / 2];

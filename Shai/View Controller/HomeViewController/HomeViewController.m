@@ -27,6 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureViews];
+    NSLog(@"%f", round([[NSDate date] timeIntervalSince1970] * 1000));
+    NSInteger time = round([[NSDate date] timeIntervalSince1970] * 1000);
+    CGFloat referTime = round([[NSDate date] timeIntervalSince1970] * 1000);
+    NSDate *date =  [NSDate dateWithTimeIntervalSince1970:referTime / 1000];
 }
 
 - (IBAction)didClickLeftButton:(id)sender {

@@ -66,7 +66,7 @@
     [dic setValue:details forKey:@"details"];
     [dic setValue:location forKey:@"location"];
     [dic setValue:imageUrls forKey:@"imageUrls"];
-    [dic setValue:@((NSInteger)([[NSDate date] timeIntervalSince1970] * 1000)) forKey:@"referTime"];
+    [dic setValue:@(round([[NSDate date] timeIntervalSince1970] * 1000.0)) forKey:@"referTime"];
     request.parameters = [ApiRequest createPostParametersWithParameters:dic];
     return request;
 }

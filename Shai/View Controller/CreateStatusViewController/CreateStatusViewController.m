@@ -34,7 +34,11 @@
 - (IBAction)didClickSaveButton:(id)sender {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     Owener *owner = [Owener getOwenserInfomation];
-    [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForUploadPictureWithUserId:[owner.userId stringValue] andImage:[self.pictureImageCollectionViewDatasource.pictures objectAtIndex:0]]];
+    if (self.pictureImageCollectionViewDatasource.pictures.count > 0) {
+        [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForUploadPictureWithUserId:[owner.userId stringValue] andImage:[self.pictureImageCollectionViewDatasource.pictures objectAtIndex:0]]];
+    } else {
+        [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForCreateStatusWithDetails:self.statusTextView.text location:@"142.00, 848.0" imageUrls:@[]]];
+    }
 }
 
 

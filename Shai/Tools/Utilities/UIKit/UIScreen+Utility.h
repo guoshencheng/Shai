@@ -11,6 +11,7 @@
 @interface UIScreen (Utility)
 
 + (CGRect)bounds;
++ (CGSize)screenSize;
 + (CGFloat)screenWidth;
 + (CGFloat)screenHeight;
 

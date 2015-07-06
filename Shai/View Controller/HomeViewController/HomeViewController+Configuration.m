@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController+Configuration.h"
+#import "BrowsePicturesViewController.h"
 #import "StatusCollectionViewCell.h"
 #import "AvatarLabelTabDatasource.h"
 #import "UIScreen+Utility.h"
@@ -66,8 +67,15 @@
     self.statusCollectionView.delegate = self;
     self.statusCollectionViewDatasource = [StatusCollectionViewDatasource new];
     self.statusCollectionViewDatasource.status = self.status;
+    __weak typeof(self) weakSelf = self;
+    self.statusCollectionViewDatasource.configureStatusCellBlock = ^(UICollectionViewCell *cell) {
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:weakSelf action:@selector(didClickPosterImageView:)];
+        [(StatusCollectionViewCell *)(cell) posterImageViewAddStatusGesture:tap];
+    };
     [self.statusCollectionView registerNib:[UINib nibWithNibName:@"StatusCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:STATUS_COLLECTION_VIEW_CELL];
     self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.statusCollectionView.collectionViewLayout;
+    layout.itemSize = CGSizeMake([UIScreen screenWidth], layout.itemSize.height);
 }
 
 - (void)configureProfilePanel {
@@ -91,6 +99,13 @@
         StatusTool *firstStatusTool = [[self getTestStatus] objectAtIndex:0];
         [self.timeView updateWithDate:firstStatusTool.sendDate];
     }
+}
+
+- (void)didClickPosterImageView:(UITapGestureRecognizer *)gesture {
+    StatusTool *statusTool = [self.status objectAtIndex:gesture.view.tag];
+    BrowsePicturesViewController *viewController = [BrowsePicturesViewController create];
+    viewController.pictures = statusTool.posterImageUrls;
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - TESTDATA 

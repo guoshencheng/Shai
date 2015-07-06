@@ -10,6 +10,10 @@
 
 @implementation UIScreen (Utility)
 
++ (CGSize)screenSize {
+    return [UIScreen bounds].size;
+}
+
 + (CGRect)bounds {
     return [[UIScreen mainScreen] bounds];
 }

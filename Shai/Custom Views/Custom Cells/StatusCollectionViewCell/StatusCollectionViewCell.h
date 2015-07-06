@@ -23,5 +23,6 @@
 
 - (void)updateWithStatusTool:(StatusTool *)statusTool;
 - (void)updateWithNickName:(NSString *)nickName posterImageUrl:(NSString *)posterImageUrl description:(NSString *)description location:(NSString *)location;
+- (void)posterImageViewAddStatusGesture:(UITapGestureRecognizer *)tap;
 
 @end

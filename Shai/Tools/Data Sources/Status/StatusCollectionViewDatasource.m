@@ -19,6 +19,10 @@
     StatusCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:STATUS_COLLECTION_VIEW_CELL forIndexPath:indexPath];
     StatusTool *statusTool = [self.status objectAtIndex:indexPath.row];
     [cell updateWithStatusTool:statusTool];
+    cell.posterImageView.tag = indexPath.item;
+    if (self.configureStatusCellBlock) {
+        self.configureStatusCellBlock(cell);
+    }
     return cell;
 }
 

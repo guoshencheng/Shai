@@ -16,6 +16,10 @@
     [self.locationImageView setImage:[UIImage imageNamed:@"status_collectionview_cell_location_icon"]];
 }
 
+- (void)posterImageViewAddStatusGesture:(UITapGestureRecognizer *)tap {
+    [self.posterImageView addGestureRecognizer:tap];
+}
+
 - (void)updateWithStatusTool:(StatusTool *)statusTool {
     [self updateWithNickName:statusTool.nickName posterImageUrl:[statusTool.posterImageUrls objectAtIndex:0] description:statusTool.details location:statusTool.location];
 }

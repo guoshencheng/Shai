@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^ConfigureStatusCellBlock) (UICollectionViewCell *cell);
+
 @interface StatusCollectionViewDatasource : NSObject <UICollectionViewDataSource>
 
 @property (strong, nonatomic) NSArray *status;
+@property (strong, nonatomic) ConfigureStatusCellBlock configureStatusCellBlock;
 
 @end

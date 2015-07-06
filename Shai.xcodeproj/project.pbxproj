@@ -23,8 +23,6 @@
 		2E00A1611B42256200A4AB3F /* UINavigationController+CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1561B42256200A4AB3F /* UINavigationController+CustomNavigationController.m */; };
 		2E00A1621B42256200A4AB3F /* DemoOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A15A1B42256200A4AB3F /* DemoOneViewController.m */; };
 		2E00A1631B42256200A4AB3F /* DemoOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A15B1B42256200A4AB3F /* DemoOneViewController.xib */; };
-		2E00A1641B42256200A4AB3F /* DemoTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A15E1B42256200A4AB3F /* DemoTwoViewController.m */; };
-		2E00A1651B42256200A4AB3F /* DemoTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A15F1B42256200A4AB3F /* DemoTwoViewController.xib */; };
 		2E00A1741B42256D00A4AB3F /* AutoLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A16A1B42256D00A4AB3F /* AutoLayoutView.m */; };
 		2E00A1751B42256D00A4AB3F /* UIView+CommonSuperview.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A16C1B42256D00A4AB3F /* UIView+CommonSuperview.m */; };
 		2E00A1761B42256D00A4AB3F /* SlideMotion+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A1711B42256D00A4AB3F /* SlideMotion+Calculation.m */; };
@@ -65,6 +63,14 @@
 		2E00A2081B42977F00A4AB3F /* NSNumber+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A2071B42977F00A4AB3F /* NSNumber+Utility.m */; };
 		2E00A20C1B429A9A00A4AB3F /* LabelTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00A20B1B429A9A00A4AB3F /* LabelTabView.m */; };
 		2E00A20E1B429AB100A4AB3F /* LabelTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E00A20D1B429AB100A4AB3F /* LabelTabView.xib */; };
+		2E1687301B4A26B000F102AD /* DemoTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E16872E1B4A26B000F102AD /* DemoTwoViewController.m */; };
+		2E1687311B4A26B000F102AD /* DemoTwoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E16872F1B4A26B000F102AD /* DemoTwoViewController.xib */; };
+		2E1687381B4A27AB00F102AD /* BrowsePicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1687361B4A27AB00F102AD /* BrowsePicturesViewController.m */; };
+		2E1687391B4A27AB00F102AD /* BrowsePicturesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E1687371B4A27AB00F102AD /* BrowsePicturesViewController.xib */; };
+		2E16873E1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E16873C1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.m */; };
+		2E16873F1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E16873D1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.xib */; };
+		2E1687421B4A32BF00F102AD /* CGSizeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1687411B4A32BF00F102AD /* CGSizeUtility.m */; };
+		2E1687461B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1687451B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m */; };
 		2E22A3F91B46613700627DDE /* CreateStatusViewController+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E22A3F81B46613700627DDE /* CreateStatusViewController+Animation.m */; };
 		2E22A3FB1B466B1800627DDE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E22A3FA1B466B1800627DDE /* MobileCoreServices.framework */; };
 		2E22A4041B46764F00627DDE /* PictureImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E22A4021B46764F00627DDE /* PictureImageCollectionViewCell.m */; };
@@ -138,9 +144,6 @@
 		2E00A1591B42256200A4AB3F /* DemoOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoOneViewController.h; sourceTree = "<group>"; };
 		2E00A15A1B42256200A4AB3F /* DemoOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoOneViewController.m; sourceTree = "<group>"; };
 		2E00A15B1B42256200A4AB3F /* DemoOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoOneViewController.xib; sourceTree = "<group>"; };
-		2E00A15D1B42256200A4AB3F /* DemoTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTwoViewController.h; sourceTree = "<group>"; };
-		2E00A15E1B42256200A4AB3F /* DemoTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTwoViewController.m; sourceTree = "<group>"; };
-		2E00A15F1B42256200A4AB3F /* DemoTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoTwoViewController.xib; sourceTree = "<group>"; };
 		2E00A1691B42256D00A4AB3F /* AutoLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutView.h; sourceTree = "<group>"; };
 		2E00A16A1B42256D00A4AB3F /* AutoLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutView.m; sourceTree = "<group>"; };
 		2E00A16B1B42256D00A4AB3F /* UIView+CommonSuperview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CommonSuperview.h"; sourceTree = "<group>"; };
@@ -211,6 +214,19 @@
 		2E00A20A1B429A9A00A4AB3F /* LabelTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelTabView.h; sourceTree = "<group>"; };
 		2E00A20B1B429A9A00A4AB3F /* LabelTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelTabView.m; sourceTree = "<group>"; };
 		2E00A20D1B429AB100A4AB3F /* LabelTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelTabView.xib; sourceTree = "<group>"; };
+		2E16872D1B4A26B000F102AD /* DemoTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTwoViewController.h; sourceTree = "<group>"; };
+		2E16872E1B4A26B000F102AD /* DemoTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTwoViewController.m; sourceTree = "<group>"; };
+		2E16872F1B4A26B000F102AD /* DemoTwoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoTwoViewController.xib; sourceTree = "<group>"; };
+		2E1687351B4A27AB00F102AD /* BrowsePicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsePicturesViewController.h; sourceTree = "<group>"; };
+		2E1687361B4A27AB00F102AD /* BrowsePicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsePicturesViewController.m; sourceTree = "<group>"; };
+		2E1687371B4A27AB00F102AD /* BrowsePicturesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowsePicturesViewController.xib; sourceTree = "<group>"; };
+		2E16873B1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsePicturesViewControllerCell.h; sourceTree = "<group>"; };
+		2E16873C1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsePicturesViewControllerCell.m; sourceTree = "<group>"; };
+		2E16873D1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BrowsePicturesViewControllerCell.xib; sourceTree = "<group>"; };
+		2E1687401B4A32BF00F102AD /* CGSizeUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSizeUtility.h; sourceTree = "<group>"; };
+		2E1687411B4A32BF00F102AD /* CGSizeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGSizeUtility.m; sourceTree = "<group>"; };
+		2E1687441B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsePicturesViewControllerDatasource.h; sourceTree = "<group>"; };
+		2E1687451B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsePicturesViewControllerDatasource.m; sourceTree = "<group>"; };
 		2E22A3F71B46613700627DDE /* CreateStatusViewController+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CreateStatusViewController+Animation.h"; sourceTree = "<group>"; };
 		2E22A3F81B46613700627DDE /* CreateStatusViewController+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CreateStatusViewController+Animation.m"; sourceTree = "<group>"; };
 		2E22A3FA1B466B1800627DDE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -408,6 +424,7 @@
 		2E00A14F1B42256200A4AB3F /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2E1687341B4A278E00F102AD /* BrowsePicturesViewController */,
 				2EA1905E1B46517F0036E2B6 /* CreateStatusViewController */,
 				2E00A1D51B4253C200A4AB3F /* LoginViewController */,
 				2E00A1B81B422EFE00A4AB3F /* HomeViewController */,
@@ -466,9 +483,9 @@
 		2E00A15C1B42256200A4AB3F /* DemoTwoViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2E00A15D1B42256200A4AB3F /* DemoTwoViewController.h */,
-				2E00A15E1B42256200A4AB3F /* DemoTwoViewController.m */,
-				2E00A15F1B42256200A4AB3F /* DemoTwoViewController.xib */,
+				2E16872D1B4A26B000F102AD /* DemoTwoViewController.h */,
+				2E16872E1B4A26B000F102AD /* DemoTwoViewController.m */,
+				2E16872F1B4A26B000F102AD /* DemoTwoViewController.xib */,
 			);
 			path = DemoTwoViewController;
 			sourceTree = "<group>";
@@ -553,6 +570,8 @@
 		2E00A17A1B4225A100A4AB3F /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				2E1687401B4A32BF00F102AD /* CGSizeUtility.h */,
+				2E1687411B4A32BF00F102AD /* CGSizeUtility.m */,
 				2E00A17B1B4225A100A4AB3F /* UIAlertView+Utility.h */,
 				2E00A17C1B4225A100A4AB3F /* UIAlertView+Utility.m */,
 				2E00A17D1B4225A100A4AB3F /* UIColor+Utility.h */,
@@ -622,6 +641,7 @@
 		2E00A1BC1B42300100A4AB3F /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				2E16873A1B4A2D8C00F102AD /* BrowsePicturesViewControllerCell */,
 				2E22A4001B46737900627DDE /* PictureImageCollectionViewCell */,
 				2E231D8E1B42E47E00D38562 /* LabelTabViewCell */,
 				2E00A1F31B42749A00A4AB3F /* StatusCollectionViewCell */,
@@ -686,6 +706,7 @@
 		2E00A1F91B427E7200A4AB3F /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2E1687431B4A394D00F102AD /* BrowsePicturesViewControllerDatasource */,
 				2E22A4061B467B0A00627DDE /* PictureImageCollectionViewDatasource */,
 				2EA6333D1B437273005C459F /* AvatarLabelTabDatasource */,
 				2E00A1FA1B427E7200A4AB3F /* Status */,
@@ -732,6 +753,35 @@
 				2EA633421B4376B3005C459F /* LabelTabView+Configuration.m */,
 			);
 			path = LabelTabView;
+			sourceTree = "<group>";
+		};
+		2E1687341B4A278E00F102AD /* BrowsePicturesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2E1687351B4A27AB00F102AD /* BrowsePicturesViewController.h */,
+				2E1687361B4A27AB00F102AD /* BrowsePicturesViewController.m */,
+				2E1687371B4A27AB00F102AD /* BrowsePicturesViewController.xib */,
+			);
+			path = BrowsePicturesViewController;
+			sourceTree = "<group>";
+		};
+		2E16873A1B4A2D8C00F102AD /* BrowsePicturesViewControllerCell */ = {
+			isa = PBXGroup;
+			children = (
+				2E16873B1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.h */,
+				2E16873C1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.m */,
+				2E16873D1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.xib */,
+			);
+			path = BrowsePicturesViewControllerCell;
+			sourceTree = "<group>";
+		};
+		2E1687431B4A394D00F102AD /* BrowsePicturesViewControllerDatasource */ = {
+			isa = PBXGroup;
+			children = (
+				2E1687441B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.h */,
+				2E1687451B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m */,
+			);
+			path = BrowsePicturesViewControllerDatasource;
 			sourceTree = "<group>";
 		};
 		2E22A4001B46737900627DDE /* PictureImageCollectionViewCell */ = {
@@ -933,15 +983,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E00A1CE1B42380E00A4AB3F /* TimeView.xib in Resources */,
-				2E00A1651B42256200A4AB3F /* DemoTwoViewController.xib in Resources */,
 				2E00A11E1B421D4000A4AB3F /* Images.xcassets in Resources */,
 				2E22A4051B46764F00627DDE /* PictureImageCollectionViewCell.xib in Resources */,
 				2E00A20E1B429AB100A4AB3F /* LabelTabView.xib in Resources */,
 				2E00A13C1B42229F00A4AB3F /* Default-667h@2x.png in Resources */,
+				2E1687311B4A26B000F102AD /* DemoTwoViewController.xib in Resources */,
 				2E00A1F81B4274B100A4AB3F /* StatusCollectionViewCell.xib in Resources */,
 				2E9F9DBC1B453FFA0056312C /* ProfilePanel.xib in Resources */,
 				2E00A1A01B42293700A4AB3F /* mapapi.bundle in Resources */,
 				2E231D931B42E4DF00D38562 /* LabelTabViewCell.xib in Resources */,
+				2E16873F1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.xib in Resources */,
 				2E00A1631B42256200A4AB3F /* DemoOneViewController.xib in Resources */,
 				2E00A13E1B42229F00A4AB3F /* Default@2x.png in Resources */,
 				2E00A1411B42247400A4AB3F /* Localizable.strings in Resources */,
@@ -950,6 +1001,7 @@
 				2EA190631B4651900036E2B6 /* CreateStatusViewController.xib in Resources */,
 				2E00A1C81B42328700A4AB3F /* HomeViewController.xib in Resources */,
 				2E00A13D1B42229F00A4AB3F /* Default-736h@2x.png in Resources */,
+				2E1687391B4A27AB00F102AD /* BrowsePicturesViewController.xib in Resources */,
 				2E00A13B1B42229F00A4AB3F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1003,7 +1055,6 @@
 			files = (
 				2E00A1851B4225A100A4AB3F /* UIAlertView+Utility.m in Sources */,
 				2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */,
-				2E00A1641B42256200A4AB3F /* DemoTwoViewController.m in Sources */,
 				2EA1904A1B4625F30036E2B6 /* ImageUrls.m in Sources */,
 				2E22A4041B46764F00627DDE /* PictureImageCollectionViewCell.m in Sources */,
 				2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */,
@@ -1019,6 +1070,7 @@
 				2E00A1C71B42328700A4AB3F /* HomeViewController.m in Sources */,
 				2E22A40C1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.m in Sources */,
 				2E00A1D91B4253E000A4AB3F /* LoginViewController.m in Sources */,
+				2E1687381B4A27AB00F102AD /* BrowsePicturesViewController.m in Sources */,
 				2E4ADEF01B4580C600138918 /* HomeViewController+Animation.m in Sources */,
 				2E00A1881B4225A100A4AB3F /* UIScreen+Utility.m in Sources */,
 				2EA1904D1B4625FC0036E2B6 /* Owener.m in Sources */,
@@ -1032,6 +1084,8 @@
 				2E00A1861B4225A100A4AB3F /* UIColor+Utility.m in Sources */,
 				2E00A14C1B42255800A4AB3F /* ApiRequest.m in Sources */,
 				2E9F9DA51B44C8D00056312C /* ThirdPartyTool.m in Sources */,
+				2E1687421B4A32BF00F102AD /* CGSizeUtility.m in Sources */,
+				2E1687301B4A26B000F102AD /* DemoTwoViewController.m in Sources */,
 				2E9F9DBA1B453FE80056312C /* ProfilePanel.m in Sources */,
 				2EA633491B43D814005C459F /* NSDictionary+Utility.m in Sources */,
 				2E00A1F71B4274B100A4AB3F /* StatusCollectionViewCell.m in Sources */,
@@ -1052,12 +1106,14 @@
 				2E00A1621B42256200A4AB3F /* DemoOneViewController.m in Sources */,
 				2E00A1891B4225A100A4AB3F /* UITextField+Utility.m in Sources */,
 				2E00A1751B42256D00A4AB3F /* UIView+CommonSuperview.m in Sources */,
+				2E1687461B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m in Sources */,
 				2E00A20C1B429A9A00A4AB3F /* LabelTabView.m in Sources */,
 				2E9F9DAC1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m in Sources */,
 				2E00A1101B421D4000A4AB3F /* main.m in Sources */,
 				2E231D921B42E4DF00D38562 /* LabelTabViewCell.m in Sources */,
 				2E22A40F1B468A4500627DDE /* HomeViewController+CreateStatusViewControllerDelegate.m in Sources */,
 				2EA633461B437F91005C459F /* LabelTabViewCell+Animation.m in Sources */,
+				2E16873E1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

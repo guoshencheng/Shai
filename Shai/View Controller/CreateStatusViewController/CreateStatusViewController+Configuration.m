@@ -12,6 +12,14 @@
 
 @implementation CreateStatusViewController (Configuration)
 
+- (void)configureBaiDuMapLocationServer {
+    [BMKLocationService setLocationDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
+    [BMKLocationService setLocationDistanceFilter:100.f];
+    self.locationService = [[BMKLocationService alloc]init];
+    self.locationService.delegate = self;
+    [self.locationService startUserLocationService];
+}
+
 - (void)configureViews {
     [self configureStatusTextView];
     [self configureCollectionView];

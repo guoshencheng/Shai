@@ -25,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configureViews];
+    [self configureBaiDuMapLocationServer];
 }
 
 - (IBAction)didClickBackButton:(id)sender {
@@ -37,7 +38,7 @@
     if (self.pictureImageCollectionViewDatasource.pictures.count > 0) {
         [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForUploadPictureWithUserId:[owner.userId stringValue] andImage:[self.pictureImageCollectionViewDatasource.pictures objectAtIndex:0]]];
     } else {
-        [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForCreateStatusWithDetails:self.statusTextView.text location:@"142.00, 848.0" imageUrls:@[]]];
+        [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForCreateStatusWithDetails:self.statusTextView.text location:[self getLocationString] imageUrls:@[]]];
     }
 }
 
@@ -58,6 +59,12 @@
 
 - (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - PrivateMethod
+
+- (NSString *)getLocationString {
+    return [NSString stringWithFormat:@"%f,%f", self.coordinate.longitude, self.coordinate.latitude];
 }
 
 @end

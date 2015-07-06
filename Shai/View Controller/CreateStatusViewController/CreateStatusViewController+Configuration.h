@@ -11,5 +11,6 @@
 @interface CreateStatusViewController (Configuration)
 
 - (void)configureViews;
+- (void)configureBaiDuMapLocationServer;
 
 @end

@@ -30,4 +30,11 @@
     }
 }
 
+#pragma mark - BMKUserLocationDelegate
+
+- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
+{
+    self.coordinate = userLocation.location.coordinate;
+}
+
 @end

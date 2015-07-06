@@ -7,12 +7,14 @@
 //
 
 #import "BaseViewController.h"
+#import <BaiduMapAPI/BMapKit.h>
+#import <BaiduMapAPI/BMKLocationService.h>
 #import "ApiService.h"
 #import "PictureImageCollectionViewDatasource.h"
 
 @protocol CreateStatusViewControllerDelegate;
 
-@interface CreateStatusViewController : BaseViewController <UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, ApiServiceDelegate>
+@interface CreateStatusViewController : BaseViewController <UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, ApiServiceDelegate, BMKLocationServiceDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UITextView *statusTextView;
@@ -25,8 +27,10 @@
 
 @property (weak, nonatomic) id<CreateStatusViewControllerDelegate> delegate;
 
+@property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 @property (strong, nonatomic) UIImagePickerController *picker;
 @property (strong, nonatomic) PictureImageCollectionViewDatasource *pictureImageCollectionViewDatasource;
+@property (strong, nonatomic) BMKLocationService *locationService;
 
 
 @end

@@ -13,6 +13,7 @@
 #import "StatusCollectionViewDatasource.h"
 #import "ApiService.h"
 #import "ProfilePanel.h"
+#import "BlurImagePanelView.h"
 
 @interface HomeViewController : BaseViewController <UICollectionViewDelegate, ApiServiceDelegate, ProfilePanelDelegate, CreateStatusViewControllerDelegate>
 
@@ -23,10 +24,12 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *statusCollectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewLeftConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerViewRightConstraint;
+@property (assign, nonatomic) NSInteger currentIndex;
 @property (strong, nonatomic) NSArray *status;
 @property (strong, nonatomic) ProfilePanel *profilePanel;
 @property (strong, nonatomic) TimeView *timeView;
 @property (strong, nonatomic) LabelTabView *labelTabView;
+@property (strong, nonatomic) BlurImagePanelView *blurImageBackgroundView;
 @property (strong, nonatomic) StatusCollectionViewDatasource *statusCollectionViewDatasource;
 
 + (instancetype)create;

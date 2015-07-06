@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Bws-cP-StL" customClass="BlurImagePanelView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SuG-yu-EBv">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kg5-0t-QhW">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Kg5-0t-QhW" secondAttribute="trailing" id="BUi-ar-bYe"/>
+                <constraint firstItem="SuG-yu-EBv" firstAttribute="top" secondItem="Bws-cP-StL" secondAttribute="top" id="FIf-CU-9Z7"/>
+                <constraint firstItem="SuG-yu-EBv" firstAttribute="leading" secondItem="Bws-cP-StL" secondAttribute="leading" id="PGw-SS-6aU"/>
+                <constraint firstItem="Kg5-0t-QhW" firstAttribute="top" secondItem="Bws-cP-StL" secondAttribute="top" id="Vv1-VQ-NoG"/>
+                <constraint firstAttribute="trailing" secondItem="SuG-yu-EBv" secondAttribute="trailing" id="fP0-2f-048"/>
+                <constraint firstItem="Kg5-0t-QhW" firstAttribute="leading" secondItem="Bws-cP-StL" secondAttribute="leading" id="nsb-c5-SgA"/>
+                <constraint firstAttribute="bottom" secondItem="Kg5-0t-QhW" secondAttribute="bottom" id="qSf-vi-Yuc"/>
+                <constraint firstAttribute="bottom" secondItem="SuG-yu-EBv" secondAttribute="bottom" id="yZc-h7-rMu"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="blurImageView" destination="Kg5-0t-QhW" id="ZSw-bL-v4Z"/>
+                <outlet property="bufferImageView" destination="SuG-yu-EBv" id="vx0-Ea-sXT"/>
+            </connections>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

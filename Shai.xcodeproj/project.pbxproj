@@ -71,6 +71,10 @@
 		2E16873F1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E16873D1B4A2DBE00F102AD /* BrowsePicturesViewControllerCell.xib */; };
 		2E1687421B4A32BF00F102AD /* CGSizeUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1687411B4A32BF00F102AD /* CGSizeUtility.m */; };
 		2E1687461B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1687451B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m */; };
+		2E1687541B4A7A0E00F102AD /* BlurImagePanelView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E16874F1B4A7A0E00F102AD /* BlurImagePanelView+Animation.m */; };
+		2E1687551B4A7A0E00F102AD /* BlurImagePanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1687521B4A7A0E00F102AD /* BlurImagePanelView.m */; };
+		2E1687561B4A7A0E00F102AD /* BlurImagePanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E1687531B4A7A0E00F102AD /* BlurImagePanelView.xib */; };
+		2E1687581B4A7E4D00F102AD /* BlurImagePanelView+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1687571B4A7E4D00F102AD /* BlurImagePanelView+Configuration.m */; };
 		2E22A3F91B46613700627DDE /* CreateStatusViewController+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E22A3F81B46613700627DDE /* CreateStatusViewController+Animation.m */; };
 		2E22A3FB1B466B1800627DDE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E22A3FA1B466B1800627DDE /* MobileCoreServices.framework */; };
 		2E22A4041B46764F00627DDE /* PictureImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E22A4021B46764F00627DDE /* PictureImageCollectionViewCell.m */; };
@@ -227,6 +231,13 @@
 		2E1687411B4A32BF00F102AD /* CGSizeUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGSizeUtility.m; sourceTree = "<group>"; };
 		2E1687441B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsePicturesViewControllerDatasource.h; sourceTree = "<group>"; };
 		2E1687451B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsePicturesViewControllerDatasource.m; sourceTree = "<group>"; };
+		2E16874E1B4A7A0E00F102AD /* BlurImagePanelView+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlurImagePanelView+Animation.h"; sourceTree = "<group>"; };
+		2E16874F1B4A7A0E00F102AD /* BlurImagePanelView+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BlurImagePanelView+Animation.m"; sourceTree = "<group>"; };
+		2E1687501B4A7A0E00F102AD /* BlurImagePanelView+Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BlurImagePanelView+Configuration.h"; sourceTree = "<group>"; };
+		2E1687511B4A7A0E00F102AD /* BlurImagePanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurImagePanelView.h; sourceTree = "<group>"; };
+		2E1687521B4A7A0E00F102AD /* BlurImagePanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurImagePanelView.m; sourceTree = "<group>"; };
+		2E1687531B4A7A0E00F102AD /* BlurImagePanelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurImagePanelView.xib; sourceTree = "<group>"; };
+		2E1687571B4A7E4D00F102AD /* BlurImagePanelView+Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BlurImagePanelView+Configuration.m"; sourceTree = "<group>"; };
 		2E22A3F71B46613700627DDE /* CreateStatusViewController+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CreateStatusViewController+Animation.h"; sourceTree = "<group>"; };
 		2E22A3F81B46613700627DDE /* CreateStatusViewController+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CreateStatusViewController+Animation.m"; sourceTree = "<group>"; };
 		2E22A3FA1B466B1800627DDE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -631,6 +642,7 @@
 		2E00A1BA1B42300100A4AB3F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2E16874D1B4A7A0E00F102AD /* BlurImagePanelView */,
 				2E9F9DB71B453FC60056312C /* ProfilePanel */,
 				2E00A2091B429A6C00A4AB3F /* LabelTabView */,
 				2E00A1C91B4237E300A4AB3F /* TimeView */,
@@ -782,6 +794,20 @@
 				2E1687451B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m */,
 			);
 			path = BrowsePicturesViewControllerDatasource;
+			sourceTree = "<group>";
+		};
+		2E16874D1B4A7A0E00F102AD /* BlurImagePanelView */ = {
+			isa = PBXGroup;
+			children = (
+				2E1687571B4A7E4D00F102AD /* BlurImagePanelView+Configuration.m */,
+				2E16874E1B4A7A0E00F102AD /* BlurImagePanelView+Animation.h */,
+				2E16874F1B4A7A0E00F102AD /* BlurImagePanelView+Animation.m */,
+				2E1687501B4A7A0E00F102AD /* BlurImagePanelView+Configuration.h */,
+				2E1687511B4A7A0E00F102AD /* BlurImagePanelView.h */,
+				2E1687521B4A7A0E00F102AD /* BlurImagePanelView.m */,
+				2E1687531B4A7A0E00F102AD /* BlurImagePanelView.xib */,
+			);
+			path = BlurImagePanelView;
 			sourceTree = "<group>";
 		};
 		2E22A4001B46737900627DDE /* PictureImageCollectionViewCell */ = {
@@ -1000,6 +1026,7 @@
 				2E00A1EB1B425CDC00A4AB3F /* WeiboSDK.bundle in Resources */,
 				2EA190631B4651900036E2B6 /* CreateStatusViewController.xib in Resources */,
 				2E00A1C81B42328700A4AB3F /* HomeViewController.xib in Resources */,
+				2E1687561B4A7A0E00F102AD /* BlurImagePanelView.xib in Resources */,
 				2E00A13D1B42229F00A4AB3F /* Default-736h@2x.png in Resources */,
 				2E1687391B4A27AB00F102AD /* BrowsePicturesViewController.xib in Resources */,
 				2E00A13B1B42229F00A4AB3F /* Default-568h@2x.png in Resources */,
@@ -1056,6 +1083,7 @@
 				2E00A1851B4225A100A4AB3F /* UIAlertView+Utility.m in Sources */,
 				2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */,
 				2EA1904A1B4625F30036E2B6 /* ImageUrls.m in Sources */,
+				2E1687551B4A7A0E00F102AD /* BlurImagePanelView.m in Sources */,
 				2E22A4041B46764F00627DDE /* PictureImageCollectionViewCell.m in Sources */,
 				2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */,
 				2E00A1CC1B4237FD00A4AB3F /* TimeView.m in Sources */,
@@ -1067,6 +1095,7 @@
 				2E00A1D41B42423D00A4AB3F /* HomeViewController+Configuration.m in Sources */,
 				2EA633431B4376B3005C459F /* LabelTabView+Configuration.m in Sources */,
 				2E00A1611B42256200A4AB3F /* UINavigationController+CustomNavigationController.m in Sources */,
+				2E1687581B4A7E4D00F102AD /* BlurImagePanelView+Configuration.m in Sources */,
 				2E00A1C71B42328700A4AB3F /* HomeViewController.m in Sources */,
 				2E22A40C1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.m in Sources */,
 				2E00A1D91B4253E000A4AB3F /* LoginViewController.m in Sources */,
@@ -1084,6 +1113,7 @@
 				2E00A1861B4225A100A4AB3F /* UIColor+Utility.m in Sources */,
 				2E00A14C1B42255800A4AB3F /* ApiRequest.m in Sources */,
 				2E9F9DA51B44C8D00056312C /* ThirdPartyTool.m in Sources */,
+				2E1687541B4A7A0E00F102AD /* BlurImagePanelView+Animation.m in Sources */,
 				2E1687421B4A32BF00F102AD /* CGSizeUtility.m in Sources */,
 				2E1687301B4A26B000F102AD /* DemoTwoViewController.m in Sources */,
 				2E9F9DBA1B453FE80056312C /* ProfilePanel.m in Sources */,

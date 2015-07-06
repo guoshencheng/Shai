@@ -28,16 +28,21 @@
     if (self.status.count > 0) {
         StatusTool *firstStatusTool = [self.status objectAtIndex:0];
         [self.timeView updateWithDate:firstStatusTool.sendDate];
+        if (firstStatusTool.posterImageUrls.count > 0) {
+            [self.blurImageBackgroundView updateImageWithUrl:[firstStatusTool.posterImageUrls objectAtIndex:0]];
+        }
     }
     [self.view layoutIfNeeded];
 }
 
 - (void)configureViews {
+    self.currentIndex = 0;
     [self initSatatus];
     [self configureTimeView];
     [self configureStatausCollectionView];
     [self configureAvatarLabelView];
     [self configureProfilePanel];
+    [self configureBlurImageBackgroundPanel];
     [self.view layoutIfNeeded];
 }
 
@@ -75,8 +80,19 @@
     [self.statusCollectionView registerNib:[UINib nibWithNibName:@"StatusCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:STATUS_COLLECTION_VIEW_CELL];
     self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.statusCollectionView.collectionViewLayout;
-    layout.itemSize = CGSizeMake([UIScreen screenWidth], layout.itemSize.height);
+    layout.itemSize = CGSizeMake([UIScreen screenWidth], [UIScreen screenHeight] - 80 - 45);
 }
+
+- (void)configureBlurImageBackgroundPanel { // for show
+    self.blurImageBackgroundView = [BlurImagePanelView create];
+    [self.containerView addSubview:self.blurImageBackgroundView];
+    [self.containerView sendSubviewToBack:self.blurImageBackgroundView];
+    [self.blurImageBackgroundView setLeftSpace:0];
+    [self.blurImageBackgroundView setTopSpace:0];
+    [self.blurImageBackgroundView setRightSpace:0];
+    [self.blurImageBackgroundView setBottomSpace:0];
+}
+
 
 - (void)configureProfilePanel {
     self.profilePanel = [ProfilePanel create];

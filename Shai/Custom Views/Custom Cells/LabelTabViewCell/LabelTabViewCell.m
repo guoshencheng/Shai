@@ -13,6 +13,8 @@
 
 - (void)awakeFromNib {
     self.avatarImageView.layer.cornerRadius = 5;
+    self.avatarImageView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    self.avatarImageView.layer.borderWidth = 1;
     self.containerViewTopConstraint.constant = self.avatarImageView.frame.size.width;
     [self layoutIfNeeded];
 }

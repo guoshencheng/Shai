@@ -80,13 +80,13 @@
     [self.statusCollectionView registerNib:[UINib nibWithNibName:@"StatusCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:STATUS_COLLECTION_VIEW_CELL];
     self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.statusCollectionView.collectionViewLayout;
-    layout.itemSize = CGSizeMake([UIScreen screenWidth], [UIScreen screenHeight] - 80 - 45);
+    layout.itemSize = CGSizeMake([UIScreen screenWidth], [UIScreen screenHeight] - 80 - 58);
 }
 
 - (void)configureBlurImageBackgroundPanel { // for show
     self.blurImageBackgroundView = [BlurImagePanelView create];
-    [self.containerView addSubview:self.blurImageBackgroundView];
-    [self.containerView sendSubviewToBack:self.blurImageBackgroundView];
+    [self.view addSubview:self.blurImageBackgroundView];
+    [self.view sendSubviewToBack:self.blurImageBackgroundView];
     [self.blurImageBackgroundView setLeftSpace:0];
     [self.blurImageBackgroundView setTopSpace:0];
     [self.blurImageBackgroundView setRightSpace:0];
@@ -97,8 +97,8 @@
 - (void)configureProfilePanel {
     self.profilePanel = [ProfilePanel create];
     [self.view insertSubview:self.profilePanel belowSubview:self.containerView];
-    [self.profilePanel setRightSpace:-(([UIScreen screenWidth] - 30 ) / 2 + 30)];
-    [self.profilePanel setLeftSpace: - ([UIScreen screenWidth] - 30 ) / 2];
+    [self.profilePanel setWidthConstant:[UIScreen screenWidth] - 30];
+    [self.profilePanel setLeftSpace: - ([UIScreen screenWidth] - 30)];
     [self.profilePanel setTopSpace:0];
     [self.profilePanel setBottomSpace:0];
     self.profilePanel.delegate = self;

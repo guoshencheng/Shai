@@ -11,6 +11,11 @@
 
 @implementation LabelTabViewCell
 
+- (void)riseUp {
+    self.containerViewTopConstraint.constant = 5;
+    [self layoutIfNeeded];
+}
+
 - (void)awakeFromNib {
     self.avatarImageView.layer.cornerRadius = 5;
     self.avatarImageView.layer.borderColor = [[UIColor whiteColor] CGColor];

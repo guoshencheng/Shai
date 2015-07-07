@@ -32,6 +32,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LabelTabViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:LABEL_TAB_VIEW_CELL forIndexPath:indexPath];
     [cell updateWithAvatarUrl:[self.avatarUrls objectAtIndex:indexPath.item]];
+    if (self.currentAvatarIndex == -1 && indexPath.item == 0) {
+        [cell riseUp];
+        self.currentAvatarIndex = 0;
+    }
     return cell;
 }
 

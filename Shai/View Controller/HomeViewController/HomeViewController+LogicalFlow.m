@@ -13,7 +13,8 @@
 
 - (void)service:(ApiService *)service didFinishRequest:(ApiRequest *)request withResponse:(ApiResponse *)response {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-    self.status = [response statusToolsObjectFactory];
+    NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"sendDate" ascending:NO]];
+    self.status = [[response statusToolsObjectFactory] sortedArrayUsingDescriptors:sortDescriptors];
     [self reloadData];
 }
 

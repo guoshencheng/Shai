@@ -56,7 +56,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jJi-tl-FxQ" secondAttribute="trailing" id="2aN-gj-vpi"/>
                             <constraint firstAttribute="trailing" secondItem="NlF-kx-GdO" secondAttribute="trailing" constant="20" id="3m7-No-5Ao"/>
@@ -77,6 +77,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Dtq-je-1F1" secondAttribute="trailing" constant="5" id="8eg-k1-WlM"/>
                 <constraint firstItem="Dtq-je-1F1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="9mg-lq-qHG"/>

@@ -13,7 +13,7 @@
 - (void)service:(ApiService *)service didFinishRequest:(ApiRequest *)request withResponse:(ApiResponse *)response {
     if ([request.url isEqualToString:IMAGE_URL] && request.method == ApiRequestMethodPost) {
         if ([response success]) {
-            [service sendJSONRequest:[ApiRequest requestForCreateStatusWithDetails:self.statusTextView.text location:@"142.00, 848.0" imageUrls:@[[response imageUrlResponseFactory]]]];
+            [service sendJSONRequest:[ApiRequest requestForCreateStatusWithDetails:self.statusTextView.text location:[self getLocationString] imageUrls:@[[response imageUrlResponseFactory]]]];
         } else {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
         }
@@ -32,9 +32,8 @@
 
 #pragma mark - BMKUserLocationDelegate
 
-- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
-{
-    self.coordinate = userLocation.location.coordinate;
+- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation {
+    self.location = [[CLLocation alloc] initWithLatitude:userLocation.location.coordinate.latitude longitude:userLocation.location.coordinate.longitude];
 }
 
 @end

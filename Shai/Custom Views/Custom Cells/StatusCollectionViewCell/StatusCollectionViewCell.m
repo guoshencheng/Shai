@@ -8,6 +8,8 @@
 
 #import "StatusCollectionViewCell.h"
 #import "UIImageView+AFNetworking.h"
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @implementation StatusCollectionViewCell
 
@@ -34,12 +36,35 @@
     }
     self.descriptionLabel.text = description;
     if (location) {
-        self.locationLabel.text = location;
+        [self setLocationLabelWithLocation:location];
     } else {
         self.locationLabel.text = @"";
         self.locationImageView.hidden = YES;
     }
     [self layoutIfNeeded];
+}
+
+- (void)setLocationLabelWithLocation:(NSString *)location {
+    if (location && ![location isEqualToString:@""] && ![location isEqualToString:@"ceshi.png"]) {
+        NSArray *locationDegreeArray = [location componentsSeparatedByString:@", "];
+        if (!locationDegreeArray || locationDegreeArray.count < 2) {
+            locationDegreeArray = [location componentsSeparatedByString:@","];
+        }
+        CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+        CLLocationDegrees latitude = [[locationDegreeArray objectAtIndex:0] doubleValue];
+        CLLocationDegrees longitude = [[locationDegreeArray objectAtIndex:1] doubleValue];
+        CLLocation *locationObject = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+        [geocoder reverseGeocodeLocation:locationObject completionHandler:^(NSArray *placemarks, NSError *error) {
+            if (placemarks.count > 0) {
+                CLPlacemark *firstPlacemark=[placemarks firstObject];
+                self.locationLabel.text = firstPlacemark.name;
+            } else {
+                self.locationLabel.text = NSLocalizedString(@"wrong-Location", nil);
+            }
+        }];
+    } else {
+        self.locationLabel.text = NSLocalizedString(@"wrong-Location", nil);
+    }
 }
 
 @end

@@ -26,8 +26,7 @@
 #pragma mark - PrivateMethod
 
 - (void)updateProfilePanelWithOffset:(CGFloat)offset {
-    [self.profilePanel updateLeftSpace:-([UIScreen screenWidth] - 30 ) / 2 + offset / 2];
-    [self.profilePanel updateRightSpace:-(([UIScreen screenWidth] - 30 ) / 2 + 30) + offset / 2];
+    [self.profilePanel setLeftSpace:-([UIScreen screenWidth] - 30 ) + offset];
     self.containerViewLeftConstraint.constant = offset;
     self.containerViewRightConstraint.constant = -offset;
     [self.view layoutIfNeeded];

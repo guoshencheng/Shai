@@ -27,11 +27,12 @@
 
 @property (weak, nonatomic) id<CreateStatusViewControllerDelegate> delegate;
 
-@property (assign, nonatomic) CLLocationCoordinate2D coordinate;
+@property (strong, nonatomic) CLLocation *location;
 @property (strong, nonatomic) UIImagePickerController *picker;
 @property (strong, nonatomic) PictureImageCollectionViewDatasource *pictureImageCollectionViewDatasource;
 @property (strong, nonatomic) BMKLocationService *locationService;
 
+- (NSString *)getLocationString;
 
 @end
 

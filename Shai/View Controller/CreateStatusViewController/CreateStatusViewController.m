@@ -11,6 +11,7 @@
 #import "CreateStatusViewController+Configuration.h"
 #import "ApiService.h"
 #import "Owener+DataManager.h"
+#import "UIImage+Utility.h"
 
 @interface CreateStatusViewController ()
 
@@ -53,7 +54,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [self dismissViewControllerAnimated:NO completion:nil];
-    [self.pictureImageCollectionViewDatasource addPicture:[info objectForKey:UIImagePickerControllerOriginalImage]];
+    [self.pictureImageCollectionViewDatasource addPicture:[UIImage fixOrientation:[info objectForKey:UIImagePickerControllerOriginalImage]]];
     [self.pictureImageCollectionView reloadData];
 }
 
@@ -61,10 +62,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - PrivateMethod
-
 - (NSString *)getLocationString {
-    return [NSString stringWithFormat:@"%f,%f", self.coordinate.longitude, self.coordinate.latitude];
+    return [NSString stringWithFormat:@"%f,%f", self.location.coordinate.latitude, self.location.coordinate.longitude];
 }
 
 @end

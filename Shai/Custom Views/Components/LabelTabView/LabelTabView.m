@@ -33,12 +33,9 @@
             [lastCell animationSlideDown];
             self.currentIndex = currentIndex;
             [self.labelCollectionView setContentOffset:CGPointMake(currentIndex * 50, 0) animated:YES];
-        } else {
-            LabelTabViewCell *currentCell = (LabelTabViewCell *)[self.labelCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:0]];
-            [currentCell animationSlideUp];
+            self.avatarLabelTabDatasource.currentAvatarIndex = currentIndex;
         }
     }
-    self.avatarLabelTabDatasource.currentAvatarIndex = currentIndex;
 }
 
 #pragma mark - LiveCycle

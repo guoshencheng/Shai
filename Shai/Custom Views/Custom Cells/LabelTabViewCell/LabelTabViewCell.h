@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 
 - (void)updateWithAvatarUrl:(NSString *)avatarUrl;
+- (void)riseUp;
 
 @end

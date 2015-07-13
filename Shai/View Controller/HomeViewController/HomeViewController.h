@@ -15,7 +15,7 @@
 #import "ProfilePanel.h"
 #import "BlurImagePanelView.h"
 
-@interface HomeViewController : BaseViewController <UICollectionViewDelegate, ApiServiceDelegate, ProfilePanelDelegate, CreateStatusViewControllerDelegate>
+@interface HomeViewController : BaseViewController <UICollectionViewDelegate, ApiServiceDelegate, ProfilePanelDelegate, CreateStatusViewControllerDelegate, StatusCollectionViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -31,6 +31,7 @@
 @property (strong, nonatomic) LabelTabView *labelTabView;
 @property (strong, nonatomic) BlurImagePanelView *blurImageBackgroundView;
 @property (strong, nonatomic) StatusCollectionViewDatasource *statusCollectionViewDatasource;
+@property (strong, nonatomic) AvatarLabelTabDatasource *avatarLabelTabDataSource;
 
 + (instancetype)create;
 

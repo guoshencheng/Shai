@@ -9,6 +9,8 @@
 #import "BlurImagePanelView.h"
 #import "BlurImagePanelView+Configuration.h"
 #import "UIImageView+WebCache.h"
+#import "UIImage+StackBlur.h"
+#import "BlurImagePanelView+Animation.h"
 
 @implementation BlurImagePanelView
 
@@ -21,10 +23,34 @@
 #pragma mark UIView Lifecycle
 
 - (void)awakeFromNib {
+    self.queue = [[NSOperationQueue alloc] init];
   [self configureView];
 }
 
 #pragma mark Public Methods
+
+- (void)updateImageWithImage:(UIImage *)image {
+    if (image) {
+        [self.queue cancelAllOperations];
+        [self performSelector:@selector(asyncDisplayImageWithImage:) withObject:image afterDelay:0.5];
+    }
+}
+
+- (void)cancelUpdate {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(asyncDisplayImageWithImage:) object:nil];
+    [self.queue cancelAllOperations];
+}
+
+- (void)asyncDisplayImageWithImage:(UIImage *)image {
+    NSBlockOperation *operation = [NSBlockOperation new];
+    [operation addExecutionBlock:^{
+        UIImage *blurImage = [[image normalize] stackBlur:20];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self animateShowBlurImage:blurImage];
+        });
+    }];
+    [self.queue addOperation:operation];
+}
 
 - (void)updateImageWithUrl:(NSString *)imageUrl {
   if (0 == imageUrl.length) {

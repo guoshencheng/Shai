@@ -14,7 +14,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *blurImageView;
 
 @property (strong, nonatomic) NSString *imageUrl;
+@property (strong, nonatomic) NSOperationQueue *queue;
 
 - (void)updateImageWithUrl:(NSString *)imageUrl;
+- (void)updateImageWithImage:(UIImage *)image;
+- (void)cancelUpdate;
 
 @end

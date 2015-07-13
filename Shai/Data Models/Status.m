@@ -2,20 +2,21 @@
 //  Status.m
 //  Shai
 //
-//  Created by guoshencheng on 7/3/15.
+//  Created by guoshencheng on 7/13/15.
 //  Copyright (c) 2015 guoshencheng. All rights reserved.
 //
 
 #import "Status.h"
+#import "User.h"
 
 
 @implementation Status
 
-@dynamic statusId;
 @dynamic details;
 @dynamic location;
 @dynamic referTime;
+@dynamic statusId;
+@dynamic imageUrls;
 @dynamic user;
-@dynamic postImageUrls;
 
 @end

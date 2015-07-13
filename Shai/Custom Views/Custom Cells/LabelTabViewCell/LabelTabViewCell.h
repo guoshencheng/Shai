@@ -16,5 +16,6 @@
 
 - (void)updateWithAvatarUrl:(NSString *)avatarUrl;
 - (void)riseUp;
+- (void)fallDown;
 
 @end

@@ -16,12 +16,13 @@
     StatusTool *statusTool = [self.statusCollectionViewDatasource.status objectAtIndex:[self caculateCurrentPageWithOffset:scrollView.contentOffset.x]];
     [self.labelTabView updateWithCurrentIndex:[self caculateCurrentPageWithOffset:scrollView.contentOffset.x]];
     if (self.currentIndex != [self caculateCurrentPageWithOffset:scrollView.contentOffset.x]) {
-        if (statusTool.posterImageUrls.count > 0) {
-            [self.blurImageBackgroundView updateImageWithUrl:[statusTool.posterImageUrls objectAtIndex:0]];
-        }
         [self.timeView updateWithDate:statusTool.sendDate];
     }
     self.currentIndex = [self caculateCurrentPageWithOffset:scrollView.contentOffset.x];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self.blurImageBackgroundView cancelUpdate];
 }
 
 #pragma mark - PrivateMethod

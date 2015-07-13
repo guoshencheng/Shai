@@ -11,6 +11,7 @@
 
 #define STATUS_COLLECTION_VIEW_CELL @"StatusCollectionViewCell"
 
+@protocol StatusCollectionViewCellDelegate;
 @interface StatusCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
@@ -21,8 +22,16 @@
 @property (weak, nonatomic) IBOutlet UIImageView *locationImageView;
 @property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
+@property (weak, nonatomic) id<StatusCollectionViewCellDelegate> delegate;
+
 - (void)updateWithStatusTool:(StatusTool *)statusTool;
 - (void)updateWithNickName:(NSString *)nickName posterImageUrl:(NSString *)posterImageUrl description:(NSString *)description location:(NSString *)location;
 - (void)posterImageViewAddStatusGesture:(UITapGestureRecognizer *)tap;
+
+@end
+
+@protocol StatusCollectionViewCellDelegate <NSObject>
+@optional
+- (void)StatusCollectionViewCell:(StatusCollectionViewCell *)statusCollectionViewCell didLoadImage:(UIImage *)image;
 
 @end

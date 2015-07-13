@@ -7,7 +7,7 @@
 //
 
 #import "StatusCollectionViewCell.h"
-#import "UIImageView+AFNetworking.h"
+#import "UIImageView+WebCache.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
@@ -28,12 +28,7 @@
 
 - (void)updateWithNickName:(NSString *)nickName posterImageUrl:(NSString *)posterImageUrl description:(NSString *)description location:(NSString *)location {
     self.nickNameLabel.text = nickName;
-    if (posterImageUrl) {
-        self.posterImageViewRightConstraint.constant = 0;
-        [self.posterImageView setImageWithURL:[NSURL URLWithString:posterImageUrl]];
-    } else {
-        self.posterImageViewRightConstraint.constant = self.containerView.frame.size.width;
-    }
+    [self setPosterImageViewWithUrl:posterImageUrl];
     self.descriptionLabel.text = description;
     if (location) {
         [self setLocationLabelWithLocation:location];
@@ -42,6 +37,19 @@
         self.locationImageView.hidden = YES;
     }
     [self layoutIfNeeded];
+}
+
+- (void)setPosterImageViewWithUrl:(NSString *)posterImageUrl {
+    if (posterImageUrl) {
+        self.posterImageViewRightConstraint.constant = 0;
+        [self.posterImageView sd_setImageWithURL:[NSURL URLWithString:posterImageUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            if ([self.delegate respondsToSelector:@selector(StatusCollectionViewCell:didLoadImage:)]) {
+                [self.delegate StatusCollectionViewCell:self didLoadImage:image];
+            }
+        }];
+    } else {
+        self.posterImageViewRightConstraint.constant = self.containerView.frame.size.width;
+    }
 }
 
 - (void)setLocationLabelWithLocation:(NSString *)location {

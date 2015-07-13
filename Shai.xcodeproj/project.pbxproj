@@ -87,6 +87,10 @@
 		2E4ADEEA1B4573D300138918 /* ProfilePanel+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4ADEE91B4573D300138918 /* ProfilePanel+Configuration.m */; };
 		2E4ADEED1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4ADEEC1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m */; };
 		2E4ADEF01B4580C600138918 /* HomeViewController+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4ADEEF1B4580C600138918 /* HomeViewController+Animation.m */; };
+		2E62C68C1B534B3E00A9B270 /* Status+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62C68B1B534B3E00A9B270 /* Status+DataManager.m */; };
+		2E62C6951B53580D00A9B270 /* User+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62C6941B53580D00A9B270 /* User+DataManager.m */; };
+		2E62C6981B535BCA00A9B270 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62C6971B535BCA00A9B270 /* User.m */; };
+		2E62C69B1B535EDC00A9B270 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62C69A1B535EDC00A9B270 /* Status.m */; };
 		2E9F9DA51B44C8D00056312C /* ThirdPartyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DA41B44C8D00056312C /* ThirdPartyTool.m */; };
 		2E9F9DAC1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DAB1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m */; };
 		2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DAE1B44DAE60056312C /* LoginViewController+LogicalFlow.m */; };
@@ -94,10 +98,7 @@
 		2E9F9DB61B4517560056312C /* HomeViewController+LogicalFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DB51B4517560056312C /* HomeViewController+LogicalFlow.m */; };
 		2E9F9DBA1B453FE80056312C /* ProfilePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DB91B453FE80056312C /* ProfilePanel.m */; };
 		2E9F9DBC1B453FFA0056312C /* ProfilePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9F9DBB1B453FFA0056312C /* ProfilePanel.xib */; };
-		2EA1904A1B4625F30036E2B6 /* ImageUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190491B4625F30036E2B6 /* ImageUrls.m */; };
 		2EA1904D1B4625FC0036E2B6 /* Owener.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1904C1B4625FC0036E2B6 /* Owener.m */; };
-		2EA190521B4626080036E2B6 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1904F1B4626080036E2B6 /* Status.m */; };
-		2EA190531B4626080036E2B6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190511B4626080036E2B6 /* User.m */; };
 		2EA190561B4626330036E2B6 /* Owener+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190551B4626330036E2B6 /* Owener+DataManager.m */; };
 		2EA190621B4651900036E2B6 /* CreateStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA190601B4651900036E2B6 /* CreateStatusViewController.m */; };
 		2EA190631B4651900036E2B6 /* CreateStatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EA190611B4651900036E2B6 /* CreateStatusViewController.xib */; };
@@ -259,6 +260,14 @@
 		2E4ADEEC1B45804400138918 /* HomeViewController+ProfilePanelDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+ProfilePanelDelegate.m"; sourceTree = "<group>"; };
 		2E4ADEEE1B4580C600138918 /* HomeViewController+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeViewController+Animation.h"; sourceTree = "<group>"; };
 		2E4ADEEF1B4580C600138918 /* HomeViewController+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HomeViewController+Animation.m"; sourceTree = "<group>"; };
+		2E62C68A1B534B3E00A9B270 /* Status+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Status+DataManager.h"; sourceTree = "<group>"; };
+		2E62C68B1B534B3E00A9B270 /* Status+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Status+DataManager.m"; sourceTree = "<group>"; };
+		2E62C6931B53580D00A9B270 /* User+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+DataManager.h"; sourceTree = "<group>"; };
+		2E62C6941B53580D00A9B270 /* User+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+DataManager.m"; sourceTree = "<group>"; };
+		2E62C6961B535BCA00A9B270 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2E62C6971B535BCA00A9B270 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2E62C6991B535EDC00A9B270 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		2E62C69A1B535EDC00A9B270 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		2E9F9DA31B44C8D00056312C /* ThirdPartyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyTool.h; sourceTree = "<group>"; };
 		2E9F9DA41B44C8D00056312C /* ThirdPartyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPartyTool.m; sourceTree = "<group>"; };
 		2E9F9DA61B44CBA90056312C /* ThirdPartyUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartyUrl.h; sourceTree = "<group>"; };
@@ -273,14 +282,8 @@
 		2E9F9DB81B453FE80056312C /* ProfilePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePanel.h; sourceTree = "<group>"; };
 		2E9F9DB91B453FE80056312C /* ProfilePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePanel.m; sourceTree = "<group>"; };
 		2E9F9DBB1B453FFA0056312C /* ProfilePanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfilePanel.xib; sourceTree = "<group>"; };
-		2EA190481B4625F30036E2B6 /* ImageUrls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUrls.h; sourceTree = "<group>"; };
-		2EA190491B4625F30036E2B6 /* ImageUrls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageUrls.m; sourceTree = "<group>"; };
 		2EA1904B1B4625FC0036E2B6 /* Owener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Owener.h; sourceTree = "<group>"; };
 		2EA1904C1B4625FC0036E2B6 /* Owener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Owener.m; sourceTree = "<group>"; };
-		2EA1904E1B4626080036E2B6 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
-		2EA1904F1B4626080036E2B6 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
-		2EA190501B4626080036E2B6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		2EA190511B4626080036E2B6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2EA190541B4626330036E2B6 /* Owener+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Owener+DataManager.h"; sourceTree = "<group>"; };
 		2EA190551B4626330036E2B6 /* Owener+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Owener+DataManager.m"; sourceTree = "<group>"; };
 		2EA1905F1B4651900036E2B6 /* CreateStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateStatusViewController.h; sourceTree = "<group>"; };
@@ -600,14 +603,12 @@
 		2E00A1981B42276300A4AB3F /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				2EA190481B4625F30036E2B6 /* ImageUrls.h */,
-				2EA190491B4625F30036E2B6 /* ImageUrls.m */,
-				2EA1904E1B4626080036E2B6 /* Status.h */,
-				2EA1904F1B4626080036E2B6 /* Status.m */,
-				2EA190501B4626080036E2B6 /* User.h */,
-				2EA190511B4626080036E2B6 /* User.m */,
+				2E62C6961B535BCA00A9B270 /* User.h */,
+				2E62C6971B535BCA00A9B270 /* User.m */,
 				2EA1904B1B4625FC0036E2B6 /* Owener.h */,
 				2EA1904C1B4625FC0036E2B6 /* Owener.m */,
+				2E62C6991B535EDC00A9B270 /* Status.h */,
+				2E62C69A1B535EDC00A9B270 /* Status.m */,
 				2EA190471B4625F30036E2B6 /* Data Manager */,
 				2E00A1991B42276300A4AB3F /* MagicalRecordWorkaround.h */,
 				2E00A19A1B42276300A4AB3F /* MagicalRecordWorkaround.m */,
@@ -877,6 +878,10 @@
 			children = (
 				2EA190541B4626330036E2B6 /* Owener+DataManager.h */,
 				2EA190551B4626330036E2B6 /* Owener+DataManager.m */,
+				2E62C68A1B534B3E00A9B270 /* Status+DataManager.h */,
+				2E62C68B1B534B3E00A9B270 /* Status+DataManager.m */,
+				2E62C6931B53580D00A9B270 /* User+DataManager.h */,
+				2E62C6941B53580D00A9B270 /* User+DataManager.m */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -1082,17 +1087,16 @@
 			files = (
 				2E00A1851B4225A100A4AB3F /* UIAlertView+Utility.m in Sources */,
 				2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */,
-				2EA1904A1B4625F30036E2B6 /* ImageUrls.m in Sources */,
 				2E1687551B4A7A0E00F102AD /* BlurImagePanelView.m in Sources */,
 				2E22A4041B46764F00627DDE /* PictureImageCollectionViewCell.m in Sources */,
 				2E00A14E1B42255800A4AB3F /* ApiService.m in Sources */,
 				2E00A1CC1B4237FD00A4AB3F /* TimeView.m in Sources */,
 				2E4ADEEA1B4573D300138918 /* ProfilePanel+Configuration.m in Sources */,
-				2EA190521B4626080036E2B6 /* Status.m in Sources */,
 				2E00A2081B42977F00A4AB3F /* NSNumber+Utility.m in Sources */,
 				2E00A1871B4225A100A4AB3F /* UIImage+Utility.m in Sources */,
 				2E00A2011B427FC300A4AB3F /* StatusTool.m in Sources */,
 				2E00A1D41B42423D00A4AB3F /* HomeViewController+Configuration.m in Sources */,
+				2E62C68C1B534B3E00A9B270 /* Status+DataManager.m in Sources */,
 				2EA633431B4376B3005C459F /* LabelTabView+Configuration.m in Sources */,
 				2E00A1611B42256200A4AB3F /* UINavigationController+CustomNavigationController.m in Sources */,
 				2E1687581B4A7E4D00F102AD /* BlurImagePanelView+Configuration.m in Sources */,
@@ -1100,6 +1104,7 @@
 				2E22A40C1B4681FD00627DDE /* CreateStatusViewController+LogicalFlow.m in Sources */,
 				2E00A1D91B4253E000A4AB3F /* LoginViewController.m in Sources */,
 				2E1687381B4A27AB00F102AD /* BrowsePicturesViewController.m in Sources */,
+				2E62C6951B53580D00A9B270 /* User+DataManager.m in Sources */,
 				2E4ADEF01B4580C600138918 /* HomeViewController+Animation.m in Sources */,
 				2E00A1881B4225A100A4AB3F /* UIScreen+Utility.m in Sources */,
 				2EA1904D1B4625FC0036E2B6 /* Owener.m in Sources */,
@@ -1126,10 +1131,10 @@
 				2E9F9DB61B4517560056312C /* HomeViewController+LogicalFlow.m in Sources */,
 				2E00A1741B42256D00A4AB3F /* AutoLayoutView.m in Sources */,
 				2E00A2041B428E8400A4AB3F /* HomeViewController+UICollectionViewDelegate.m in Sources */,
-				2EA190531B4626080036E2B6 /* User.m in Sources */,
 				2E00A19D1B42276400A4AB3F /* MagicalRecordWorkaround.m in Sources */,
 				2E00A1761B42256D00A4AB3F /* SlideMotion+Calculation.m in Sources */,
 				2EA190561B4626330036E2B6 /* Owener+DataManager.m in Sources */,
+				2E62C6981B535BCA00A9B270 /* User.m in Sources */,
 				2E22A3F91B46613700627DDE /* CreateStatusViewController+Animation.m in Sources */,
 				2EA633401B43728E005C459F /* AvatarLabelTabDatasource.m in Sources */,
 				2E00A1601B42256200A4AB3F /* BaseViewController.m in Sources */,
@@ -1138,6 +1143,7 @@
 				2E00A1751B42256D00A4AB3F /* UIView+CommonSuperview.m in Sources */,
 				2E1687461B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m in Sources */,
 				2E00A20C1B429A9A00A4AB3F /* LabelTabView.m in Sources */,
+				2E62C69B1B535EDC00A9B270 /* Status.m in Sources */,
 				2E9F9DAC1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m in Sources */,
 				2E00A1101B421D4000A4AB3F /* main.m in Sources */,
 				2E231D921B42E4DF00D38562 /* LabelTabViewCell.m in Sources */,

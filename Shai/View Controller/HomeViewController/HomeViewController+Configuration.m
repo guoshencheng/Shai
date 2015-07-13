@@ -11,16 +11,16 @@
 #import "StatusCollectionViewCell.h"
 #import "AvatarLabelTabDatasource.h"
 #import "UIScreen+Utility.h"
+#import "HomeViewController+LogicalFlow.h"
 
 @implementation HomeViewController (Configuration)
 
 #pragma mark -  PublicMethod
 
 - (void)reloadData {
-    AvatarLabelTabDatasource *dataSource = [AvatarLabelTabDatasource new];
-    dataSource.currentAvatarIndex = -1;
-    [dataSource setAvatarUrlsFromStatus:self.status];
-    [self.labelTabView updateWithDataSource:dataSource];
+    self.avatarLabelTabDataSource.currentAvatarIndex = -1;
+    [self.avatarLabelTabDataSource setAvatarUrlsFromStatus:self.status];
+    [self.labelTabView updateWithDataSource:self.avatarLabelTabDataSource];
     [self.labelTabView updateWithCurrentIndex:0];
     self.statusCollectionViewDatasource.status = self.status;
     self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;
@@ -28,9 +28,6 @@
     if (self.status.count > 0) {
         StatusTool *firstStatusTool = [self.status objectAtIndex:0];
         [self.timeView updateWithDate:firstStatusTool.sendDate];
-        if (firstStatusTool.posterImageUrls.count > 0) {
-            [self.blurImageBackgroundView updateImageWithUrl:[firstStatusTool.posterImageUrls objectAtIndex:0]];
-        }
     }
     [self.view layoutIfNeeded];
 }
@@ -49,10 +46,8 @@
 #pragma mark - PrivateMethod
 
 - (void)initSatatus {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.status = [[NSArray alloc] init];
-    [[ApiService serviceWithDelegate:self] sendJSONRequest:[ApiRequest requestForGetAllUserAllStatus]];
-    //self.status = [self getTestStatus];
+    self.status = [self getAllStatus];
 }
 
 - (void)configureAvatarLabelView {
@@ -62,10 +57,10 @@
     [self.labelTabView setLeftSpace:0];
     [self.labelTabView setBottomSpace:0];
     [self.labelTabView setHeightConstant:58];
-    AvatarLabelTabDatasource *dataSource = [AvatarLabelTabDatasource new];
-    dataSource.currentAvatarIndex = -1;
-    [dataSource setAvatarUrlsFromStatus:self.status];
-    [self.labelTabView updateWithDataSource:dataSource];
+    self.avatarLabelTabDataSource = [AvatarLabelTabDatasource new];
+    self.avatarLabelTabDataSource.currentAvatarIndex = -1;
+    [self.avatarLabelTabDataSource setAvatarUrlsFromStatus:self.status];
+    [self.labelTabView updateWithDataSource:self.avatarLabelTabDataSource];
 }
 
 - (void)configureStatausCollectionView {
@@ -75,7 +70,9 @@
     __weak typeof(self) weakSelf = self;
     self.statusCollectionViewDatasource.configureStatusCellBlock = ^(UICollectionViewCell *cell) {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:weakSelf action:@selector(didClickPosterImageView:)];
-        [(StatusCollectionViewCell *)(cell) posterImageViewAddStatusGesture:tap];
+        StatusCollectionViewCell *statusCell = (StatusCollectionViewCell *)cell;
+        [statusCell posterImageViewAddStatusGesture:tap];
+        statusCell.delegate = weakSelf;
     };
     [self.statusCollectionView registerNib:[UINib nibWithNibName:@"StatusCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:STATUS_COLLECTION_VIEW_CELL];
     self.statusCollectionView.dataSource = self.statusCollectionViewDatasource;

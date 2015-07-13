@@ -10,3 +10,4 @@
 "profilepanel-allstatus" = "All Status";
 "profilepanel-createstatus" = "Create Status";
 "wrong-Location" = "Wrong location";
+"login-fail" = "login failed";

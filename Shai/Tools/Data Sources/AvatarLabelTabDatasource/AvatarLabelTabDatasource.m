@@ -18,7 +18,11 @@
     NSMutableArray *array = [[NSMutableArray alloc] init];
     for (NSInteger i = 0; i < statuses.count; i ++) {
         StatusTool *status = [statuses objectAtIndex:i];
-        [array addObject:status.avatarUrl];
+        if (status.avatarUrl) {
+            [array addObject:status.avatarUrl];
+        } else {
+            [array addObject:@""];
+        }
     }
     self.avatarUrls = array;
 }
@@ -35,6 +39,8 @@
     if (self.currentAvatarIndex == -1 && indexPath.item == 0) {
         [cell riseUp];
         self.currentAvatarIndex = 0;
+    } else {
+        [cell fallDown];
     }
     return cell;
 }

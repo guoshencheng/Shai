@@ -10,6 +10,8 @@
 
 @interface HomeViewController (LogicalFlow)
 
-
+- (NSArray *)getAllStatus;
+- (void)saveAllStatusWithStatusTools:(NSArray *)statusTools;
+- (void)sendStatusRequest;
 
 @end

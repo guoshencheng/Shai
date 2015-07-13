@@ -38,6 +38,10 @@
     }
 }
 
+- (void)updateAgain {
+    
+}
+
 #pragma mark - LiveCycle
 
 - (void)awakeFromNib {

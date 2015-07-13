@@ -22,16 +22,16 @@
 
 - (void)updateBlurImage {
   typeof(self) __weak weakSelf = self;
-  [self.bufferImageView setImageWithURL:[NSURL URLWithString:self.imageUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-    if (!error) {
-      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *blurImage = [[image normalize] stackBlur:20];
-        dispatch_async(dispatch_get_main_queue(), ^{
-          [weakSelf animateShowBlurImage:blurImage];
-        });
-      });
-    }
-  }];
+    [self.bufferImageView sd_setImageWithURL:[NSURL URLWithString:self.imageUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if (!error) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                UIImage *blurImage = [[image normalize] stackBlur:20];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [weakSelf animateShowBlurImage:blurImage];
+                });
+            });
+        }
+    }];
 }
 
 #pragma mark - Private Methods

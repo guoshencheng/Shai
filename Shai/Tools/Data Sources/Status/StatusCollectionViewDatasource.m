@@ -7,7 +7,6 @@
 //
 
 #import "StatusCollectionViewDatasource.h"
-#import "StatusCollectionViewCell.h"
 
 @implementation StatusCollectionViewDatasource
 

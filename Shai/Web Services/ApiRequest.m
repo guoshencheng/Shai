@@ -19,7 +19,6 @@
         NSString *part = [NSString stringWithFormat:@"%@=%@", key, [self.parameters valueForKey:key]];
         [parts addObject: part];
     }
-    
     return [parts componentsJoinedByString: @"&"];
 }
 

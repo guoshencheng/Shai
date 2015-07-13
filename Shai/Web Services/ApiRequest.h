@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#define STATUS_URL @"http://10.0.2.217:8888/api/statuses"
-#define LOGIN_URL @"http://10.0.2.217:8888/api/login"
-#define IMAGE_URL @"http://10.0.2.217:8888/api/images"
-#define STATUS_USERID_URL @"http://10.0.2.217:8888/api/user/%d/statuses"
+#define STATUS_URL @"http://10.0.2.217:9999/api/statuses"
+#define LOGIN_URL @"http://10.0.2.217:9999/api/login"
+#define IMAGE_URL @"http://10.0.2.217:9999/api/images"
+#define STATUS_USERID_URL @"http://10.0.2.217:9999/api/user/%d/statuses"
 
 typedef enum {
     ApiRequestMethodGet,

@@ -2,7 +2,7 @@
 //  User.m
 //  Shai
 //
-//  Created by guoshencheng on 7/3/15.
+//  Created by guoshencheng on 7/13/15.
 //  Copyright (c) 2015 guoshencheng. All rights reserved.
 //
 

@@ -93,6 +93,13 @@
         self.navigationController.navigationBarHidden = YES;
         self.window.rootViewController = self.navigationController;
         [self.window makeKeyAndVisible];
+    } else {
+        HomeViewController *viewController = [HomeViewController create];
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        self.navigationController.navigationBarHidden = YES;
+        self.window.rootViewController = self.navigationController;
+        [self.window makeKeyAndVisible];
+        [viewController toast:NSLocalizedString(@"login-fail", nil) complete:nil];
     }
 }
 

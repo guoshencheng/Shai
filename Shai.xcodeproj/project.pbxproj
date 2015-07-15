@@ -89,8 +89,6 @@
 		2E4ADEF01B4580C600138918 /* HomeViewController+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4ADEEF1B4580C600138918 /* HomeViewController+Animation.m */; };
 		2E62C68C1B534B3E00A9B270 /* Status+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62C68B1B534B3E00A9B270 /* Status+DataManager.m */; };
 		2E62C6951B53580D00A9B270 /* User+DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62C6941B53580D00A9B270 /* User+DataManager.m */; };
-		2E62C6981B535BCA00A9B270 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62C6971B535BCA00A9B270 /* User.m */; };
-		2E62C69B1B535EDC00A9B270 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E62C69A1B535EDC00A9B270 /* Status.m */; };
 		2E9F9DA51B44C8D00056312C /* ThirdPartyTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DA41B44C8D00056312C /* ThirdPartyTool.m */; };
 		2E9F9DAC1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DAB1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m */; };
 		2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9F9DAE1B44DAE60056312C /* LoginViewController+LogicalFlow.m */; };
@@ -107,6 +105,8 @@
 		2EA633431B4376B3005C459F /* LabelTabView+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633421B4376B3005C459F /* LabelTabView+Configuration.m */; };
 		2EA633461B437F91005C459F /* LabelTabViewCell+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633451B437F91005C459F /* LabelTabViewCell+Animation.m */; };
 		2EA633491B43D814005C459F /* NSDictionary+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA633481B43D814005C459F /* NSDictionary+Utility.m */; };
+		2EC444371B562FF300778BDB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC444361B562FF300778BDB /* User.m */; };
+		2EC4443A1B562FF300778BDB /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC444391B562FF300778BDB /* Status.m */; };
 		CB741897115545C7E9F5E780 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D56AD2AE65D895EE146132D8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -264,10 +264,6 @@
 		2E62C68B1B534B3E00A9B270 /* Status+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Status+DataManager.m"; sourceTree = "<group>"; };
 		2E62C6931B53580D00A9B270 /* User+DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+DataManager.h"; sourceTree = "<group>"; };
 		2E62C6941B53580D00A9B270 /* User+DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+DataManager.m"; sourceTree = "<group>"; };
-		2E62C6961B535BCA00A9B270 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		2E62C6971B535BCA00A9B270 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		2E62C6991B535EDC00A9B270 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
-		2E62C69A1B535EDC00A9B270 /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		2E9F9DA31B44C8D00056312C /* ThirdPartyTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyTool.h; sourceTree = "<group>"; };
 		2E9F9DA41B44C8D00056312C /* ThirdPartyTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPartyTool.m; sourceTree = "<group>"; };
 		2E9F9DA61B44CBA90056312C /* ThirdPartyUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartyUrl.h; sourceTree = "<group>"; };
@@ -299,6 +295,10 @@
 		2EA633451B437F91005C459F /* LabelTabViewCell+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LabelTabViewCell+Animation.m"; sourceTree = "<group>"; };
 		2EA633471B43D814005C459F /* NSDictionary+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Utility.h"; sourceTree = "<group>"; };
 		2EA633481B43D814005C459F /* NSDictionary+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Utility.m"; sourceTree = "<group>"; };
+		2EC444351B562FF300778BDB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2EC444361B562FF300778BDB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2EC444381B562FF300778BDB /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		2EC444391B562FF300778BDB /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
 		38BFDD2328466ACA7B8B9E26 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		83E05D7600E53F86A0BCE3D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D56AD2AE65D895EE146132D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -603,12 +603,12 @@
 		2E00A1981B42276300A4AB3F /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				2E62C6961B535BCA00A9B270 /* User.h */,
-				2E62C6971B535BCA00A9B270 /* User.m */,
 				2EA1904B1B4625FC0036E2B6 /* Owener.h */,
 				2EA1904C1B4625FC0036E2B6 /* Owener.m */,
-				2E62C6991B535EDC00A9B270 /* Status.h */,
-				2E62C69A1B535EDC00A9B270 /* Status.m */,
+				2EC444381B562FF300778BDB /* Status.h */,
+				2EC444391B562FF300778BDB /* Status.m */,
+				2EC444351B562FF300778BDB /* User.h */,
+				2EC444361B562FF300778BDB /* User.m */,
 				2EA190471B4625F30036E2B6 /* Data Manager */,
 				2E00A1991B42276300A4AB3F /* MagicalRecordWorkaround.h */,
 				2E00A19A1B42276300A4AB3F /* MagicalRecordWorkaround.m */,
@@ -1085,6 +1085,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC444371B562FF300778BDB /* User.m in Sources */,
 				2E00A1851B4225A100A4AB3F /* UIAlertView+Utility.m in Sources */,
 				2E9F9DAF1B44DAE60056312C /* LoginViewController+LogicalFlow.m in Sources */,
 				2E1687551B4A7A0E00F102AD /* BlurImagePanelView.m in Sources */,
@@ -1134,7 +1135,6 @@
 				2E00A19D1B42276400A4AB3F /* MagicalRecordWorkaround.m in Sources */,
 				2E00A1761B42256D00A4AB3F /* SlideMotion+Calculation.m in Sources */,
 				2EA190561B4626330036E2B6 /* Owener+DataManager.m in Sources */,
-				2E62C6981B535BCA00A9B270 /* User.m in Sources */,
 				2E22A3F91B46613700627DDE /* CreateStatusViewController+Animation.m in Sources */,
 				2EA633401B43728E005C459F /* AvatarLabelTabDatasource.m in Sources */,
 				2E00A1601B42256200A4AB3F /* BaseViewController.m in Sources */,
@@ -1143,7 +1143,7 @@
 				2E00A1751B42256D00A4AB3F /* UIView+CommonSuperview.m in Sources */,
 				2E1687461B4A39EA00F102AD /* BrowsePicturesViewControllerDatasource.m in Sources */,
 				2E00A20C1B429A9A00A4AB3F /* LabelTabView.m in Sources */,
-				2E62C69B1B535EDC00A9B270 /* Status.m in Sources */,
+				2EC4443A1B562FF300778BDB /* Status.m in Sources */,
 				2E9F9DAC1B44D7FE0056312C /* LoginViewController+ThirdPartyToolDelegate.m in Sources */,
 				2E00A1101B421D4000A4AB3F /* main.m in Sources */,
 				2E231D921B42E4DF00D38562 /* LabelTabViewCell.m in Sources */,

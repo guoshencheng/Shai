@@ -36,7 +36,8 @@
 }
 
 - (NSArray *)getAllStatus {
-    return [Status getStatusTool];
+    NSArray *sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"sendDate" ascending:NO]];
+    return [[Status getStatusTool] sortedArrayUsingDescriptors:sortDescriptors];
 }
 
 @end

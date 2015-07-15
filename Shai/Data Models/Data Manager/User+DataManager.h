@@ -10,6 +10,6 @@
 
 @interface User (DataManager)
 
-+ (User *)getOrCreateUserWithContext:(NSManagedObjectContext *)context andUserId:(NSInteger)userId;
++ (User *)getOrCreateUserWithContext:(NSManagedObjectContext *)context andUserId:(NSString *)userId;
 
 @end

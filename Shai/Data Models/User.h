@@ -2,7 +2,7 @@
 //  User.h
 //  Shai
 //
-//  Created by guoshencheng on 7/13/15.
+//  Created by guoshencheng on 7/15/15.
 //  Copyright (c) 2015 guoshencheng. All rights reserved.
 //
 
@@ -15,7 +15,15 @@
 
 @property (nonatomic, retain) NSString * avatarUrl;
 @property (nonatomic, retain) NSString * nickName;
-@property (nonatomic, retain) NSNumber * userId;
-@property (nonatomic, retain) Status *statuses;
+@property (nonatomic, retain) NSString * userId;
+@property (nonatomic, retain) NSSet *statuses;
+@end
+
+@interface User (CoreDataGeneratedAccessors)
+
+- (void)addStatusesObject:(Status *)value;
+- (void)removeStatusesObject:(Status *)value;
+- (void)addStatuses:(NSSet *)values;
+- (void)removeStatuses:(NSSet *)values;
 
 @end

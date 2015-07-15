@@ -9,7 +9,6 @@
 #import "HomeViewController.h"
 #import "HomeViewController+Configuration.h"
 #import "HomeViewController+Animation.h"
-#import "HomeViewController+LogicalFlow.h"
 
 @interface HomeViewController ()
 
@@ -32,7 +31,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self sendStatusRequest];
 }
 
 - (IBAction)didClickLeftButton:(id)sender {

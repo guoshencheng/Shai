@@ -37,24 +37,21 @@
 }
 
 + (void)saveAllStatusWithStatuTools:(NSArray *)statusTools completion:(MRSaveCompletionHandler)completion {
-    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
-        NSMutableArray *userIds = [[NSMutableArray alloc] init];
-        NSMutableArray *users = [[NSMutableArray alloc] init];
-        for (StatusTool *statusTool in statusTools) {
-            Status * status = [Status saveStatusWithStatusTool:statusTool inContext:localContext];
-            if (![userIds containsObject:@(statusTool.userId)]) {
-                User *user = [User getOrCreateUserWithContext:localContext andUserId:statusTool.userId];
-                user.userId = @(statusTool.userId);
-                user.nickName = statusTool.nickName;
-                user.avatarUrl = statusTool.avatarUrl;
+    NSDictionary *statusDictionary = [Status sortStatusByUsersWithStatusTools:statusTools];
+    for (id key in statusDictionary.allKeys) {
+        NSArray *oneUserStatusTools = [statusDictionary objectForKey:key];
+        StatusTool *statusTool = [oneUserStatusTools objectAtIndex:0];
+        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+            User *user = [User getOrCreateUserWithContext:localContext andUserId:statusTool.userId];
+            user.userId = statusTool.userId;
+            user.nickName = statusTool.nickName;
+            user.avatarUrl = statusTool.avatarUrl;
+            for (StatusTool *oneUserStatusTool in oneUserStatusTools) {
+                Status * status = [Status saveStatusWithStatusTool:oneUserStatusTool inContext:localContext];
                 status.user = user;
-                [userIds addObject:@(statusTool.userId)];
-                [users addObject:user];
-            } else {
-                status.user = [users objectAtIndex:[userIds indexOfObject:@(statusTool.userId)]];
             }
-        }
-    } completion:completion];
+        } completion:completion];
+    }
 }
 
 + (void)saveStatusWithStatusTool:(StatusTool *)statusTool completion:(MRSaveCompletionHandler)completion {
@@ -64,6 +61,21 @@
 }
 
 #pragma mark - PrivateMethod
+
++ (NSDictionary *)sortStatusByUsersWithStatusTools:(NSArray *)statusTools {
+    NSMutableDictionary *resultDictionary = [[NSMutableDictionary alloc] init];
+    for (StatusTool *statusTool in statusTools) {
+        if (![resultDictionary.allKeys containsObject:statusTool.userId]) {
+            NSMutableArray *array = [[NSMutableArray alloc] init];
+            [array addObject:statusTool];
+            [resultDictionary setObject:array forKey:statusTool.userId];
+        } else {
+            NSMutableArray *array = [resultDictionary objectForKey:statusTool.userId];
+            [array addObject:statusTool];
+        }
+    }
+    return resultDictionary;
+}
 
 + (Status *)saveStatusWithStatusTool:(StatusTool *)statusTool inContext:(NSManagedObjectContext *)context {
     Status *status = [Status getOrCreateStatusInfomationInContext:context withStatusId:@(statusTool.statusId)];
@@ -108,7 +120,7 @@
     statusTool.sendDate = self.referTime;
     statusTool.posterImageUrls = [Status changeImageUrlsStringToArray:self.imageUrls];
     statusTool.nickName = self.user.nickName;
-    statusTool.userId = [self.user.userId integerValue];
+    statusTool.userId = [NSString stringWithFormat:@"%@", self.user.userId];
     statusTool.avatarUrl = self.user.avatarUrl;
     return statusTool;
 }

@@ -31,6 +31,16 @@
 
 - (void)configureStatusTextView {
     self.statusTextView.delegate = self;
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboardGestureAction:)];
+    [self.statusTextView addGestureRecognizer:recognizer];
+}
+
+- (void)dismissKeyboardGestureAction:(UIGestureRecognizer *)gestureRecognizer {
+    if ([self.statusTextView isFirstResponder]) {
+        [self.view endEditing:YES];
+    } else {
+        [self.statusTextView becomeFirstResponder];
+    }
 }
 
 - (void)configureImagePicker {

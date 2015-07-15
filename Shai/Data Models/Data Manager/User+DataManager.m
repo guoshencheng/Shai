@@ -11,8 +11,8 @@
 
 @implementation User (DataManager)
 
-+ (User *)getOrCreateUserWithContext:(NSManagedObjectContext *)context andUserId:(NSInteger)userId {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userId == %d",userId];
++ (User *)getOrCreateUserWithContext:(NSManagedObjectContext *)context andUserId:(NSString *)userId {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userId == %@",userId];
     NSArray *users = [User MR_findAllWithPredicate:predicate inContext:context];
     if (users && users.count > 0) {
         return [users objectAtIndex:0];

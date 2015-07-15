@@ -48,6 +48,7 @@
 - (void)initSatatus {
     self.status = [[NSArray alloc] init];
     self.status = [self getAllStatus];
+    [self sendStatusRequest];
 }
 
 - (void)configureAvatarLabelView {
@@ -128,7 +129,7 @@
 }
 
 - (StatusTool *)getTestStatusTool {
-    return [StatusTool createWithNickName:@"贰浅不可能这么贰吧" selfDecription:@"微博登入按钮主要是简化用户进行 SSO 登陆，实际上，它内部是对 SSO 认证流程进行了简单的封装。微博登出按钮主要提供一键登出的功能，帮助开发者主动取消用户的授权。" location:@"地点:浙江杭州" posterImage:[self getTestPosterImageUrls] sendDate:[NSDate date] avatarUrl:@"http://cdnq.duitang.com/uploads/item/201408/28/20140828224832_JdeHi.jpeg" userId:1 statusId:1];
+    return [StatusTool createWithNickName:@"贰浅不可能这么贰吧" selfDecription:@"微博登入按钮主要是简化用户进行 SSO 登陆，实际上，它内部是对 SSO 认证流程进行了简单的封装。微博登出按钮主要提供一键登出的功能，帮助开发者主动取消用户的授权。" location:@"地点:浙江杭州" posterImage:[self getTestPosterImageUrls] sendDate:[NSDate date] avatarUrl:@"http://cdnq.duitang.com/uploads/item/201408/28/20140828224832_JdeHi.jpeg" userId:@"1" statusId:1];
 }
 
 - (NSArray *)getTestPosterImageUrls {

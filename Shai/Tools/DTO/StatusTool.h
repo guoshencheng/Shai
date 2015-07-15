@@ -17,9 +17,9 @@
 @property (nonatomic, strong) NSString *avatarUrl;
 @property (nonatomic, strong) NSArray *posterImageUrls;
 @property (nonatomic, strong) NSDate *sendDate;
-@property (nonatomic, assign) NSInteger userId;
+@property (nonatomic, strong) NSString *userId;
 
-+ (instancetype)createWithNickName:(NSString *)nickName selfDecription:(NSString *)details location:(NSString *)location posterImage:(NSArray *)posterImageUrls sendDate:(NSDate *)sendDate avatarUrl:(NSString *)avatarUrl userId:(NSInteger)userId statusId:(NSInteger)statusId;
-+ (instancetype)createWithNickName:(NSString *)nickName selfDecription:(NSString *)details location:(NSString *)location posterImage:(NSArray *)posterImageUrls userId:(NSInteger)userId statusId:(NSInteger)statusId;
++ (instancetype)createWithNickName:(NSString *)nickName selfDecription:(NSString *)details location:(NSString *)location posterImage:(NSArray *)posterImageUrls sendDate:(NSDate *)sendDate avatarUrl:(NSString *)avatarUrl userId:(NSString *)userId statusId:(NSInteger)statusId;
++ (instancetype)createWithNickName:(NSString *)nickName selfDecription:(NSString *)details location:(NSString *)location posterImage:(NSArray *)posterImageUrls userId:(NSString *)userId statusId:(NSInteger)statusId;
 
 @end

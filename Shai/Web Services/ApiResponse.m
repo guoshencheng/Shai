@@ -57,9 +57,9 @@
         NSString *location = [entity objectForKey:@"location"];
         NSString *nickName = [entity objectForKey:@"nickName"];
         CGFloat referTime = [[entity objectForKey:@"referTime"] floatValue];
-        NSNumber *userId = [entity objectForKey:@"userId"];
+        NSString *userId = [entity objectForKey:@"userId"];
         NSDate *date =  [NSDate dateWithTimeIntervalSince1970:referTime / 1000];
-        StatusTool *statusTool = [StatusTool createWithNickName:nickName selfDecription:detail location:location posterImage:imageUrls sendDate:date avatarUrl:avatarUrl userId:[userId intValue] statusId:statusId];
+        StatusTool *statusTool = [StatusTool createWithNickName:nickName selfDecription:detail location:location posterImage:imageUrls sendDate:date avatarUrl:avatarUrl userId:userId statusId:statusId];
         [statusTools addObject:statusTool];
     }
     return statusTools;

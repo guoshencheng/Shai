@@ -2,7 +2,7 @@
 //  Status.m
 //  Shai
 //
-//  Created by guoshencheng on 7/13/15.
+//  Created by guoshencheng on 7/15/15.
 //  Copyright (c) 2015 guoshencheng. All rights reserved.
 //
 
@@ -13,10 +13,10 @@
 @implementation Status
 
 @dynamic details;
+@dynamic imageUrls;
 @dynamic location;
 @dynamic referTime;
 @dynamic statusId;
-@dynamic imageUrls;
 @dynamic user;
 
 @end

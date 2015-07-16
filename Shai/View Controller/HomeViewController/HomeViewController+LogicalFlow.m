@@ -28,7 +28,7 @@
 }
 
 - (void)StatusCollectionViewCell:(StatusCollectionViewCell *)statusCollectionViewCell didLoadImage:(UIImage *)image {
-    [self.blurImageBackgroundView updateImageWithImage:image];
+    [self.blurImageBackgroundView updateBackgroundColorWithImage:image];
 }
 
 - (void)saveAllStatusWithStatusTools:(NSArray *)statusTools {

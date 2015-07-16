@@ -10,6 +10,7 @@
 #import "BlurImagePanelView+Configuration.h"
 #import "UIImageView+WebCache.h"
 #import "UIImage+StackBlur.h"
+#import "UIImage+Utility.h"
 #import "BlurImagePanelView+Animation.h"
 
 @implementation BlurImagePanelView
@@ -33,6 +34,21 @@
     if (image) {
         [self.queue cancelAllOperations];
         [self performSelector:@selector(asyncDisplayImageWithImage:) withObject:image afterDelay:0.5];
+    }
+}
+
+- (void)updateBackgroundColorWithImage:(UIImage *)image {
+    if (image) {
+        typeof(self) __weak weakSelf = self;
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIColor *color = [image mostColor];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [UIView animateWithDuration:0.2 animations:^{
+                    weakSelf.backgroundColor = color;
+                }];
+
+            });
+        });
     }
 }
 

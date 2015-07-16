@@ -13,5 +13,6 @@
 + (UIImage *)imageWithView:(UIView *)view;
 + (UIImage *)imageWithView:(UIView *)view size:(CGSize)size;
 + (UIImage *)fixOrientation:(UIImage *)aImage;
+- (UIColor *)mostColor;
 
 @end

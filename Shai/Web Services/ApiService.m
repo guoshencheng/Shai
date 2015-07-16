@@ -9,6 +9,7 @@
 #import "ApiService.h"
 #import "AFNetworking.h"
 #import "NSDictionary+Utility.h"
+#import "Owener+DataManager.h"
 
 @interface ApiService () {
     NSOperationQueue *_requestQueue;
@@ -35,6 +36,16 @@
     return service;
 }
 
+- (void)sendReLoginWithRequest:(ApiRequest *)apiRequest {
+    Owener *owner = [Owener getOwenserInfomation];
+    [self sendGetRequest:[ApiRequest requestForLoginWithUserId:[owner.userId stringValue] nickName:owner.nickName avatarUrl:owner.avatarUrl] withCompletion:^(id data, NSError *error) {
+        ApiResponse *apiResponse = [ApiResponse getResponseWithDictionary:data error:error];
+        if ([apiResponse success]) {
+            [self sendJSONRequest:apiRequest];
+        }
+    }];
+}
+
 - (void)sendJSONRequest:(ApiRequest *)apiRequest {
     [self sendRequest:apiRequest withCompletion:^(id dictionary, NSError *error) {
         ApiResponse *apiResponse;
@@ -43,10 +54,14 @@
         } else {
             apiResponse = [ApiResponse postResponseWithDictionary:dictionary error:error];
         }
-        NSLog(@"%@",dictionary);
-        if ([self.delegate respondsToSelector:@selector(service:didFinishRequest:withResponse:)]) {
-            [self.delegate service:self didFinishRequest:apiRequest withResponse:apiResponse];
+        if ([apiResponse.errorMsg isEqualToString:@"NOT LOGIN"]) {
+            [self sendReLoginWithRequest:apiRequest];
+        } else {
+            if ([self.delegate respondsToSelector:@selector(service:didFinishRequest:withResponse:)]) {
+                [self.delegate service:self didFinishRequest:apiRequest withResponse:apiResponse];
+            }
         }
+        NSLog(@"%@",dictionary);
     }];
 }
 

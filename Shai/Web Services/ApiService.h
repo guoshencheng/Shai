@@ -17,6 +17,7 @@
 @property (nonatomic, weak) id<ApiServiceDelegate> delegate;
 
 + (instancetype)serviceWithDelegate:(id <ApiServiceDelegate>)delegate;
+- (void)sendReLoginWithRequest:(ApiRequest *)apiRequest;
 - (void)sendJSONRequest:(ApiRequest *)apiRequest;
 
 @end

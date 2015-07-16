@@ -18,6 +18,7 @@
 
 - (void)updateImageWithUrl:(NSString *)imageUrl;
 - (void)updateImageWithImage:(UIImage *)image;
+- (void)updateBackgroundColorWithImage:(UIImage *)image;
 - (void)cancelUpdate;
 
 @end
